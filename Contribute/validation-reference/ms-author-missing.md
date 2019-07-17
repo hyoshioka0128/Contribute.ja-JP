@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 12/20/2018
 ms.prod: non-product-specific
-ms.openlocfilehash: 2eb4899febda438ca7d0fd370cd313a6e1542ccd
-ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
+ms.openlocfilehash: b343cd3f7f1a6a66d0970450863a98a210cd1062
+ms.sourcegitcommit: 1311ccbbf38312bfe6947082870bc9e90d38c986
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58637347"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67791501"
 ---
 # <a name="ms-author-missing"></a>ms-author-missing
 
@@ -19,11 +19,13 @@ ms.locfileid: "58637347"
 
 ## <a name="suggestion"></a>提案
 
-`Missing attribute: ms.author. Add a valid Microsoft alias.`
+`Missing attribute: ms.author. Add the current author's Microsoft alias.`
 
 ## <a name="resolution"></a>解決方法
 
-ms.author に対して有効な Microsoft のエイリアスを追加します。 これは、記事の個人作成者、指定されたチームのエイリアスのいずれかにする必要があります。
+現在の作成者の `ms.author` の Microsoft のエイリアスを追加します。 これは、記事の個人作成者、指定されたチームのエイリアスのいずれかにする必要があります。
+
+所有権が変更されている場合、これは元の作成者ではなく、記事の*現在*の所有者であるはずです。
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
