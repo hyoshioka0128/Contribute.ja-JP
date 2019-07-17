@@ -1,7 +1,7 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
     - name: 共同作成者ガイド
-      href: /contribute/
-      homepage: /contribute/
+      tocHref: /contribute/
+      topicHref: /contribute/
