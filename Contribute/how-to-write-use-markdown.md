@@ -113,9 +113,9 @@ This is text is both ***bold and italic***.
 
 次のようにレンダリングされます。
 
-1. 第 1 手順
-2. 第 2 手順
-3. 第 3 手順
+1. First instruction
+2. Second instruction
+3. Third instruction
 
 リストを別のリスト内にネストするには、子リスト アイテムをインデントします。 たとえば、次の Markdown 書式は
 
@@ -128,10 +128,10 @@ This is text is both ***bold and italic***.
 
 次のようにレンダリングされます。
 
-1. 第 1 手順
-   1. 下位手順
-   2. 下位手順
-2. 第 2 手順
+1. First instruction
+   1. Sub-instruction
+   2. Sub-instruction
+2. Second instruction
 
 すべてのエントリに対して '1.' を 使用していることに注目してください。 後の更新で新しい手順が追加されるときや既存の手順が削除されるとき、見直しが簡単になります。
 
@@ -152,7 +152,7 @@ Markdown の基本仕様には表が含まれていませんが、GFM が表を�
 
 これは次のようにレンダリングされます。
 
-| Fun                  | With                 | 表          |
+| Fun                  | With                 | Tables          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
 | $100                 | $100                 | $100            |
@@ -310,10 +310,10 @@ Docs 記事では、段落、リンク、リスト、見出しなど、ほとん
 
 特定の内容に注目を集めるには、4 つのタイプの注ブロックから選択できます。
 
-- NOTE (注意)
-- WARNING (警告)
-- TIP (ヒント)
-- IMPORTANT (重要)
+- NOTE
+- WARNING
+- TIP
+- IMPORTANT
 
 注ブロックによって文章がわかりにくくなることがあるので、概して注ブロックは控えめに使用する必要があります。 注ブロックでもコード ブロック、イメージ、リスト、およびリンクがサポートされますが、注ブロックを簡潔でわかりやすくするように心掛けてください。
 
