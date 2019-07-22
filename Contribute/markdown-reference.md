@@ -21,7 +21,7 @@ Markdown は、プレーン テキスト形式の構文を使用する軽量の�
 
 Docs では、Markdig Markdown エンジンが使用されます。 [https://babelmark.github.io/](https://babelmark.github.io/) では、Markdown のレンダリングを Markdig と他のエンジンで比較テストできます。
 
-## <a name="alerts-note-tip-important-caution-warning"></a>アラート (注記、ヒント、重要、注意、警告)
+## <a name="alerts-note-tip-important-caution-warning"></a>アラート (Note, Tip, Important, Caution, Warning)
 
 アラートは Docs Markdown の拡張機能です。これにより、コンテンツの重要性を示す色とアイコンを使用して docs.microsoft.com 上でレンダリングされるブロック引用が作成されます。 次の種類のアラートがサポートされています。
 
@@ -45,19 +45,19 @@ Docs では、Markdig Markdown エンジンが使用されます。 [https://bab
 これらのアラートは docs.microsoft.com 上で次のように表示されます。
 
 > [!NOTE]
-> Information the user should notice even if skimming. (ざっと読む場合でも、ユーザーは注意するべき情報。)
+> Information the user should notice even if skimming.
 
 > [!TIP]
-> Optional information to help a user be more successful. (ユーザーにさらなる好結果を与える任意の情報。)
+> Optional information to help a user be more successful.
 
 > [!IMPORTANT]
-> Essential information required for user success. (ユーザーが好結果を得るために必須となる情報。)
+> Essential information required for user success.
 
 > [!CAUTION]
-> Negative potential consequences of an action. (ある行動で起こりえる良くない結果。)
+> Negative potential consequences of an action.
 
 > [!WARNING]
-> Dangerous certain consequences of an action. (ある行動で起こるいくつかの危険な結果。)
+> Dangerous certain consequences of an action.
 
 ## <a name="code-snippets"></a>コード スニペット
 
@@ -506,7 +506,7 @@ Markdown で表を作成すると、表が右側のナビゲーションまで�
 これは次のようにレンダリングされます。
 
 > [!div class="mx-tdBreakAll"]
-> |名前|構文|サイレント インストールでは必須ですか。|Description|
+> |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the installer, displaying no UI and no prompts.|
 > |NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
