@@ -4,12 +4,12 @@ description: この記事では、フォークや複製のプロセスなど、�
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
-ms.openlocfilehash: 5373bf34399105c15caabe0abdc1ea0692c46a4a
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 1053900b0af5a0ea3dec99ccd27114f16b828406
+ms.sourcegitcommit: c6a5a715af1b915ecd4ef64d40f7d18c6035c858
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609501"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68669924"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>ドキュメントの Git リポジトリをローカルに設定する
 
@@ -55,6 +55,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
    - Visual Studio ドキュメント[https://github.com/MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs)
    - .NET ドキュメント[https://github.com/dotnet/docs](https://github.com/dotnet/docs)
    - Azure .NET SDK ドキュメント[https://github.com/azure/azure-docs-sdk-dotnet](https://github.com/azure/azure-docs-sdk-dotnet)
+   - ConfigMgr ドキュメント [https://github.com/MicrosoftDocs/SCCMdocs ] (https://github.com/MicrosoftDocs/SCCMdocs/)
 
 ## <a name="fork-the-repository"></a>リポジトリのフォーク
 適切なリポジトリを使用し、GitHub Web サイトで GitHub アカウントにリポジトリのフォークを作成します。
