@@ -2,12 +2,12 @@
 title: .NET ドキュメント リポジトリに対する共同作成プロセス
 description: この記事では、.NET ドキュメント リポジトリに対する共同作成方法について簡単に紹介します。 使用するリポジトリについて、コンテンツを整理するプロセスについて、さらにコード サンプルなどの資産を管理するためのポリシーについて説明します。
 ms.date: 11/07/2018
-ms.openlocfilehash: 121f6c885ef6d292968e5bb3961cae8e9c22942b
-ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
+ms.openlocfilehash: a5429864efe56e2004ccfeac4443dc74fbf15dc3
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58637508"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247332"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>.NET ドキュメントに対する共同作成プロセス
 
@@ -94,7 +94,7 @@ Microsoft によって定期的にすべてのコミットがマスター ブラ
 コードはすべて [dotnet/samples](https://github.com/dotnet/samples) リポジトリに存在します。 Microsoft では、samples フォルダーの構造が docs フォルダーの構造と一致するというモデルを目標に取り組んでいます。 Microsoft が従っている標準は次のとおりです。
 
 - 最上位レベルの *snippets* フォルダーには、焦点を絞った小さなサンプル用のスニペットが含まれます。
-- API 参照サンプルは次のパターンに従うフォルダー内に置かれます: *snippets/\<language>/api/\<namespace>/\<apiname>*。
+- API 参照サンプルは次のパターンに従うフォルダー内に置かれます: *snippets/\<language>/api/\<namespace>/\<apiname>* 。
 - その他の最上位レベルのフォルダーは、*docs* リポジトリ内の最上位レベルのフォルダーと対応します。 たとえば、docs リポジトリに *machine-learning/tutorials* フォルダーがあるとすると、機械学習チュートリアルのサンプルは *samples/machine-learning/tutorials* フォルダーにあります。
 
 さらに、*core* フォルダーおよび *standard* フォルダーの下に置くサンプルはすべて、.NET Core によってサポートされているすべてのプラットフォームでビルドされ実行される必要があります。 それは、Microsoft の CI ビルド システムによって強制されます。 最上位レベルの *framework* フォルダーには、Windows 上でのみビルドされ検証されるサンプルが含まれます。
@@ -103,7 +103,7 @@ Microsoft によって定期的にすべてのコミットがマスター ブラ
 
 Microsoft は、すべてのコードに対応するように CI システムを整えることを目標に取り組んでいます。 サンプルに対して更新プログラムを作成する場合は、各更新プログラムを必ずビルド可能なプロジェクトに含めます。 理想的には、サンプル上に正確性のテストも追加します。
 
-作成する完全なサンプルのそれぞれには、*readme.md* ファイルが含まれている必要があります。 このファイルには、サンプルに関する簡単な説明が含まれている必要があります (1 つまたは 2 つのパラグラフ)。 この *readme.md* では、このサンプルを探索することで何を学習できるのかを閲覧者に伝える必要があります。 *readme.md* ファイルには、[.NET ドキュメント サイト](https://docs.microsoft.com/dotnet/welcome)に掲載されているライブ ドキュメントへのリンクも含まれる必要があります。 リポジトリ内の特定のファイルがそのサイトのどこにマップされているかを確認するには、リポジトリ パス内の `/docs` を `http://docs.microsoft.com/dotnet` に置き換えます。
+作成する完全なサンプルのそれぞれには、*readme.md* ファイルが含まれている必要があります。 このファイルには、サンプルに関する簡単な説明が含まれている必要があります (1 つまたは 2 つのパラグラフ)。 この *readme.md* では、このサンプルを探索することで何を学習できるのかを閲覧者に伝える必要があります。 *readme.md* ファイルには、[.NET ドキュメント サイト](https://docs.microsoft.com/dotnet/welcome)に掲載されているライブ ドキュメントへのリンクも含まれる必要があります。 リポジトリ内の特定のファイルがそのサイトのどこにマップされているかを確認するには、リポジトリ パス内の `/docs` を `https://docs.microsoft.com/dotnet` に置き換えます。
 
 ご自分のトピックには、サンプルへのリンクも含められます。 GitHub 上のサンプルのフォルダーに直接リンクします。
 
@@ -158,7 +158,7 @@ Microsoft はこれらのプロジェクトをすぐにビルドできるよう�
     dotnet run
     ```
 
-3. 使用するサンプルのルート ディレクトリに readme.md を追加します。 
+3. 使用するサンプルのルート ディレクトリに readme.md を追加します。
 
    このファイルでは、コードの概説を含めると共に、サンプルを参照している記事にユーザーの目を向ける必要があります。
 
