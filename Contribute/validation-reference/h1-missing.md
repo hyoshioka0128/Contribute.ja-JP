@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 12/12/2018
 ms.prod: non-product-specific
-ms.openlocfilehash: 677127d09349445bb80778dfb501d7d4294ea46b
-ms.sourcegitcommit: 89147521f0aa3b39e7ddf390136b09a43d95c416
+ms.openlocfilehash: 2d0b766bba5b5ba32bff68f7ac185ab639fc7557
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848483"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247407"
 ---
 # <a name="h1-missing"></a>h1-missing
 
@@ -36,7 +36,9 @@ ms.author: mbradley
 ```
 
 > [!NOTE]
-> このルールはインクルード ファイルには適用されません。 インクルード ファイルに対して H1 の警告が表示された場合、大抵はインクルード ファイルを `includes` フォルダーに移動する必要があります。 `includes` フォルダーは、ファイル パス内の任意のレベルに置くことができます。 パスに基づいて Docs のビルドではファイルがインクルード ファイルとして認識され、H1 の検証は実行されません。
+> このルールはインクルード ファイルには適用されません。 インクルード ファイルに対して H1 の結果が表示された場合、大抵はインクルード ファイルを `includes` フォルダーに移動する必要があります。 `includes` フォルダーは、ファイル パス内の任意のレベルに置くことができます。 パスに基づいて Docs のビルドではファイルがインクルード ファイルとして認識され、H1 の検証は実行されません。
+>
+> 親ファイル内に H1 が見つからないケースは、多くの場合、インクルード ファイルの誤用、すなわち H1 を親ファイルではなくインクルード ファイルに含めていることが原因です。 これは許可されません。なぜなら、インクルード ファイル内で H1 を使用することは、親ファイルに重複する H1 が含まれるか、またはインクルード ファイルが 1 回しか使用されないことを意味するからです。 H1 はコンテンツ セット内で一意である必要があり、インクルード ファイルは複数のファイル間でコンテンツを共有するためにのみ使用する必要があります。 H1 がインクルード ファイルに含まれているために `h1-missing` の結果が表示された場合、解決策は、その H1 (と、そのインクルード ファイルが 1 回しか使用されない場合はインクルードされるすべてのコンテンツ) を親ファイルに移動することです。 Docs のインクルード ファイルについて詳しくは、Microsoft の内部記事「[再利用可能なコンテンツを記事にインクルードする](https://review.docs.microsoft.com/en-us/help/contribute/includes-best-practices?branch=master)」をご覧ください。
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
