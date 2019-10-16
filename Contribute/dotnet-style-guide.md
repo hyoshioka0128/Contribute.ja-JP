@@ -1,13 +1,16 @@
 ---
 title: .NET 記事のテンプレートとチートシート
 description: この記事には、.NET ドキュメント リポジトリ用の新しい記事を作成するときに使用できる便利なテンプレートが含まれています
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 9b57abd96093940c96f90a4a01b9f81eae063ffb
-ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
+ms.openlocfilehash: 998ebf90c8a162451dd4ca2e7c8a55833ed9d408
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653622"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288362"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>.NET ドキュメントのメタデータと Markdown テンプレート
 
@@ -198,7 +201,7 @@ UID の後ろに \* (または `%2A`) を追加すると、リンクは固有の
 
 ### <a name="youtube"></a>YouTube
 
-動画の正しい URL を取得するには、動画を右クリックし、**[埋め込みコードのコピー]** を選択し、`<iframe>` 要素から URL をコピーします。
+動画の正しい URL を取得するには、動画を右クリックし、 **[埋め込みコードのコピー]** を選択し、`<iframe>` 要素から URL をコピーします。
 
 ```markdown
 > [!VIDEO <youtube_video_link>]
