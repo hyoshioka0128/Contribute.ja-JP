@@ -1,13 +1,16 @@
 ---
 title: .NET ドキュメント リポジトリに対する共同作成プロセス
 description: この記事では、.NET ドキュメント リポジトリに対する共同作成方法について簡単に紹介します。 使用するリポジトリについて、コンテンツを整理するプロセスについて、さらにコード サンプルなどの資産を管理するためのポリシーについて説明します。
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: a5429864efe56e2004ccfeac4443dc74fbf15dc3
-ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
+ms.openlocfilehash: e54ade313f026b5ea512c0f783d3f8ad83979390
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71247332"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288355"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>.NET ドキュメントに対する共同作成プロセス
 
