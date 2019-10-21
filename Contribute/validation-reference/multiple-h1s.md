@@ -4,14 +4,14 @@ description: Docs のビルドの問題 multiple-h1 に関する説明と解決�
 author: meganbradley
 ms.author: mbradley
 ms.topic: error-reference
-ms.date: 12/12/2018
+ms.date: 10/09/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: a1006d9d75ebd53751c9ab81aa016d67d6e5df57
-ms.sourcegitcommit: 89147521f0aa3b39e7ddf390136b09a43d95c416
+ms.openlocfilehash: c97ae237cd2ce657bd02132af5169cb6544ae306
+ms.sourcegitcommit: 57eb071bdc55ef71fa3f8ac979326c3f8fbe9c45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848607"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72246265"
 ---
 # <a name="multiple-h1"></a>multiple-h1
 
@@ -23,9 +23,19 @@ ms.locfileid: "70848607"
 
 H1 はマークダウン ファイル内の最初の見出しを参照します。 docs.microsoft.com に公開すると、H1 はページの上部に大きなフォントで表示されます。 H1 を作成するには、行を 1 つのハッシュ (#) とスペースで開始して、その後に見出しのテキストを続けます。 各ファイルで使用できる H1 は 1 個のみです。
 
+`=======` のように、記事に等号の行が含まれ、二重下線ができる場合にも、このメッセージが表示されることがあります。 これは、H1 の代替 Markdown 構文です。 マージ競合でもよく見られます。
+
+```markdown
+<<<<<<< HEAD
+...
+=======
+...
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+```
+
 ## <a name="resolution"></a>解決方法
 
-この問題を解決するには、後続の H1 の見出しレベルを H2 (`##`) に変更するか、あるいはファイルを再構成します。 見出しレベルをスキップする (H1 の後に H3 を続ける) ことは許可されていないので注意してください。
+この問題を解決するには、後続の H1 の見出しレベルを H2 (`##`) に変更するか、あるいはファイルを再構成します。 見出しレベルをスキップすること (H1 の後に H3 を続けるなど) は許可されていないので注意してください。
 
 ```markdown
 ---
@@ -38,6 +48,8 @@ Some content...
 
 ## This is an H2
 ```
+
+追加の H1 が実際には二重下線 (`=======`) である場合は、それを削除するか、必要に応じて `##` などのハッシュタグの見出しで置き換えます。 二重下線がマージ競合の一部である場合は、マージ競合の開始マーカーと終了マーカー、および古いテキストも必ず削除してください。
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]

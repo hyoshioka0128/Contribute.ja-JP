@@ -1,0 +1,56 @@
+- name: 共同作成者ガイド概要とブラウザー ベースのタスク
+  href: index.md
+- name: ローカルでのセットアップと作業
+  items:
+    - name: 1. GitHub にサインアップする
+      href: get-started-setup-github.md
+    - name: 2. Git と Markdown のツールをインストールする
+      href: get-started-setup-tools.md
+    - name: 3. ローカルの Git リポジトリをセットアップする
+      href: get-started-setup-local.md
+    - name: Git と GitHub の基本
+      href: git-github-fundamentals.md
+    - name: 完全なワークフロー
+      href: how-to-write-workflows-major.md
+- name: 書き込みの要点
+  items:
+    - name: Markdown
+      href: how-to-write-use-markdown.md
+    - name: Markdown リファレンス
+      href: markdown-reference.md
+    - name: スタイルおよびボイスのクイック スタート
+      href: style-quick-start.md
+    - name: リンク
+      href: how-to-write-links.md
+    - name: Docs Authoring Pack
+      href: how-to-write-docs-auth-pack.md
+- name: ドキュメント セット固有のガイダンス
+  items:
+    - name: .NET ドキュメント
+      items:
+        - name: .NET ドキュメントへの協力方法
+          href: dotnet-contribute.md
+        - name: .NET ドキュメントに協力する
+          href: dotnet-contribute-process.md
+        - name: .NET ドキュメントのスタイル規則
+          href: dotnet-style-guide.md
+        - name: ボイスとトーンのガイド
+          href: dotnet-voice-tone.md
+        - name: pull request のレビュー プロセス
+          href: dotnet-pr-review.md
+    - name: PowerShell ドキュメント
+      items:
+        - name: PowerShell ドキュメントに協力する方法
+          href: powershell\powershell-contribute.md
+        - name: PowerShell の協力プロセス
+          href: powershell\powershell-contribute-process.md
+        - name: PowerShell 記事の作成に関するクイックスタート
+          href: powershell\powershell-style-basic-markdown.md
+        - name: PowerShell スクリプト サンプル スタイル ガイド
+          href: powershell\powershell-style-code.md
+        - name: PowerShell コマンドレット リファレンス スタイル ガイド
+          href: powershell\powershell-style-reference.md
+        - name: PowerShell の pull request の送信
+          href: powershell\powershell-pull-requests.md
+- name: その他のリソース
+  href: additional-resources.md

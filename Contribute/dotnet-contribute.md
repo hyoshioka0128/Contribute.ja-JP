@@ -1,13 +1,16 @@
 ---
 title: .NET ドキュメント リポジトリに協力する
-description: この記事では、.NET ドキュメントを構成するレポジトリ内の記事やコード サンプルに協力する過程について取り上げています。
+description: この記事では、.NET ドキュメントを構成するレポジトリ内の記事やコード サンプルに協力する過程について説明しています。
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 9104e4215538d2a9eeea7128a2572608b6adde8a
-ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
+ms.openlocfilehash: 5628b7b33b79e85b01b2e5621082c06878f7f142
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52299593"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288465"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>.NET ドキュメント リポジトリに協力する方法について説明します
 

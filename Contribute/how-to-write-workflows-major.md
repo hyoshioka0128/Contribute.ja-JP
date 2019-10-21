@@ -1,20 +1,23 @@
 ---
 title: 大規模な変更や長期にわたる変更の GitHub 共同作成ワークフロー
 description: この記事では、"大規模な" 共同作成者向けのワークフローを利用して docs.microsoft.com の記事を作成する方法について説明します。
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 93e659df4f72c6a272d15fd7487eb3a997bdf3c8
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 87c31979e60a957586ea623b22be190bfdaa41d9
+ms.sourcegitcommit: d357977935b432381f3df6297164417ed59ab434
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609407"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310291"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>大規模な変更や長期にわたる変更の GitHub 共同作成ワークフロー
 
 > [!IMPORTANT]
-> docs.microsoft.com に公開されるすべてのリポジトリには、「[Microsoft Open Source Code of Conduct (Microsoft オープンソース倫理規定)](https://opensource.microsoft.com/codeofconduct/)」または「[.NET Foundation Code of Conduct (.NET Foundation 倫理規定)](https://dotnetfoundation.org/code-of-conduct)」が適用されています。 詳細については、「[Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)」 (倫理規定に関する FAQ) を参照してください。 または、ご質問やコメントがある場合は、[opencode@microsoft.com](mailto:opencode@microsoft.com) または [conduct@dotnetfoundation.org](mailto:conduct@dotnetfoundation.org) までご連絡ください。<br>
+> docs.microsoft.com に公開されるすべてのリポジトリには、「[Microsoft Open Source Code of Conduct (Microsoft オープンソース倫理規定)](https://opensource.microsoft.com/codeofconduct/)」または「[.NET Foundation Code of Conduct (.NET Foundation 倫理規定)](https://dotnetfoundation.org/code-of-conduct)」が適用されています。 詳細については、[倫理規定に関する FAQ](https://opensource.microsoft.com/codeofconduct/faq/) のページを参照してください。 または、ご質問やコメントがある場合は、[opencode@microsoft.com](mailto:opencode@microsoft.com) または [conduct@dotnetfoundation.org](mailto:conduct@dotnetfoundation.org) までご連絡ください。<br>
 >
-> パブリック リポジトリ内にあるドキュメントおよびコード例の軽微な修正や補足は、「[docs.microsoft.com - 使用条件](https://docs.microsoft.com/legal/termsofuse)」の対象になります。 Microsoft の従業員ではない共同作成者が新規または大幅な変更を行うと、オンライン貢献者使用許諾契約書 (CLA) の提出をお願いするコメントがプルリクエスト内に生成されます。 プルリクエストをマージするには、オンライン フォームへの入力が必要になります。
+> パブリック リポジトリにあるドキュメントおよびコード例に対する軽微な修正や明確化は、「[docs.microsoft.com - 使用条件](https://docs.microsoft.com/legal/termsofuse)」の対象になります。 Microsoft の従業員ではない共同作成者が新規または大幅な変更を行うと、オンライン貢献者使用許諾契約書 (CLA) の提出をお願いするコメントがプルリクエスト内に生成されます。 プルリクエストをマージするには、オンライン フォームへの入力が必要になります。
 
 ## <a name="overview"></a>概要
 
@@ -28,7 +31,7 @@ ms.locfileid: "51609407"
 
 始める前に、このワークフローで使用される Git/GitHub の用語とモニカーをいくつか説明します。 それらをすぐに理解できなくても気にすることはありません。 それらの知識を得ておくことにより、定義を確認する必要が生じたときには、このセクションを再び参照できます。
 
-| 名前 | 説明 |
+| Name | 説明 |
 |-----------|-------------|
 |フォーク|通常では、メイン GitHub リポジトリのコピーを指すときに、名詞として使用されます。 実際には、フォークは別のリポジトリです。 ただし、GitHub でメイン/親リポジトリへの接続が維持される点で、これは特殊です。 "最初にリポジトリをフォークする必要があります" のように、動詞として使用されることも時々あります。|
 |リモート|リモート リポジトリへの名前付きの接続です。たとえば、"オリジン" リモートや "アップストリーム" リモートです。 Git では、これは別のコンピューターでホストされているリポジトリへの参照に使用されるため、"リモート" と呼ばれます。 このワークフローでは、リモートはいつでも GitHub リポジトリです。|
@@ -59,4 +62,4 @@ ms.locfileid: "51609407"
 
 これで終了です。 docs.microsoft.com のコンテンツを共同作成しました。
 
-- Markdown や Markdown 拡張構文などのトピックについての知識を深めるには、「Writing essentials」 (書き方の要点) セクションに進んでください。
+- Markdown や Markdown 拡張構文などのトピックの詳細については、[書き込みの要点](how-to-write-use-markdown.md)に関する記事に進んでください。
