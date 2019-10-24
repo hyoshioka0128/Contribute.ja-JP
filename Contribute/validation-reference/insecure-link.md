@@ -6,16 +6,17 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 10/1/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: b97d4c4a0f61e5f3448331a56fe4bde442ff1cca
-ms.sourcegitcommit: 0cb0177c209abab1a72af4f411ef527fa5cf10f9
+ms.openlocfilehash: c22404e624ae85369d7b0b95f44e37d51f847368
+ms.sourcegitcommit: ab31cbb17c64a06cab4ffb37b157fd812417a499
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72379525"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587676"
 ---
 # <a name="insecure-link"></a>insecure-link
 
-[!INCLUDE [suggestion-note](includes/suggestion-note.md)]
+> [!IMPORTANT]
+> このルールは最初 "提案" として有効になりました。これは、コンテンツ チームがその影響を測定し、各リポジトリをクリーンアップする計画を立てるための時間を与えるためです。 **2019 年 12 月 20 日に "警告" に昇格します**。
 
 ## <a name="suggestion"></a>提案
 
