@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 3142b1aee8cadb69f82bfbcd3f89c701fac5b356
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: a5ff6c5122a08d2b611fd6b0344a6f5740d93928
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288290"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592565"
 ---
 # <a name="markdown-reference"></a>Markdown 参照
 
@@ -26,7 +26,7 @@ Docs では、Markdig Markdown エンジンが使用されます。 [https://bab
 
 アラートは Docs Markdown の拡張機能です。これにより、コンテンツの重要性を示す色とアイコンを使用して docs.microsoft.com 上でレンダリングされるブロック引用が作成されます。 次の種類のアラートがサポートされています。
 
-```markdown
+```md
 > [!NOTE]
 > Information the user should notice even if skimming.
 
@@ -45,26 +45,13 @@ Docs では、Markdig Markdown エンジンが使用されます。 [https://bab
 
 これらのアラートは docs.microsoft.com 上で次のように表示されます。
 
-> [!NOTE]
-> Information the user should notice even if skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]
-> Essential information required for user success.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-> [!WARNING]
-> Dangerous certain consequences of an action.
+![前の例のアラートで、発行されたドキュメント ページのアイコンと色が異なることを確認する方法を示します](media/alerts-rendering.png)
 
 ## <a name="code-snippets"></a>コード スニペット
 
 Markdown ファイルにはコード スニペットを埋め込むことができます。
 
-```markdown
+```md
 [!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
 ```
 
@@ -72,7 +59,7 @@ Markdown ファイルにはコード スニペットを埋め込むことがで�
 
 Docs では、6 つのレベルの Markdown 見出しがサポートされています。
 
-```markdown
+```md
 # This is a first level heading (H1)
 
 ## This is a second level heading (H2)
@@ -97,7 +84,7 @@ Markdown ではインライン HTML がサポートされていますが、Docs 
 
 イメージをインクルードするための構文は次のようになります。
 
-```markdown
+```md
 ![[alt text]](<folderPath>)
 
 Example:
@@ -133,7 +120,7 @@ Example:
 
 相対パスとは、現在のファイルから見た目的のファイルまでのパスです。 Docs では、相対パスを使用することで、同じドキュメント セット内の別のファイルにリンクすることができます。 相対パスの構文は次のようになります。
 
-```markdown
+```md
 [link text](../../folder/filename.md)
 ```
 
@@ -154,7 +141,7 @@ Example:
 
 ### <a name="site-relative-links-to-other-files-on-docs"></a>Docs 上の他のファイルへのサイト相対リンク
 
-```markdown
+```md
 [Azure and Linux](/articles/virtual-machines/linux/overview)
 ```
 
@@ -162,7 +149,7 @@ Example:
 
 ### <a name="links-to-external-sites"></a>外部サイトへのリンク
 
-```markdown
+```md
 [Microsoft](https://www.microsoft.com)
 ```
 
@@ -172,13 +159,13 @@ Example:
 
 同じリポジトリにおける別ファイルの見出しへのブックマーク リンクは次のようになります。 次に例を示します。
 
-```markdown
+```md
 [Managed Disks](../../linux/overview.md#managed-disks)
 ```
 
 現在のファイルにある見出しへのブックマーク リンクは次のようになります。
 
-```markdown
+```md
 [Managed Disks](#managed-disks)
 ```
 
@@ -197,7 +184,7 @@ Example:
 
 明示的なアンカーにリンクするには、次の構文を使用します。
 
-```markdown
+```md
 To go to a section on the same page:
 [text](#AnchorText)
 
@@ -258,7 +245,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 入れ子になっているリストなど、リストには文字を使用しないでください。 Docs に公開するとき、それらは正しくレンダリングされません。番号を使用する入れ子リストは、公開されると、小文字としてレンダリングされます。 次に例を示します。
 
-```markdown
+```md
 1. This is
 1. a parent numbered list
    1. and this is
@@ -278,7 +265,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 箇条書きを作成するには、`-` の後ろにスペースを入れてから各行を続けます。
 
-```markdown
+```md
 - This is
 - a parent bulleted list
   - and this is
@@ -298,7 +285,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 チェックリストは、カスタム Markdown 拡張経由で docs.microsoft.com (のみ) で使用する場合に利用できます。
 
-```markdown
+```md
 > [!div class="checklist"]
 > * List item 1
 > * List item 2
@@ -321,14 +308,14 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 構文は次のようになります。
 
-```markdown
+```md
 > [!div class="nextstepaction"]
 > [button text](link to topic)
 ```
 
 次に例を示します。
 
-```markdown
+```md
 > [!div class="nextstepaction"]
 > [Learn about basic style](style-quick-start.md)
 ```
@@ -433,7 +420,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 Markdow で表を作成する最も簡単な方法は、パイプと行を使用することです。 ヘッダー付きの標準的な表を作成するには、最初の行の後に点線を続けます。
 
-```markdown
+```md
 |This is   |a simple   |table header|
 |----------|-----------|------------|
 |table     |data       |here        |
@@ -449,7 +436,7 @@ Markdow で表を作成する最も簡単な方法は、パイプと行を使用
 
 ヘッダーなしで表を作成することもできます。 たとえば、複数列のリストを作成するには、次の操作を行います。
 
-```markdown
+```md
 |   |   |
 | - | - |
 | This | table |
@@ -465,7 +452,7 @@ Markdow で表を作成する最も簡単な方法は、パイプと行を使用
 
 コロンを使用して、列を整列することができます。
 
-```markdown
+```md
 |                  |
 |------------------|
 |    right aligned:|
@@ -495,7 +482,7 @@ Markdown で表を作成すると、表が右側のナビゲーションまで�
 
 クラス名が `mx-tdBreakAll` の `div` で折り返される 3 行の表の Markdown サンプルを次に示します。
 
-```markdown
+```md
 > [!div class="mx-tdBreakAll"]
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
@@ -541,13 +528,13 @@ docs.microsoft.com の場合、HTML テーブルは推奨されません。 ソ�
 
 次の構文を使用してビデオを埋め込むことができ、そのビデオは Docs でレンダリングされます。
 
-```markdown
+```md
 > [!VIDEO <embedded_video_link>]
 ```
 
 例:
 
-```markdown
+```md
 > [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
 
 > [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
@@ -591,6 +578,6 @@ docs.microsoft.com の場合、HTML テーブルは推奨されません。 ソ�
 1. 動画リンクを取得したら、作業項目を閉じます。
 1. その後、次の構文を利用し、動画リンクを投稿に追加できます。
 
-   ```markdown
+   ```md
    > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
    ```

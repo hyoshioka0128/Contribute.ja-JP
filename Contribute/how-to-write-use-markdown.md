@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: c823e086ba61e7ddfe643da13afc8597e5ea280c
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: ffc44f07929890ef17b3878ba389dfeea82691a6
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288406"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592452"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>ドキュメントを記述するための Markdown の使用方法
 
@@ -23,7 +23,7 @@ ms.locfileid: "72288406"
 
 見出しを作成するには、ハッシュ記号 (#) を次のように使用します。
 
-```markdown
+```md
 # This is heading 1
 ## This is heading 2
 ### This is heading 3
@@ -42,19 +42,19 @@ ms.locfileid: "72288406"
 
 テキストの書式を**太字**に設定するには、テキストを二重のアスタリスクで囲みます。
 
-```markdown
+```md
 This text is **bold**.
 ```
 
 テキストの書式を*斜体*に設定するには、テキストを一重のアスタリスクで囲みます。
 
-```markdown
+```md
 This text is *italic*.
 ```
 
 テキストの書式を***太字と斜体***の両方に設定するには、テキストを三重のアスタリスクで囲みます。
 
-```markdown
+```md
 This is text is both ***bold and italic***.
 ```
 
@@ -62,7 +62,7 @@ This is text is both ***bold and italic***.
 
 ブロック引用は `>` 文字で作成されます。
 
-```markdown
+```md
 > The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
 ```
 
@@ -76,7 +76,7 @@ This is text is both ***bold and italic***.
 
 記号付きリスト/箇条書きリストの書式を設定するには、アスタリスクまたはダッシュを使用できます。 たとえば、次の Markdown 書式は
 
-```markdown
+```md
 - List item 1
 - List item 2
 - List item 3
@@ -90,7 +90,7 @@ This is text is both ***bold and italic***.
 
 リストを別のリスト内にネストするには、子リスト アイテムをインデントします。 たとえば、次の Markdown 書式は
 
-```markdown
+```md
 - List item 1
   - List item A
   - List item B
@@ -108,7 +108,7 @@ This is text is both ***bold and italic***.
 
 番号付きリスト/段階的リストの書式を設定するには、対応する番号を使用します。 たとえば、次の Markdown 書式は
 
-```markdown
+```md
 1. First instruction
 1. Second instruction
 1. Third instruction
@@ -122,7 +122,7 @@ This is text is both ***bold and italic***.
 
 リストを別のリスト内にネストするには、子リスト アイテムをインデントします。 たとえば、次の Markdown 書式は
 
-```markdown
+```md
 1. First instruction
    1. Sub-instruction
    1. Sub-instruction
@@ -144,7 +144,7 @@ Markdown の基本仕様には表が含まれていませんが、GFM が表を�
 
 たとえば、次の Markdown 書式は
 
-```markdown
+```md
 | Fun                  | With                 | Tables          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
@@ -322,33 +322,26 @@ Docs 記事では、段落、リンク、リスト、見出しなど、ほとん
 
 例:
 
-```markdown
+```md
 > [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
+> Information the user should notice even if skimming.
 
 > [!TIP]
-> This is a TIP
+> Optional information to help a user be more successful.
 
 > [!IMPORTANT]
-> This is IMPORTANT
+> Essential information required for user success.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> [!WARNING]
+> Dangerous certain consequences of an action.
 ```
 
-これは次のようにレンダリングされます。
+これらのアラートは docs.microsoft.com 上で次のように表示されます。
 
-> [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
-
-> [!TIP]
-> This is a TIP
-
-> [!IMPORTANT]
-> This is IMPORTANT
+![前の例のアラートで、発行されたドキュメント ページのアイコンと色が異なることを確認する方法を示します](media/alerts-rendering.png)
 
 ### <a name="include-files"></a>インクルード ファイル
 
@@ -373,7 +366,7 @@ Docs 記事では、段落、リンク、リスト、見出しなど、ほとん
 
 例:
 
-```markdown
+```md
 [!INCLUDE[sample include file](../includes/sampleinclude.md)]
 ```
 
@@ -385,7 +378,7 @@ Docs 記事では、段落、リンク、リスト、見出しなど、ほとん
 
 次にセレクターの例を示します。
 
-```markdown
+```md
 > [!div class="op_single_selector"]
 - [macOS](../docs/core/tutorials/using-on-macos.md)
 - [Windows](../docs/core/tutorials/with-visual-studio.md)
@@ -406,13 +399,13 @@ Markdig では、コード スニペット拡張機能を使用した記事へ�
 
 アンダー スコアを含む alt テキストは正しくレンダリングされません。 たとえば、次のテキストを使用するのではなく、
 
-```markdown
+```md
 ![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 次のようにアンダー スコアをエスケープします。
 
-```markdown
+```md
 ![ADextension\_2FA\_Configure\_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
@@ -435,7 +428,7 @@ Word から Markdown エディターにコピーしたテキストに、"スマ�
 
 ## <a name="markdown-flavor"></a>Markdown のフレーバー
 
-docs.microsoft.com サイトのバックエンドでは、[Markdig](https://github.com/lunet-io/markdig) 解析エンジンを使って解析される [CommonMark](https://commonmark.org/) 準拠のマークダウンがサポートされています。 ほとんどのドキュメントが GitHub に格納され、そこで編集可能であるように、このマークダウンのフレーバーのほとんどは [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/) と互換性があります。 Markdown の拡張機能を通じて、その他の機能が追加されています。
+docs.microsoft.com サイトのバックエンドでは、[Markdig](https://github.com/lunet-io/markdig) 解析エンジンを使って解析される [CommonMark](https://commonmark.org/) 準拠の Markdown がサポートされています。 ほとんどのドキュメントが GitHub に格納され、そこで編集可能であるように、このマークダウンのフレーバーのほとんどは [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/) と互換性があります。 Markdown の拡張機能を通じて、その他の機能が追加されています。
 
 ## <a name="see-also"></a>関連項目:
 
