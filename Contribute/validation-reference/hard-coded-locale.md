@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 10/18/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 0fbc7634e00202fdfdf607b9504744a6d9846792
-ms.sourcegitcommit: 836d4d6127fabb5569ffc0809db5fb25e46038b5
+ms.openlocfilehash: 1ab511398cbd622906ccb0a67e2b24968ee29374
+ms.sourcegitcommit: 55624c641bea5367bcfa08655c085bc950e8beae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72590862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166828"
 ---
 # <a name="hard-coded-locale"></a>hard-coded-locale
 
@@ -20,7 +20,7 @@ ms.locfileid: "72590862"
 
 ## <a name="suggestion"></a>提案
 
-`Link '{URL}' contains locale code '{code}'. For localizability, remove '{code}' from links to Microsoft sites.`
+`Link '{URL}' contains locale code '{code}'. For localizability, remove '{code}' from links to most Microsoft sites.`
 
 特定の Microsoft サイトへのリンクにロケールのコード (`en-us` など) を含めるべきではありません。 英語のコンテンツ内のリンクにロケールのコードを含めた場合、それはローカライズされたリンクにも含まれることになり、ローカライズのエクスペリエンスが損なわれます。 たとえば、ドイツ語にローカライズされたコンテンツ内のリンクが `en-us` を含んでいた場合、ドイツ語を使用するお客様が、ドイツ語の記事があるにもかかわらず英語の記事にリンクされることになります。
 
@@ -28,7 +28,7 @@ ms.locfileid: "72590862"
 
 - azure.microsoft.com
 - docs.microsoft.com
-- msdn.microsoft.com
+- msdn.microsoft.com (正しいフォーラムがリンクされるためにロケールが必要な social.msdn.com は除く)
 - technet.microsoft.com
 
 ## <a name="resolution"></a>解決方法
