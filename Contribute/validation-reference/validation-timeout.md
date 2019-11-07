@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 6/5/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 9f8074d3746ea375e29704853c82f48d95273cdc
-ms.sourcegitcommit: 55624c641bea5367bcfa08655c085bc950e8beae
+ms.openlocfilehash: f75f005ce9ab0cf332667d5c8b7778ba4ef35a0a
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73166771"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592537"
 ---
 # <a name="validation-timeout"></a>validation-timeout
 
@@ -34,8 +34,8 @@ Docs Portal からビルドを強制的に実行するには、リポジトリ�
 
    :::image type="content" source="media/find-repo.png" alt-text="Docs Portal の検索ボックスを使用してリポジトリを検索する":::
 1. **[ビルド履歴]** タブで、 **[+ Manual Publish]\(+ 手動での発行\)** をクリックします。
-1. 警告が発生しているブランチ (Master など) を選択します。
-1. ターゲットは、既定の **[Docs site]\(Docs サイト\)** をそのまま使用します。
+1. 警告が発生しているブランチ (master など) を選択します。
+1. ターゲットは、既定の **[Docs Site]\(Docs サイト\)** をそのまま使用します。
 1. **[強制発行]** チェックボックスをオンにします。
 1. **[発行]** をクリックします。
 
