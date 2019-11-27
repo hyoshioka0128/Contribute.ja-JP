@@ -4,14 +4,14 @@ description: Docs のビルドの問題 h1-missing に関する説明と解決�
 author: meganbradley
 ms.author: mbradley
 ms.topic: error-reference
-ms.date: 12/12/2018
+ms.date: 11/25/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 2d0b766bba5b5ba32bff68f7ac185ab639fc7557
-ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
+ms.openlocfilehash: 1ff29a06b5a8d53d0152329807acc416463f4fe2
+ms.sourcegitcommit: 423d9b8145a11426c91f45510b2d77319838eb27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71247407"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74528898"
 ---
 # <a name="h1-missing"></a>h1-missing
 
