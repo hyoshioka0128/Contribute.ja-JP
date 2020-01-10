@@ -7,15 +7,16 @@ ms.custom: external-contributor-guide
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: 69371cd201d156b2d0ce5e3e38527d77baca5a8a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 970f80b4e6ce795e0e2f15192d31680d7de6d35b
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288574"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188324"
 ---
-# <a name="using-links-in-documentation"></a>ドキュメントでリンクを使用する
-この記事では、docs.microsoft.com でホストされたページからハイパーリンクを使用する方法について説明します。 いくつかの規則が変更されていますが、リンクは Markdown に簡単に追加できます。 リンクは、同じページ内のコンテンツをポイントするか、他の近くにあるページ内をポイントするか、外部のサイトや URL をポイントすることができます。
+# <a name="use-links-in-documentation"></a>ドキュメントでリンクを使用する
+
+この記事では、docs.microsoft.com でホストされたページからハイパーリンクを使用する方法について説明します。 いくつかの規則が変更されていますが、リンクは Markdown に簡単に追加できます。 リンクは、同じページ内か、近くにある他のページ内か、外部のサイトや URL 上のコンテンツを指します。
 
 docs.microsoft.com サイトのバックエンドでは、Open Publishing Services (OPS) が使われています。これは、[Markdig](https://github.com/lunet-io/markdig) 解析エンジンを使って解析される [CommonMark](https://commonmark.org/) 準拠のマークダウンをサポートしています。 ほとんどのドキュメントが GitHub に格納され、そこで編集可能であるように、このマークダウンのフレーバーのほとんどは [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/) と互換性があります。 Markdown の拡張機能を通じて、その他の機能が追加されています。
 
@@ -43,28 +44,35 @@ docs.microsoft.com サイトのバックエンドでは、Open Publishing Servic
 
 ## <a name="links-from-one-article-to-another"></a>1 つの記事から別の記事へのリンク
 
-同じ docset 内で 1 つの Docs 技術情報記事から別の Docs 技術情報記事へのインライン リンクを作成するには、次のリンク構文を使用します。
+同じ *docset* 内で 1 つの Docs 技術情報記事から別の Docs 技術情報記事へのインライン リンクを作成するには、次のリンク構文を使用します。
 
-- ディレクトリの記事を、同じディレクトリの別の記事にリンクする場合
+- 記事を同じディレクトリの別の記事にリンクする場合:
 
   `[link text](article-name.md)`
 
-- サブディレクトリの記事を、ルート ディレクトリの記事にリンクする場合
+- 記事を現在のディレクトリの親ディレクトリにある記事にリンクする場合:
 
   `[link text](../article-name.md)`
 
-- ルート ディレクトリの記事を、サブディレクトリの記事にリンクする場合
+- 記事を現在のディレクトリのサブディレクトリにある記事にリンクする場合:
 
-  `[link text](./directory/article-name.md)`
+  `[link text](directory/article-name.md)`
 
-- サブディレクトリの記事を、別のサブディレクトリの記事にリンクする場合
+- 記事を現在のディレクトリの親ディレクトリのサブディレクトリにある記事にリンクする場合:
 
   `[link text](../directory/article-name.md)`
 
-- docset 間の記事のリンク (同じリポジトリ内の場合でも):  `[link text](./directory/article-name)`
+> [!NOTE]
+> 前述の例で `~/` をリンクの一部としているものはありません。 リポジトリのルートから始まる絶対パスにリンクするには、リンクを `/` から始めます。 GitHub のソース リポジトリを移動するときに `~/` が生成する無効なリンクを含みます。 `/` が正しく解決するパスから始めます。
 
-> [!IMPORTANT]
-> 上記の例で `~/` をリンクの一部としているのはありません。 リポジトリのルートにあるパスにリンクするには、`/` から始めます。 GitHub のソース リポジトリを移動するときに `~/` が生成する無効なリンクを含みます。 `/` が正しく解決するパスから始めます。
+異なる docset 内の記事にリンクするには、そのファイルが同じリポジトリ内にある場合でも、次の構文を使用します。
+
+`[link text](/docset-root/directory/article-name)`
+   
+たとえば、ルート URL が `https://docs.microsoft.com/dotnet` である記事を、ルート URL が `https://docs.microsoft.com/visualstudio` である記事にリンクする場合、リンクは `[link text](/visualstudio/directory/article-name)` のようになります。
+
+> [!TIP]
+> 同じ *docset* 内の記事は、"docs.microsoft.com" の後の URL フラグメントが同じになります。 たとえば、`https://docs.microsoft.com/dotnet/core/get-started` と `https://docs.microsoft.com/dotnet/framework/install` は同じ docset 内にあり、`https://docs.microsoft.com/dotnet/core/get-started` と `https://docs.microsoft.com/visualstudio/whats-new` は別々の docset 内にあります。
 
 ## <a name="links-to-anchors"></a>アンカーへのリンク
 
@@ -75,12 +83,7 @@ docs.microsoft.com サイトのバックエンドでは、Open Publishing Servic
   `[link](#the-text-of-the-H2-section-separated-by-hyphens)`
   `[Create cache](#create-cache)`
 
-- 同じサブディレクトリの別の記事のアンカーにリンクする場合
-
-  `[link text](article-name.md#anchor-name)`
-  `[Configure your profile](media-services-create-account.md#configure-your-profile)`
-
-- 別のサービスのサブディレクトリのアンカーにリンクする場合
+- 別の記事のアンカーにリンクする場合:
 
   `[link text](../directory/article-name.md#anchor-name)`
   `[Configure your profile](../directory/media-services-create-account.md#configure-your-profile)`
@@ -147,10 +150,6 @@ docs.microsoft.com サイトのバックエンドでは、Open Publishing Servic
 - **次の手順**:「次の手順」セクションには、たとえば MVP のブログに対するリンクを追加しても構いません。 この場合も、サイトを離れることをユーザーが必ず認識できるようにしてください
 - **法的情報**:Microsoft は、すべての ms.com ページにおいて、**利用条件**フッターの**サード パーティのサイトへのリンク**によって法的に保護されています。
 
-## <a name="links-to-msdn-or-technet"></a>MSDN または TechNet へのリンク
-
-MSDN または TechNet へのリンクが必要な場合は、そのトピックへのフル リンクを使用し、そのリンクから "en-us" の言語ロケールを削除します。
-
 ## <a name="links-to-azure-powershell-reference-content"></a>Azure PowerShell 関連コンテンツへのリンク
 
 Azure PowerShell 関連のコンテンツは、2016 年 11 月以来、数回の変更を重ねています。 docs.microsoft.com の他の記事からこのコンテンツにリンクする場合は、次のガイドラインを使用してください。
@@ -174,18 +173,15 @@ URL の構造:
 
 これらの URL を使用すると、コンテンツの最新バージョンにリダイレクトされます。 この方法を使うと、バージョン モニカーを指定する必要はありません。 また、バージョンが変わったときに更新する必要がある概念的コンテンツへのリンクも保持しません。
 
-正確なリンクを作成するには、リンクするページを自分のブラウザーで検索して、その URL をコピーします。
-次に、`https://docs.microsoft.com` とロケール情報を削除します。
-
-目次からリンクするときは、フル URL からロケール情報を削除したものを使用する必要があります。
+正確なリンクを作成するには、リンク先となるページをブラウザーで探し、その URL をコピーして、ロケール コード (たとえば、**en-us**) を削除します。
 
 Markdown の例
 
 ```markdown
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup)
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
-[New-AzureVM](/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
-[New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)
-[Install Azure PowerShell for Service Management](/powershell/azure/servicemanagement/install-azurerm-ps)
-[Install Azure PowerShell](/powershell/azure/install-azurerm-ps)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
+[New-AzureVM](https://docs.microsoft.com/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
+[New-AzureRmVM](https://docs.microsoft.com/powershell/module/azurerm.compute/new-azurermvm)
+[Install Azure PowerShell for Service Management](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azurerm-ps)
+[Install Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
 ```

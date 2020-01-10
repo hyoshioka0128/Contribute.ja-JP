@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: a5ff6c5122a08d2b611fd6b0344a6f5740d93928
-ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
+ms.openlocfilehash: 452cbf97db748532ae2b0e09b4bb558c8f757a61
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592565"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188254"
 ---
 # <a name="markdown-reference"></a>Markdown 参照
 
@@ -73,7 +73,7 @@ Docs では、6 つのレベルの Markdown 見出しがサポートされてい
 - Markdown ファイルごとに与える H1 は 1 つだけにする必要があります。
 - H1 は YML メタデータ ブロックの後ろに来る、ファイルで最初のコンテンツにする必要があります。
 - H2 は右側に自動的に表示され、発行されたファイルのメニューのナビゲーションとなります。 これより下のレベルの見出しは表示されません。そのため、閲覧者がコンテンツを移動する支えになるように H2 を戦略的に利用してください。
-- `<h1>` など、HMTL 見出しは推奨されません。場合によっては、ビルド警告を発生させます。
+- `<h1>` など、HTML 見出しは推奨されません。場合によっては、ビルド警告を発生させます。
 - [ブックマーク](#bookmark-links)を利用し、ファイル内で個別の見出しにリンクできます。
 
 ## <a name="html"></a>HTML
@@ -416,7 +416,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 > - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
 > - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
 
-## <a name="tables"></a>表
+## <a name="tables"></a>Tables
 
 Markdow で表を作成する最も簡単な方法は、パイプと行を使用することです。 ヘッダー付きの標準的な表を作成するには、最初の行の後に点線を続けます。
 
