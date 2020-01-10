@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: meganbradley
 ms.author: mbradley
 ms.date: 10/22/2018
-ms.openlocfilehash: 11f18ce4f769b478108d399b780937f927e0e12d
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 1552ecc3e17e52439a7faa72973813099ce4d253
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288332"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188309"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>VS Code 用 Docs Authoring Pack
 
@@ -32,7 +32,7 @@ Docs Markdown 拡張機能を使用して、相対リンク、画像、その他
 
 ## <a name="how-to-use-the-docs-markdown-extension"></a>Docs Markdown 拡張機能の使用方法
 
-Docs Markdown のメニューにアクセスするには、「`ALT+M`」と入力します。 上下の矢印をクリックまたは使用して、必要な機能を選択するか、フィルターの入力して開始し、メニューで必要な機能が強調表示されたら `ENTER` キーを押します。 次の機能を使用できます:
+Docs Markdown のメニューにアクセスするには、`ALT+M` キーを押します。 上下の矢印をクリックまたは使用して、必要な機能を選択するか、フィルターの入力して開始し、メニューで必要な機能が強調表示されたら `ENTER` キーを押します。 次の機能を使用できます:
 
 |機能     |Description           |
 |-------------|----------------------|

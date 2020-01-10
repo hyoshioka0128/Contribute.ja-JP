@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: ffc44f07929890ef17b3878ba389dfeea82691a6
-ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
+ms.openlocfilehash: 1f43cecb450c988e4f546aa5ecc5907061521f34
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592452"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188292"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>ドキュメントを記述するための Markdown の使用方法
 
@@ -196,7 +196,7 @@ Markdown では、コード スニペットの配置方法として、文中へ�
     ...
     ```
 
-冒頭の 3 つのバッククォート (`) 記号に続くエイリアスは、使用される構文強調表示を定義します。 以下は Docs コンテンツで一般的に使用されるプログラミング言語と、対応するラベルのリストです。
+冒頭の 3 つのバッククォート (\`) 記号に続くエイリアスは、使用される構文強調表示を定義します。 以下は Docs コンテンツで一般的に使用されるプログラミング言語と、対応するラベルのリストです。
 
 これらの言語は、フレンドリ名をサポートし、ほとんどに言語の強調表示機能があります。
 
@@ -230,6 +230,7 @@ Markdown では、コード スニペットの配置方法として、文中へ�
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (ドット小数点区切り記号)|powerapps-dot|
 |PowerApps (コンマ小数点区切り記号)|powerapps-comma|
 |PowerShell|powershell|
