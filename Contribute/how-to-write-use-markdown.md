@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: 1f43cecb450c988e4f546aa5ecc5907061521f34
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 086972acaef9647709fbe43f07c07abde71c7d9f
+ms.sourcegitcommit: fd92198ec2d0ce2d6687b6f1521a82b3fefc60e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188292"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111053"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>ドキュメントを記述するための Markdown の使用方法
 
@@ -389,10 +389,312 @@ Docs 記事では、段落、リンク、リスト、見出しなど、ほとん
 
 ### <a name="code-include-references"></a>コードのインクルード参照
 
-Markdig では、コード スニペット拡張機能を使用した記事へのコードの高度なインクルードがサポートされます。 プログラミング言語の選択や構文の色分けといった GFM 機能に基づく高度なレンダリングに加えて、次のような便利な機能を使用できます。
+Docs コード スニペット Markdown 拡張機能を使用すると、コード サンプルを自分の記事に埋め込んで、それらを言語固有の構文の色分けを使用してレンダリングすることができます。 現在のリポジトリまたは別のリポジトリからコードを取り込むことができます。 次の手順では、その機能を [docs.microsoft.com Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) で使用する方法の概要について説明します。 Visual Studio Code では、 **[プレビュー]** を開けば、コード スニペットをプレビューできます。 プレビューでは、強調表示と対話機能は使用できません。
 
-- 外部リポジトリから集められたコード サンプル/スニペットのインクルード。
-- さまざまな言語でのさまざまなバージョンのコード サンプルをタブに表示する UI。
+> [!NOTE]
+> この拡張機能では、コード コンテンツをそのインラインに含めることはサポートされていません。これを行うには、標準のトリプルティック Markdown 規則を使用します。
+
+#### <a name="code-from-current-repository"></a>現在のリポジトリからのコード
+
+1. Visual Studio Code で、**Alt + M** キーまたは **Option + M** キーをクリックし、[スニペット] を選択します。
+2. [スニペット] を選択すると、[Full Search]\(完全な検索\)、[Scoped Search]\(範囲検索\)、または [Cross-Repository Reference]\(リポジトリ間の参照\) の選択を求めるメッセージが表示されます。 ローカルで検索するには、完全なローカル検索を選択します。
+3. 検索用語を入力してファイルを検索します。 ファイルが見つかったら、そのファイルを選択します。
+4. 次に、スニペットに含めるコードの行を決定するオプションを選択します。 オプションは次のとおりです: **[ID]** 、 **[範囲]** 、および **[なし]** 。
+5. 手順 4 で行った選択に基づき、必要に応じて値を指定します。
+
+コード ファイル全体を表示します。
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs":::
+```
+
+行番号を指定して、コード ファイルの一部を表示します。
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+コード ファイルの一部をスニペット名で表示します。
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+#### <a name="code-from-another-repository"></a>別のリポジトリからのコード
+
+1. Visual Studio Code で、**Alt + M** キーまたは **Option + M** キーをクリックし、[スニペット] を選択します。
+2. [スニペット] を選択すると、[Full Search]\(完全な検索\)、[Scoped Search]\(範囲検索\)、または [Cross-Repository Reference]\(リポジトリ間の参照\) の選択を求めるメッセージが表示されます。 リポジトリ間で検索するには、[Cross-Repository Reference]\(リポジトリ間の参照\) を選択します。
+3. *.openpublishing.publish.config.json* に含まれているリポジトリの中から選択できるようになります。 リポジトリを選択します。
+3. 検索用語を入力してファイルを検索します。 ファイルが見つかったら、そのファイルを選択します。
+4. 次に、スニペットに含めるコードの行を決定するオプションを選択します。 オプションは次のとおりです: **[ID]** 、 **[範囲]** 、および **[なし]** 。
+5. 手順 5 で行った選択に基づき、必要に応じて値を指定します。
+
+スニペット参照は次のようになります。
+
+```markdown
+:::code language="csharp" source="~/samples-durable-functions/samples/csx/shared/Location.csx" highlight="2,5":::
+```
+
+#### <a name="path-to-code-file"></a>コード ファイルへのパス
+
+例:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+例は、ASP.NET ドキュメント リポジトリの [aspnetcore/data/ef-mvc/crud.md](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/crud.md) 記事のファイルです。 コード ファイルが、同じリポジトリ内の [aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs) への相対パスによって参照されています。
+
+#### <a name="selected-line-numbers"></a>選択した行番号
+
+例:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+この例では、*StudentController.cs* コード ファイルの行 2 から 24 までと行 26 のみが表示されます。
+
+次のセクションで説明するように、ハード コーディングされた行番号のスニペットが選ばれます。
+
+#### <a name="named-snippet"></a>名前付きのスニペット
+
+例:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+名前には文字とアンダースコアのみを使用します。
+
+例では、コード ファイルの `snippet_Create` セクションを表示します。 この例のコード ファイルには、`snippet_Create` という名前の C# 領域があります。
+
+```cs
+// code excluded from the snippet
+// <snippet_Create>
+// code included in the snippet
+// </snippet_Create>
+// code excluded from the snippet
+```
+
+可能な限り、行番号の指定ではなく、名前付きセクションを使用してください。 コード ファイルが、行番号の変更を伴う方法で変更されることは不可避なため、行番号の参照は脆弱です。
+このような変更は、必ずしも通知されません。 最終的には、自分の記事に誤った行が表示され始め、変更が行われたという手がかりも得られません。
+
+#### <a name="highlighting-selected-lines"></a>選択した行を強調表示する
+
+例:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26" highlight="2,5":::
+```
+
+この例では、表示されているスニペットの冒頭から数えて、2 番目と 5 番目の行が強調表示されています (強調表示する行番号は、コード ファイルの冒頭からはカウントされていません)。つまり、コード ファイルの行 3 から 6 までが強調表示されています。
+
+#### <a name="interactive-code-snippets"></a>対話型コード スニペット
+
+参照で追加されたコード スニペットの対話モードを有効にできます。 以下に例を示します。
+
+```markdown
+:::code language="powershell" source="PowerShell.ps1" interactive="cloudshell-powershell":::
+```
+
+```markdown
+:::code language="bash" source="Bash.sh" interactive="cloudshell-bash":::
+```
+
+特定のコード ブロックに対してこの機能をオンにするには、`interactive` 属性を使用します。 使用可能な属性値は次のとおりです。
+
+- `cloudshell-powershell` - 前の例にあるように、Azure PowerShell Cloud Shell を有効にする
+- `cloudshell-bash` - Azure Cloud Shell を有効にする
+- `try-dotnet` - Try .NET を有効にします。
+- `try-dotnet-class` - クラス スキャフォールディングを使用した Try .NET を有効にする
+- `try-dotnet-method` - メソッド スキャフォールディングを使用した Try .NET を有効にする
+
+互換性のあるペアとして `language` と `interactive` があります。 たとえば、`interactive` が `try-dotnet` の場合は、言語を `csharp` とする必要があります。 同様に、`cloudshell-powershell` の場合は `powershell` でのみ機能し、`cloudshell-bash` の場合は言語として `bash` でのみ機能します。
+
+Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは独自の Azure アカウントのみに対してコマンドを実行できます。
+
+[Try .NET](https://github.com/dotnet/try) を使用すると、ブラウザーで .NET コード (C#) を対話形式で実行できるようになります。 Try .NET の場合、対話機能には、`try-dotnet`、`try-dotnet-class`、および `try-dotnet-method` の 3 つのオプションがあります。 これらのオプションを使用するために、コード スニペット内で追加の構成を行う必要はありません。 現在、既定で使用できる名前空間は次のとおりです。
+
+- System
+- System.Linq
+- System.Collections.Generic
+- System.Text
+- System.Globalization
+- System.Text.RegularExpressions
+
+`try-dotnet` 属性値を使用すると、ユーザーは C# コードをカスタム コードにラップすることなく、ブラウザーで実行することができます。
+
+例:
+
+```md
+:::code language="csharp" source="relative/path/source.cs" interactive="try-dotnet":::
+```
+
+`try-dotnet-class` 値によって、対話型コンポーネントに渡されるコードにクラスレベルのスキャフォールディングが適用されます。
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-class":::
+```
+
+例:
+
+クラス スキャフォールディングが適用されていないコード スニペット
+
+```md
+public static void Main()
+    {  
+        // Specify the data source.  
+        int[] scores = new int[] { 97, 92, 81, 60 };        // Define the query expression.
+
+        IEnumerable<int> scoreQuery =
+            from score in scores  
+            where score > 80  
+            select score;
+
+        // Execute the query.  
+        foreach (int i in scoreQuery)
+        {  
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+クラス スキャフォールディングが適用されたコード スニペット
+
+```md
+class NameOfClass {
+
+   public static void Main()
+    {
+        // Specify the data source.
+        int[] scores = new int[] { 97, 92, 81, 60 };
+
+        // Define the query expression.
+        IEnumerable<int> scoreQuery =
+            from score in scores
+            where score > 80
+            select score;
+
+        // Execute the query.
+        foreach (int i in scoreQuery)
+        {
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+`try-dotnet-method` 値によって、対話型コンポーネントに渡されるコードにメソッドレベルのスキャフォールディングが適用されます。
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-method":::
+```
+
+例:
+
+メソッド スキャフォールディングが適用されていないコード スニペット
+
+```md
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+```
+
+メソッド スキャフォールディングが適用されたコード スニペット
+
+```md
+public static void Main(string args[]) {
+
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+}
+```
+
+#### <a name="snippet-syntax-reference"></a>スニペットの構文リファレンス
+
+指定したコード言語を使用して、リポジトリ内に格納されているコード スニペットを参照できます。 指定したコード パスのコンテンツが拡張され、ファイルに含まれます。
+
+コード スニペットのフォルダー構造に制限はありません。 コード スニペットを通常のソース コードとして管理できます。
+
+構文:
+
+```md
+:::code language="<language>" source="<path>" <attribute>="<attribute-value>":::
+```
+
+> [!IMPORTANT]
+> この構文は、ブロックの Markdown 拡張機能です。 これは、独自の行で使用する必要があります。
+
+- `<language>` (*省略可能*)
+  - コード スニペットの言語。 詳細については、この記事で後述する「[サポートされている言語](#supported-languages)」を参照してください。
+
+- `<path>` (*必須*)
+  - 参照するコード スニペット ファイルを示すファイル システムの相対パス。
+
+- `<attribute>` および `<attribute-value>` (*省略可能*)
+  - ファイルからコードを取得する方法を指定するために併せて使用。
+    - `range`:　`1,3-5` 行の範囲です。 この例には、1、3、4、5 行が含まれます。
+    - `id`:　`snippet_Create` コード ファイルから挿入する必要があるスニペットの ID です。 この値を範囲と共存させることはできません。
+    - `highlight`:　`2-4,6` 生成されたコード スニペットで強調表示する必要がある行の範囲や数です。 番号付けは、インポートされた範囲ではなく、コード スニペット自体を基準にして行われます。
+    - `interactive`: `cloudshell-powershell`、`cloudshell-bash`、`try-dotnet`、`try-dotnet-class`、`try-dotnet-method` String 値では、有効にする対話機能の種類を決定します。
+
+#### <a name="supported-languages"></a>サポートされている言語
+
+|Name|Markdown ラベル|
+|-----|-------|
+|.NET Core CLI|`dotnetcli`|
+|C# での ASP.NET|`aspx-csharp`|
+|VB での ASP.NET|`aspx-vb`|
+|Azure CLI|`azurecli`|
+|ブラウザーでの Azure CLI|`azurecli-interactive`|
+|ブラウザーでの Azure PowerShell|`azurepowershell-interactive`|
+|AzCopy|`azcopy`|
+|Bash|`bash`|
+|C++|`cpp`|
+|C#|`csharp`|
+|ブラウザーの C#|`csharp-interactive`|
+|コンソール|`console`|
+|CSHTML|`cshtml`|
+|DAX|`dax`|
+|Docker|`Dockerfile`|
+|F#|`fsharp`|
+|HTML|`html`|
+|Java|`java`|
+|JavaScript|`javascript`|
+|JSON|`json`|
+|Kusto Query Language|`kusto`|
+|Markdown|`md`|
+|Objective-C|`objc`|
+|PHP|`php`|
+|PowerShell|`powershell`|
+|Power Query M|`powerquery-m`|
+|protobuf|`protobuf`|
+|Python|`python`|
+|Ruby|`ruby`|
+|SQL|`sql`|
+|Swift|`swift`|
+|VB|`vb`|
+|XAML|`xaml`|
+|XML|`xml`|
+|YAML|`yml`|
+
+#### <a name="code-extensions"></a>コード拡張子
+
+|Name|Markdown ラベル|ファイル拡張子|
+|-----|-------|-----|
+|C#|csharp|.cs、.csx|
+|C++|cpp|.cpp、.h|
+|F#|fsharp|.fs|
+|Java|java|.java|
+|JavaScript|javascript|.js|
+|Python|python|.py|
+|SQL|sql|.sql|
+|VB|vb|.vb|
+|XAML|xaml|.xaml|
+|XML|xml|.xml|
 
 ## <a name="gotchas-and-troubleshooting"></a>問題の発見 + トラブルシューティング
 
