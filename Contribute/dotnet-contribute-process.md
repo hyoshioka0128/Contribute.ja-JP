@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: e54ade313f026b5ea512c0f783d3f8ad83979390
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 161f831bf3f31428f78d3a828b12b4c9ecaffb0e
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288355"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331770"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>.NET ドキュメントに対する共同作成プロセス
 
@@ -169,7 +169,7 @@ Microsoft はこれらのプロジェクトをすぐにビルドできるよう�
 
 ## <a name="the-c-interactive-experience"></a>C# インタラクティブ エクスペリエンス
 
-記事に含めるすべてのサンプルで、ソース言語を示すための[言語タグ](how-to-write-use-markdown.md#code-snippets)が使用されます。 C# による短いコード サンプルでは、`csharp-interactive` 言語タグを使用して、ブラウザー内で実行される C# サンプルを指定することができます。 (インライン コード サンプルでは `csharp-interactive` タグが使用され、ソースから取り込まれるスニペットの場合は、`code-csharp-interactive` タグが使用されます。)これらのコード サンプルでは、記事内のコード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、インタラクティブ コードの実行から得られる任意の出力が出力ウィンドウに表示されます。
+記事に含めるすべてのサンプルで、ソース言語を示すための[言語タグ](code-in-docs.md)が使用されます。 C# による短いコード サンプルでは、`csharp-interactive` 言語タグを使用して、ブラウザー内で実行される C# サンプルを指定することができます。 (インライン コード サンプルでは `csharp-interactive` タグが使用され、ソースから取り込まれるスニペットの場合は、`code-csharp-interactive` タグが使用されます。)これらのコード サンプルでは、記事内のコード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、インタラクティブ コードの実行から得られる任意の出力が出力ウィンドウに表示されます。
 
 C# インタラクティブ エクスペリエンスによって、サンプルを操作する方法が変更されます。 訪問者は、サンプルを実行して結果を表示することができます。 サンプルまたは対応するテキストに出力に関する情報を含める必要があるかどうかを判断するのに役立つ要因が複数あります。
 
