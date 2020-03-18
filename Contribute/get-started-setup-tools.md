@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 04/30/2018
-ms.openlocfilehash: 24d47c4e094c318be75a27dbaaec11d8ead94452
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: ba7e511d756f43acfa5cfbbd228f793d7fbce727
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288559"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331862"
 ---
 # <a name="install-content-authoring-tools"></a>コンテンツ オーサリング ツールのインストール
 
@@ -49,7 +49,7 @@ Markdown は、読みやすく、かつ習得しやすい軽量のマークア�
 
 Markdown テキストは、.md 拡張子の付いたファイルに保存されます。
 
-Markdown の基本と Open Publishing Services (OPS) による Markdown のカスタム拡張機能でサポートされる機能を含む、Markdown での記述方法の詳細については、「[ドキュメントを記述するための Markdown の使用方法](how-to-write-use-markdown.md)」と「[OPS の Markdown 参照](markdown-reference.md)」の記事で説明します。
+Markdown の基本と Open Publishing Services (OPS) による Markdown のカスタム拡張機能でサポートされる機能を含む、Markdown での記述方法の詳細については、「[Markdown リファレンス](markdown-reference.md)」の記事で説明します。
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
 
@@ -74,6 +74,6 @@ Visual Studio Code 用に Docs Authoring Pack をインストールします。 
    詳しくは、[Docs Authoring Pack](how-to-write-docs-auth-pack.md) に関するページを参照してください。
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで、[ローカル Git リポジトリを設定](get-started-setup-local.md)する準備が整いました。

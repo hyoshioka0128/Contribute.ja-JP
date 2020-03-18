@@ -3,30 +3,30 @@ title: docs.microsoft.com の Markdown 参照
 description: Microsoft Docs プラットフォームで使われる Markdown の機能と構文について学習します。
 author: meganbradley
 ms.author: mbradley
-ms.date: 05/18/2018
+ms.date: 01/30/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 452cbf97db748532ae2b0e09b4bb558c8f757a61
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 14cc9f0912149eb342c97d0dd7d2776bd54c84e7
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188254"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331967"
 ---
-# <a name="markdown-reference"></a>Markdown 参照
+# <a name="docs-markdown-reference"></a>Docs Markdown リファレンス
 
-Markdown は、プレーン テキスト形式の構文を使用する軽量のマークアップ言語です。 Docs プラットフォームでは、Markdown の CommonMark 標準がサポートされているほか、docs.microsoft.com で豊富なコンテンツを提供する目的で設計されたカスタム Markdown 拡張機能も一部サポートされています。 この記事では、docs.microsoft.com で Markdown を使用するためのアルファベット順参照を提供します。
+この記事では、docs.microsoft.com (Docs) で Markdown を記述するためのアルファベット順のリファレンスを提供します。
 
-あらゆるテキスト エディターを使用して Markdown を作成できます。 標準の Markdown 構文とカスタム Docs 拡張機能の両方を簡単に挿入できるエディターとして、[Docs Authoring Pack](https://aka.ms/DocsAuthoringPack) をインストールした [VS Code](https://code.visualstudio.com/) をお勧めします。
+[Markdown](https://daringfireball.net/projects/markdown/) は、プレーン テキスト形式の構文を使用する軽量のマークアップ言語です。 Docs では、[Markdig](https://github.com/lunet-io/markdig) 解析エンジンを使って解析される [CommonMark](https://commonmark.org/) 準拠の Markdown がサポートされています。 Docs ではまた、より豊富なコンテンツを Docs サイトに提供するカスタム Markdown 拡張機能もサポートされています。
 
-Docs では、Markdig Markdown エンジンが使用されます。 [https://babelmark.github.io/](https://babelmark.github.io/) では、Markdown のレンダリングを Markdig と他のエンジンで比較テストできます。
+任意のテキスト エディターを使用して Markdown を記述できますが、[Visual Studio Code](https://code.visualstudio.com/) を [Docs Authoring Pack](https://aka.ms/DocsAuthoringPack) と共に使用することをお勧めします。 Docs Authoring Pack には編集ツールとプレビュー機能が用意されており、Docs に表示されたときの記事の外観を確認できます。
 
 ## <a name="alerts-note-tip-important-caution-warning"></a>アラート (Note, Tip, Important, Caution, Warning)
 
-アラートは Docs Markdown の拡張機能です。これにより、コンテンツの重要性を示す色とアイコンを使用して docs.microsoft.com 上でレンダリングされるブロック引用が作成されます。 次の種類のアラートがサポートされています。
+アラートは Markdown の拡張機能です。これにより、docs.microsoft.com 上でレンダリングされるブロック引用が、コンテンツの重要性を示す色とアイコンを使用して作成されます。 次の種類のアラートがサポートされています。
 
-```md
+```markdown
 > [!NOTE]
 > Information the user should notice even if skimming.
 
@@ -45,21 +45,134 @@ Docs では、Markdig Markdown エンジンが使用されます。 [https://bab
 
 これらのアラートは docs.microsoft.com 上で次のように表示されます。
 
-![前の例のアラートで、発行されたドキュメント ページのアイコンと色が異なることを確認する方法を示します](media/alerts-rendering.png)
+> [!NOTE]
+> Information the user should notice even if skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Essential information required for user success.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> [!WARNING]
+> Dangerous certain consequences of an action.
+
+### <a name="angle-brackets"></a>山かっこ
+
+プレースホルダーを示すためなどに、ファイル内のテキストに山かっこを使用する場合は、山かっこを手動でエンコードする必要があります。 そうしないと、それらのテキストは Markdown によって HTML タグとして認識されます。
+
+たとえば、`<script name>` は `&lt;script name&gt;` または `\<script name>` としてエンコードします。
+
+インライン コードとして、またはコード ブロック内に書式設定されたテキストでは、山かっこをエスケープする必要はありません。
+
+## <a name="apostrophes-and-quotation-marks"></a>アポストロフィと引用符
+
+Word から Markdown エディターにコピーしたテキストに、"スマート" (カールした) アポストロフィまたは引用符が含まれていることがあります。 これらを標準的なアポストロフィや引用符にエンコードまたは変更する必要があります。 そうしないと、ファイルが公開されたときに次のように表示されます: Itâ€™s
+
+これらの "スマート" バージョンの記述記号のエンコーディングは次のとおりです。
+
+- 左 (始め) 二重引用符: `&#8220;`
+- 右 (終わり) 二重引用符: `&#8221;`
+- 右 (終わり) 一重引用符またはアポストロフィ: `&#8217;`
+- 左 (始め) 一重引用符 (あまり使用されません): `&#8216;`
+
+## <a name="blockquotes"></a>ブロック引用
+
+ブロック引用は `>` 文字で作成されます。
+
+```md
+> This is a blockquote. It is usually rendered indented and with a different background color.
+```
+
+先の例は次のようにレンダリングされます。
+
+> これはブロック引用です。 通常は、インデントされ、別の背景色で表示されます。
+
+## <a name="bold-and-italic-text"></a>太字や斜体のテキスト
+
+テキストの書式を**太字**に設定するには、テキストを二重のアスタリスクで囲みます。
+
+```markdown
+This text is **bold**.
+```
+
+テキストの書式を*斜体*に設定するには、テキストを一重のアスタリスクで囲みます。
+
+```markdown
+This text is *italic*.
+```
+
+テキストの書式を***太字と斜体***の両方に設定するには、テキストを三重のアスタリスクで囲みます。
+
+```markdown
+This text is both ***bold and italic***.
+```
 
 ## <a name="code-snippets"></a>コード スニペット
 
-Markdown ファイルにはコード スニペットを埋め込むことができます。
+Docs Markdown では、コード スニペットの配置方法として、文中へのインライン配置と、文と文の間への "フェンスされた" 個別ブロックとしての配置の両方がサポートされます。 詳細については、「[ドキュメントにコードを追加する方法](code-in-docs.md)」を参照してください。
 
-```md
-[!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
+## <a name="columns"></a>列
+
+Markdown 拡張機能の**列**を使用すると、ドキュメントの作成者は、基本的な Markdown テーブルよりも柔軟で強力な列ベースのコンテンツ レイアウトを追加できます (基本的な Markdown テーブルは実際に表形式であるデータのみに適しています)。 最大 4 つの列を追加し、オプションの `span` 属性を使用して 2 つ以上の列を結合できます。
+
+列の構文は次のようになります。
+
+```markdown
+:::row:::
+   :::column span="":::
+      Content...
+   :::column-end:::
+   :::column span="":::
+      More content...
+   :::column-end:::
+:::row-end:::
 ```
+
+列には、画像を含めた基本的な Markdown のみを挿入する必要があります。 見出し、テーブル、タブ、およびその他の複雑な構造を含めることはできません。 行で列の外部にコンテンツを含めることはできません。
+
+たとえば、次の Markdown では、幅が 2 列にまたがる 1 個の列と、1 個の標準 (`span` なし) 列が作成されます。
+
+```markdown
+:::row:::
+   :::column span="2":::
+      **This is a 2-span column with lots of text.**
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc
+      ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec
+      rutrum non eros eget consectetur.
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
+```
+
+これは次のようにレンダリングされます。
+
+:::row:::
+   :::column span="2":::
+      **This is a 2-span column with lots of text.**
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec rutrum non eros eget consectetur.
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="headings"></a>見出し
 
 Docs では、6 つのレベルの Markdown 見出しがサポートされています。
 
-```md
+```markdown
 # This is a first level heading (H1)
 
 ## This is a second level heading (H2)
@@ -70,182 +183,134 @@ Docs では、6 つのレベルの Markdown 見出しがサポートされてい
 ```
 
 - 最後の `#` と見出しテキストの間にスペースを入れる必要があります。
-- Markdown ファイルごとに与える H1 は 1 つだけにする必要があります。
-- H1 は YML メタデータ ブロックの後ろに来る、ファイルで最初のコンテンツにする必要があります。
-- H2 は右側に自動的に表示され、発行されたファイルのメニューのナビゲーションとなります。 これより下のレベルの見出しは表示されません。そのため、閲覧者がコンテンツを移動する支えになるように H2 を戦略的に利用してください。
-- `<h1>` など、HTML 見出しは推奨されません。場合によっては、ビルド警告を発生させます。
-- [ブックマーク](#bookmark-links)を利用し、ファイル内で個別の見出しにリンクできます。
+- 各 Markdown ファイルに H1 見出しは 1 つだけ含まれている必要があります。
+- H1 見出しは YML メタデータ ブロックの後ろに来る、ファイルで最初のコンテンツにする必要があります。
+- H2 見出しは、公開されたファイルの右側のナビゲーション メニューに、自動的に表示されます。 これより下のレベルの見出しは表示されません。そのため、閲覧者がコンテンツ内を移動しやすくなるように、H2 を戦略的に利用してください。
+- `<h1>` などの HTML 見出しは推奨されません。場合によっては、ビルド警告が発生します。
+- [ブックマーク リンク](how-to-write-links.md#links-to-anchors)を使用して、ファイル内の個々の見出しにリンクすることができます。
 
 ## <a name="html"></a>HTML
 
-Markdown ではインライン HTML がサポートされていますが、Docs への公開には HTML は推奨されません。値の一覧が制限されていない限り、それによってビルドのエラーまたは警告が発生します。
+Markdown ではインライン HTML がサポートされていますが、Docs への公開には HTML は推奨されません。値の一覧が限られている場合を除き、ビルドのエラーまたは警告が発生します。 
 
 ## <a name="images"></a>イメージ
 
-イメージをインクルードするための構文は次のようになります。
+イメージには既定で次の種類のファイルがサポートされています。
 
-```md
-![[alt text]](<folderPath>)
+- .jpg
+- .png
+
+### <a name="standard-conceptual-images-default-markdown"></a>標準の概念図 (既定の Markdown)
+
+画像を埋め込むための基本的な Markdown 構文は次のとおりです。
+
+```Markdown
+![<alt text>](<folderPath>)
 
 Example:
 ![alt text for image](../images/Introduction.png)
 ```
 
-`alt text` はイメージの簡単な説明であり、`<folder path>` はイメージの相対パスです。 目が不自由な人のためにスクリーン リーダー用の代替テキストが必要になります。 イメージをレンダリングできないサイト バグがある場合にも役立ちます。
+`<alt text>` はイメージの簡単な説明であり、`<folder path>` はイメージの相対パスです。 目が不自由な人のためにスクリーン リーダー用の代替テキストが必要になります。 画像をレンダリングできないサイト バグがある場合にも役立ちます。
 
-イメージはドキュメント セット内の `/media` フォルダーに格納してください。 イメージには既定で次の種類のファイルがサポートされています。
+alt テキスト内のアンダースコアは、前に円記号を付けてエスケープする (`\_`) 必要があります。そうしないと正しくレンダリングされません。 ただし、alt テキストとして使用するためにファイル名をコピーしないでください。 たとえば、次のようにするのではなく、
 
-- .jpg
-- .png
+```markdown
+![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+```
 
-ドキュメント セットの docfx.json ファイルにリソースとして追加することで、他の種類のイメージのサポートを追加できます<!--add link to reference when available--> 。
+次のように記述します。
+
+```markdown
+![Active Directory extension for two-factor authentication, step 4: Configure](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+```
+
+### <a name="standard-conceptual-images-docs-markdown"></a>標準の概念図 (Docs Markdown)
+
+Docs カスタム拡張機能の `:::image:::` では、標準の画像、複雑な画像、アイコンがサポートされています。
+
+標準の画像の場合、以前の Markdown 構文は引き続き機能しますが、新しい拡張機能をお勧めします。新しい拡張機能では、親トピックとは異なるローカライズ スコープの指定など、より強力な機能がサポートされているためです。 ローカル画像を指定する代わりに共有イメージ ギャラリーから選択するなど、その他の高度な機能が今後使用できるようになります。 新しい構文は次のとおりです。
+
+```Markdown
+:::image type="content" source="<folderPath>" alt-text="<alt text>":::
+```
+
+`type="content"` (既定値) の場合、`source` と `alt-text` は必須です。
+
+### <a name="complex-images-with-long-descriptions"></a>長い説明を含む複雑な画像
+
+また、この拡張機能を使用すると、スクリーン リーダーによって読み上げられる、公開されたページに視覚的に表示されない長い説明を含む画像を追加することもできます。 長い説明は、グラフなどの複雑な画像に求められるアクセシビリティの要件です。 構文は次のとおりです。
+
+```Markdown
+:::image type="complex" source="<folderPath>" alt-text="<alt text>":::
+   <long description here>
+:::image-end:::
+```
+
+`type="complex"`、`source`、`alt-text`、長い説明、`:::image-end:::` タグは、すべて必須です。
+
+### <a name="specifying-loc-scope"></a>ローカライズ スコープの指定
+
+画像のローカライズ スコープが、その画像を含む記事またはモジュールのローカライズ スコープと異なる場合があります。 これにより、間違ったグローバル エクスペリエンスが発生する可能性があります。たとえば、製品のスクリーンショットが、その製品を利用可能でない言語に誤ってローカライズされる場合があります。 これを回避するには、種類が `content` および `complex` の画像にオプションの `loc-scope` 属性を指定します。
+
+### <a name="icons"></a>アイコン
+
+画像拡張機能では、アイコンがサポートされています。アイコンは装飾的な画像であり、alt テキストを使用することはできません。 アイコンの構文は次のとおりです。
+
+```Markdown
+:::image type="icon" source="<folderPath>":::
+```
+
+`type="icon"` の場合、`source` のみを指定する必要があります。
+
+## <a name="included-markdown-files"></a>インクルードされた Markdown ファイル
+
+Markdown ファイルを複数の記事で繰り返す必要がある場合は、インクルード ファイルを使用できます。 インクルード機能により、ビルド時に参照をインクルード ファイルの内容に置き換えるように Docs に指示します。 インクルードは、次の方法で使用できます。
+
+- インライン: 一般的なテキスト スニペットを文中にインラインで再利用できます。
+- ブロック: Markdown ファイル全体をブロックとして再利用し、記事のセクション内にネストできます。
+
+インラインまたはブロックによるインクルード ファイルは、Markdown (.md) ファイルです。 これにはあらゆる有効な Markdown を含めることができます。 インクルード ファイルは、通常、リポジトリのルートにある *includes* 共通サブディレクトリ内に配置されます。 記事が公開されると、インクルードされたファイルはその記事にシームレスに統合されます。
+
+### <a name="includes-syntax"></a>インクルード構文
+
+ブロック インクルードは、独立した行でのインクルードです。
+
+```markdown
+[!INCLUDE [<title>](<filepath>)]
+```
+
+インライン インクルードは、行の内部でのインクルードです。
+
+```markdown
+Text before [!INCLUDE [<title>](<filepath>)] and after.
+```
+
+ここで `<title>` はファイルの名前、`<filepath>` はファイルへの相対パスです。 `INCLUDE` は大文字にする必要があり、`<title>` の前にスペースが必要です。
+
+インクルード ファイルに関する要件と考慮事項を次に示します。
+
+- ブロックによるインクルードは、1 つまたは 2 つの段落、共通の手順、共通のセクションといった分量の多いコンテンツに使用してください。 1 つの文よりも小さい場合には、使用しないでください。
+- インクルードは Docs 拡張機能に依存するため、GitHub でレンダリングした記事にインクルードはレンダリングされません。 公開後にのみレンダリングされます。
+- インクルード ファイル内のすべてのテキストの記述には、インクルードを参照する記事内の先行テキストや後続テキストに依存しない完全な文または語句を使用してください。 このガイダンスを無視すると、翻訳不可能な文字列が記事内に発生します。
+- インクルード ファイルを他のインクルード ファイル内に埋め込まないでください。
+- メディア ファイルは、インクルードのサブディレクトリ内にあるメディア フォルダーに配置する必要があります。たとえば、`<repo>` */includes/media* フォルダーです。 *media* ディレクトリのルートには画像を配置しないでください。 画像がないインクルードの場合は、対応する *media* ディレクトリは不要です。
+- 通常の記事と同様に、インクルード ファイル間でメディアを共有しないでください。 インクルードおよび記事ごとに、一意の名前を持つ個別ファイルを使用してください。 インクルードに関連するメディア フォルダー内にメディア ファイルを格納してください。
+- 記事の唯一のコンテンツとしてインクルードを使用しないでください。  インクルードの目的は、記事内のほかのコンテンツを補完することです。
 
 ## <a name="links"></a>リンク
 
-多くの場合、Docs では、他のファイルやページへの標準の Markdown リンクが使用されます。 リンクの種類については、下のセクションに説明があります。
-
-> [!TIP]
-> Docs Authoring Pack for VS Code を利用すれば、パスを理解する面倒な作業なく、相対的なリンクとブックマークを正しく挿入できます。
-
-> [!IMPORTANT]
-> Microsoft サイトへのリンクに en-us のようなロケール コードを含めないでください。 ハードコーディングされたロケール コードはローカライズされたコンテンツのレンダリングを妨げます。他のロケールのお客様に不自由を与えることになり、また、大きなローカライズ コストを発生させます。 ブラウザーから URL をコピーすると、既定ではロケール コードが含まれます。そのため、リンクを作成するとき、手動で削除する必要があります。 たとえば、次のような URL を使用します。
->
-> `[Microsoft](https://www.microsoft.com)`
->
-> 次のような URL は使用しないでください。
->
-> `[Microsoft](https://www.microsoft.com/en-us/)`
-
-### <a name="relative-links-to-files-in-the-same-doc-set"></a>同じドキュメント セットのファイルの相対リンク
-
-相対パスとは、現在のファイルから見た目的のファイルまでのパスです。 Docs では、相対パスを使用することで、同じドキュメント セット内の別のファイルにリンクすることができます。 相対パスの構文は次のようになります。
-
-```md
-[link text](../../folder/filename.md)
-```
-
-`../` は階層で 1 つ上を示します。
-
-- 相対パスはビルド中に解決されますが、その中で .md 拡張が削除されます。
-- "../" を使用して親フォルダー内のファイルにリンクできますが、そのファイルは同じドキュメント セット内に置かれている必要があります。 "../" を使用して別のドキュメント セット フォルダー内のファイルにリンクすることはできません。
-- Docs では、"~" で始まる特殊な形式の相対パスもサポートされています (~/foo/bar.md など)。 この構文は、ドキュメント セットのルート フォルダーから相対的に見たファイルを示しています。 この種類のパスも、ビルド中に検証および解決されます。
-
-> [!IMPORTANT]
-> 相対パスにファイル拡張子を含めてください。 その相対パスの目的ファイルの存在がビルドで検証されます。 相対パスにファイル拡張子が含まれない場合、ビルドにより、リンクが壊れていると警告されます。 たとえば、次のような URL を使用します。
->
-> `[link text](../../folder/filename.md)`
->
-> 次のような URL は使用しないでください。
->
-> `[link text](../../folder/filename)`
-
-### <a name="site-relative-links-to-other-files-on-docs"></a>Docs 上の他のファイルへのサイト相対リンク
-
-```md
-[Azure and Linux](/articles/virtual-machines/linux/overview)
-```
-
-ファイル拡張子 (.md) を含めません。 Azure "articles" ドキュメント セットの外から Linux 概要ファイルにリンクされています。
-
-### <a name="links-to-external-sites"></a>外部サイトへのリンク
-
-```md
-[Microsoft](https://www.microsoft.com)
-```
-
-別の Web ページへの URL ベースのリンク (https:// を含める必要があります)。
-
-### <a name="bookmark-links"></a>ブックマーク リンク
-
-同じリポジトリにおける別ファイルの見出しへのブックマーク リンクは次のようになります。 次に例を示します。
-
-```md
-[Managed Disks](../../linux/overview.md#managed-disks)
-```
-
-現在のファイルにある見出しへのブックマーク リンクは次のようになります。
-
-```md
-[Managed Disks](#managed-disks)
-```
-
-ハッシュ記号 `#` に見出しの単語を続けて使用します。 見出しテキストをリンク テキストに変更するには、次の操作を行います。
-- すべて小文字を使用する
-- 句読点を削除する
-- スペースをダッシュに置き換える
-
-たとえば、見出しの名前が "2.2 Security concerns" の場合は、ブックマークのリンク テキストは "#22-security-concerns" になります。
-
-### <a name="explicit-anchor-links"></a>明示的なアンカー リンク
-
-`<a>` HTML タグを使用する明示的なアンカー リンクは、ハブ ページと待ち受けページを除き、**必須ではないか、推奨されません**。 一般的な Markdown ファイルでは、前述のブックマークを使用してください。 ハブ ページと待ち受けページについては、アンカーを次のように使用します。
-
-`## <a id="AnchorText"> </a>Header text` または `## <a name="AnchorText"> </a>Header text`
-
-明示的なアンカーにリンクするには、次の構文を使用します。
-
-```md
-To go to a section on the same page:
-[text](#AnchorText)
-
-To go to a section on another page.
-[text](FileName.md#AnchorText)
-```
-
-### <a name="xref-cross-reference-links"></a>XREF (相互参照) リンク
-
-現在のドキュメント セットまたは他のドキュメント セットにある自動生成 API 参照ページにリンクするには、一意の ID (UID) を持つ XREF リンクを使用します。
-
-> [!NOTE]
-> 他のドキュメント セットにある API 参照ページを参照するには、`docfx.json` ファイルで `xrefService` 構成を追加する必要があります。
-> ```
-> "build": {
->   ...
->   "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
-> }
-> ```
-
-UID は、クラスとメンバーの完全修飾名に相当します。 UID の後ろに * を追加すると、リンクは固有の API ではなく、オーバーロードのページを表すようになります。 たとえば、`List<T>.BinarySearch*` を使用すると、`List<T>.BinarySearch(T, IComparer<T>)` のような固有のオーバーロードにリンクする代わりに BinarySearch Method ページにリンクします。
-
-次のいずれかの構文を使用できます。
-
-- 自動リンク: `<xref:UID> or <xref:UID?displayProperty=nameWithType>`
-
-  任意の `displayProperty` クエリ パラメーターにより、完全修飾のリンク テキストが生成されます。 既定では、リンク テキストに表示されるのはメンバー名または型名のみです。
-
-- マークダウン リンク: `[link text](xref:UID)`
-  
-  表示されるリンク テキストをカスタマイズする場合に使用します。
-
-例:
-
-- `<xref:System.String>` は "String" としてレンダリングされます。
-- `<xref:System.String?displayProperty=nameWithType>` は "System.String" としてレンダリングされます。
-- `[String class](xref:System.String)` は "String class" としてレンダリングされます。
-
-現在、UID を検索する簡単な方法はありません。 <!-- ? -->API の UID を検索する最善の方法は、リンクする API のページのソースを表示し、ms.assetid という値を検索することです。 個別のオーバーロードの値は、ソースには表示されません。 将来的に、より優れたシステムを提供できるように取り組んでいます。
-
-UID に特殊文字 \`、\#、\* が含まれている場合、UID の値は、それぞれ `%60`、`%23`、`%2A` のように HTML エンコードする必要があります。 かっこがエンコードされている場合もありますが、これは必須ではありません。
-
-例:
-
-- System.Threading.Tasks.Task\`1 は、`System.Threading.Tasks.Task%601` になります
-- System.Exception.\#ctor は、`System.Exception.%23ctor` になります
-- System.Lazy\`1.\#ctor(System.Threading.LazyThreadSafetyMode) は、`System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29` になります
-
-<!-- leave out of Contributor Guide for now
-Using XREF may require some configuration. For more information, see XREF Service.
--->
+リンクの構文の詳細については、「[ドキュメントでリンクを使用する](how-to-write-links.md)」を参照してください。
 
 ## <a name="lists-numbered-bulleted-checklist"></a>リスト (番号付き、箇条書き、チェックリスト)
 
 ### <a name="numbered-list"></a>番号付きリスト
 
-番号付きリストを作成するには、すべての 1 を使用できます。これは公開されると、連続する一覧としてレンダリングされます。 ソースを読みやすくするために、リストをインクリメントできます。
+番号付きリストを作成するには、すべて 1 を使用できます。 数値は、公開時には連続したリストとして昇順にレンダリングされます。 ソースを読みやすくするために、リストを手動でインクリメントできます。
 
-入れ子になっているリストなど、リストには文字を使用しないでください。 Docs に公開するとき、それらは正しくレンダリングされません。番号を使用する入れ子リストは、公開されると、小文字としてレンダリングされます。 次に例を示します。
+入れ子になっているリストを含めて、リストには文字を使用しないでください。 Docs に公開したとき、それらは正しくレンダリングされません。番号を使用する入れ子リストは、公開されると、小文字としてレンダリングされます。 次に例を示します。
 
-```md
+```markdown
 1. This is
 1. a parent numbered list
    1. and this is
@@ -263,9 +328,9 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 ### <a name="bulleted-list"></a>箇条書き
 
-箇条書きを作成するには、`-` の後ろにスペースを入れてから各行を続けます。
+箇条書きを作成するには、`-` または `*` の後ろにスペースを入れてから各行を続けます。
 
-```md
+```markdown
 - This is
 - a parent bulleted list
   - and this is
@@ -281,18 +346,20 @@ Using XREF may require some configuration. For more information, see XREF Servic
   - a nested bulleted list
 - All done!
 
+`-` と `*` のどちらの構文を使用する場合も、それを記事内で一貫して使用してください。
+
 ### <a name="checklist"></a>チェックリスト
 
-チェックリストは、カスタム Markdown 拡張経由で docs.microsoft.com (のみ) で使用する場合に利用できます。
+チェックリストは、カスタム Markdown 拡張機能を使って Docs で使用する場合に利用できます。
 
-```md
+```markdown
 > [!div class="checklist"]
 > * List item 1
 > * List item 2
 > * List item 3
 ```
 
-このサンプルは docs.microsoft.com で次のようにレンダリングされます。
+この例は Docs 上に次のようにレンダリングされます。
 
 > [!div class="checklist"]
 > * List item 1
@@ -300,38 +367,89 @@ Using XREF may require some configuration. For more information, see XREF Servic
 > * List item 3
 
 "これから学習する内容" や "今回学習した内容" をまとめる目的で、記事の冒頭や最後でチェックリストを使用します。 記事全体でランダムなチェックリストを追加しないでください。
-<!-- is this guidance still accurate? -->
 
 ## <a name="next-step-action"></a>次のステップ アクション
 
-カスタム拡張を使用し、次のステップ アクション ボタンを docs.microsoft.com (のみ) のページに追加できます。
+カスタム拡張機能を使用して、次のステップ アクション ボタンを Docs のページに追加できます。
 
 構文は次のようになります。
 
-```md
+```markdown
 > [!div class="nextstepaction"]
 > [button text](link to topic)
 ```
 
 次に例を示します。
 
-```md
+```markdown
 > [!div class="nextstepaction"]
-> [Learn about basic style](style-quick-start.md)
+> [Learn about adding code to articles](code-in-docs.md)
 ```
 
 これは次のようにレンダリングされます。
 
 > [!div class="nextstepaction"]
-> [Learn about basic style](style-quick-start.md)
+> [Learn about adding code to articles](code-in-docs.md)
 
 別の Web ページへの Markdown リンクを含め、次のステップ アクションでは、サポートされているあらゆるリンクを使用できます。 ほとんどの場合、次のアクション リンクは同じドキュメント セット内の別のファイルへの相対リンクになります。
 
-## <a name="section-definition"></a>セクション定義
+## <a name="non-localized-strings"></a>ローカライズされない文字列
 
-<!-- more info about this would be helpful! -->
-セクションを定義する必要がある場合があります。 この構文は多くの場合、コード表に使用されます。
-次の例を参照してください。
+カスタム Markdown 拡張機能の `no-loc` を使用して、ローカライズ プロセスで無視するコンテンツの文字列を識別できます。
+
+呼び出されるすべての文字列は、大文字と小文字が区別されます。つまり、文字列がローカライズで無視されるためには、正確に一致する必要があります。
+
+個々の文字列をローカライズ不可としてマークするには、次の構文を使用します。
+
+```markdown
+:::no-loc text="String":::
+```
+
+たとえば次の場合、ローカライズ プロセスで `Document` の 1 つのインスタンスのみが無視されます。
+
+```markdown
+# Heading 1 of the Document
+
+Markdown content within the :::no-loc text="Document":::.  The are multiple instances of Document, document, and documents.
+```
+
+> [!NOTE]
+> 特殊文字をエスケープするには `\` を使用します。
+> ```markdown
+> Lorem :::no-loc text="Find a \"Quotation\""::: Ipsum.
+> ```
+
+YAML ヘッダーのメタデータを使用して、現在の Markdown ファイル内で任意の文字列のすべてのインスタンスをローカライズ不可としてマークすることもできます。
+
+```yml
+author: cillroy
+no-loc: [Global, Strings, to be, Ignored]
+```
+
+> [!NOTE]
+> *docfx. json* ファイル内のグローバル メタデータとして、no-loc メタデータはサポートされていません。 ローカライズ パイプラインでは *docfx. json* ファイルが読み取られないため、個々のソース ファイルのそれぞれに no-loc メタデータを追加する必要があります。
+
+次の例では、メタデータ `title` と Markdown ヘッダーの両方で、`Document` という単語がローカライズ プロセスで無視されます。
+
+メタデータ `description` と Markdown のメイン コンテンツでは、`document` という単語がローカライズされています。これは、大文字 `D` で始まっていないためです。
+
+```markdown
+---
+title: Title of the Document
+author: author-name
+description: Description for the document
+no-loc: [Title, Document]
+---
+# Heading 1 of the Document
+
+Markdown content within the document.
+```
+
+<!-- commenting out for now because no one knows what this means
+## Section definition
+
+You might need to define a section. This syntax is mostly used for code tables.
+See the following example:
 
 ````
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
@@ -343,7 +461,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 > ```
 ````
 
-前述のブロック引用 Markdown テキストは、次のように表示されます。
+The preceding blockquote Markdown text will be rendered as:
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
 > ```cs
 > <cs code text>
@@ -351,76 +469,99 @@ Using XREF may require some configuration. For more information, see XREF Servic
 > ```javascript
 > <js code text>
 > ```
+-->
 
 ## <a name="selectors"></a>セレクター
 
-<!-- could be more clear! -->
-同じ記事に対してさまざまなページをつなげる場合は、セレクターを使用できます。 閲覧者はページを切り替えることができます。
+セレクターは、同じ記事の複数のフレーバーをユーザーが切り替えられるようにする UI 要素です。 一部のドキュメント セットにおいて、テクノロジまたはプラットフォーム間の実装の違いに対処するために使用されます。 一般的に、セレクターが最も当てはまるのは、開発者向けのモバイル プラットフォームのコンテンツです。
 
-> [!NOTE]
-> この拡張機能は、docs.microsoft.com と MSDN で機能が異なります。 <!-- should we keep info about MSDN? If so say how they differ?-->
+セレクターを使用する各記事ファイルに配置されるセレクター Markdown は同じであるため、ご自分の記事のセレクターをインクルード ファイル内に配置することをお勧めします。 そのうえで、同じセレクターを使用するご自分のすべての記事ファイル内で、そのインクルード ファイルを参照できます。
+
+セレクターには単一セレクターと複数のセレクターの 2 種類があります。
 
 ### <a name="single-selector"></a>単一セレクター
 
-```
+```markdown
 > [!div class="op_single_selector"]
-> - [Universal Windows](how-to-write-use-markdown.md)
-> - [Windows Phone](how-to-write-use-markdown.md)
-> - [iOS](how-to-write-use-markdown.md)
-> - [Android](how-to-write-use-markdown.md)
-> - [Kindle](how-to-write-use-markdown.md)
-> - [Baidu](how-to-write-use-markdown.md)
-> - [Xamarin.iOS](how-to-write-use-markdown.md)
-> - [Xamarin.Android](how-to-write-use-markdown.md)
+> - [Universal Windows](../articles/notification-hubs-windows-store-dotnet-get-started/)
+> - [Windows Phone](../articles/notification-hubs-windows-phone-get-started/)
+> - [iOS](../articles/notification-hubs-ios-get-started/)
+> - [Android](../articles/notification-hubs-android-get-started/)
+> - [Kindle](../articles/notification-hubs-kindle-get-started/)
+> - [Baidu](../articles/notification-hubs-baidu-get-started/)
+> - [Xamarin.iOS](../articles/partner-xamarin-notification-hubs-ios-get-started/)
+> - [Xamarin.Android](../articles/partner-xamarin-notification-hubs-android-get-started/)
 ```
 
 これは次のようにレンダリングされます。
 
 > [!div class="op_single_selector"]
-> - [Universal Windows](how-to-write-use-markdown.md)
-> - [Windows Phone](how-to-write-use-markdown.md)
-> - [iOS](how-to-write-use-markdown.md)
-> - [Android](how-to-write-use-markdown.md)
-> - [Kindle](how-to-write-use-markdown.md)
-> - [Baidu](how-to-write-use-markdown.md)
-> - [Xamarin.iOS](how-to-write-use-markdown.md)
-> - [Xamarin.Android](how-to-write-use-markdown.md)
+> - [Universal Windows](how-to-write-links.md)
+> - [Windows Phone](how-to-write-links.md)
+> - [iOS](how-to-write-links.md)
+> - [Android](how-to-write-links.md)
+> - [Kindle](how-to-write-links.md)
+> - [Baidu](how-to-write-links.md)
+> - [Xamarin.iOS](how-to-write-links.md)
+> - [Xamarin.Android](how-to-write-links.md)
 
 ### <a name="multi-selector"></a>複数のセレクター
 
-```
+```markdown
 > [!div class="op_multi_selector" title1="Platform" title2="Backend"]
-> - [(iOS | .NET)](how-to-write-workflows-major.md)
-> - [(iOS | JavaScript)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | .NET)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | Javascript)](how-to-write-workflows-major.md)
-> - [(Windows Phone | .NET)](how-to-write-workflows-major.md)
-> - [(Windows Phone | Javascript)](how-to-write-workflows-major.md)
-> - [(Android | .NET)](how-to-write-workflows-major.md)
-> - [(Android | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
+> - [(iOS | .NET)](./mobile-services-dotnet-backend-ios-get-started-push.md)
+> - [(iOS | JavaScript)](./mobile-services-javascript-backend-ios-get-started-push.md)
+> - [(Windows universal C# | .NET)](./mobile-services-dotnet-backend-windows-universal-dotnet-get-started-push.md)
+> - [(Windows universal C# | Javascript)](./mobile-services-javascript-backend-windows-universal-dotnet-get-started-push.md)
+> - [(Windows Phone | .NET)](./mobile-services-dotnet-backend-windows-phone-get-started-push.md)
+> - [(Windows Phone | Javascript)](./mobile-services-javascript-backend-windows-phone-get-started-push.md)
+> - [(Android | .NET)](./mobile-services-dotnet-backend-android-get-started-push.md)
+> - [(Android | Javascript)](./mobile-services-javascript-backend-android-get-started-push.md)
+> - [(Xamarin iOS | Javascript)](./partner-xamarin-mobile-services-ios-get-started-push.md)
+> - [(Xamarin Android | Javascript)](./partner-xamarin-mobile-services-android-get-started-push.md)
 ```
 
 これは次のようにレンダリングされます。
 
 > [!div class="op_multi_selector" title1="プラットフォーム" title2="バックエンド"]
-> - [(iOS | .NET)](how-to-write-workflows-major.md)
-> - [(iOS | JavaScript)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | .NET)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | Javascript)](how-to-write-workflows-major.md)
-> - [(Windows Phone | .NET)](how-to-write-workflows-major.md)
-> - [(Windows Phone | Javascript)](how-to-write-workflows-major.md)
-> - [(Android | .NET)](how-to-write-workflows-major.md)
-> - [(Android | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
+> - [(iOS | .NET)](how-to-write-links.md)
+> - [(iOS | JavaScript)](how-to-write-links.md)
+> - [(Windows universal C# | .NET)](how-to-write-links.md)
+> - [(Windows universal C# | Javascript)](how-to-write-links.md)
+> - [(Windows Phone | .NET)](how-to-write-links.md)
+> - [(Windows Phone | Javascript)](how-to-write-links.md)
+> - [(Android | .NET)](how-to-write-links.md)
+> - [(Android | Javascript)](how-to-write-links.md)
+> - [(Xamarin iOS | Javascript)](how-to-write-links.md)
+> - [(Xamarin Android | Javascript)](how-to-write-links.md)
+
+## <a name="subscript-and-superscript"></a>添字と上付き文字
+
+添字または上付き文字は、数式について記述する場合など、技術的な正確性のために必要な場合に限って使用してください。 脚注など、標準以外のスタイルでは使用しないでください。
+
+添字と上付き文字の両方について、HTML を使用します。
+
+```html
+Hello <sub>This is subscript!</sub>
+```
+
+これは次のようにレンダリングされます。
+
+Hello <sub>This is subscript!</sub>
+
+```html
+Goodbye <sup>This is superscript!</sup>
+```
+
+これは次のようにレンダリングされます。
+
+Goodbye <sup>This is superscript!</sup>
 
 ## <a name="tables"></a>Tables
 
 Markdow で表を作成する最も簡単な方法は、パイプと行を使用することです。 ヘッダー付きの標準的な表を作成するには、最初の行の後に点線を続けます。
 
-```md
+```markdown
 |This is   |a simple   |table header|
 |----------|-----------|------------|
 |table     |data       |here        |
@@ -434,55 +575,38 @@ Markdow で表を作成する最も簡単な方法は、パイプと行を使用
 |table     |data       |here        |
 |it doesn't|actually   |have to line up nicely!||
 
-ヘッダーなしで表を作成することもできます。 たとえば、複数列のリストを作成するには、次の操作を行います。
-
-```md
-|   |   |
-| - | - |
-| This | table |
-| has no | header |
-```
-
-これは次のようにレンダリングされます。
-
-|   |   |
-| - | - |
-| This | table |
-| has no | header |
-
 コロンを使用して、列を整列することができます。
 
-```md
-|                  |
-|------------------|
-|    right aligned:|
-|:left aligned     |
-|:centered        :|
+```markdown
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
 ```
 
 これは次のようにレンダリングされます。
 
-|                  |
-|------------------|
-|    right aligned:|
-|:left aligned     |
-|:centered        :|
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
 
 > [!TIP]
 > Docs Authoring Extension for VS Code では、基本的な Markdown 表を簡単に追加できます。
 >
 > [オンラインの表生成機能](http://www.tablesgenerator.com/markdown_tables)を使用することもできます。
 
-### <a name="mx-tdbreakall"></a>mx-tdBreakAll
+### <a name="line-breaks-within-words-in-any-table-cell"></a>任意のテーブル セルでの単語内の改行
 
-> [!IMPORTANT]
-> これは docs.microsoft.com サイトでのみ機能します。
-
-Markdown で表を作成すると、表が右側のナビゲーションまで広がって、表が読めなくなることがあります。 これは、必要に応じて、Docs のレンダリングで表内の改行を許可することで解決できます。 カスタム クラス `[!div class="mx-tdBreakAll"]` を使用して表を折り返すだけです。
+Markdown テーブルに長い単語があると、テーブルが右側のナビゲーションまで広がって読めなくなることがあります。 これを解決するには、Docs のレンダリングで必要に応じて単語内に改行を自動的に挿入できるようにします。 カスタム クラス `[!div class="mx-tdBreakAll"]` を使用して表を折り返すだけです。
 
 クラス名が `mx-tdBreakAll` の `div` で折り返される 3 行の表の Markdown サンプルを次に示します。
 
-```md
+```markdown
 > [!div class="mx-tdBreakAll"]
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
@@ -500,84 +624,10 @@ Markdown で表を作成すると、表が右側のナビゲーションまで�
 > |NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command, including a list of all options and behaviors.|
 
-### <a name="mx-tdcol2breakall"></a>mx-tdCol2BreakAll
+### <a name="line-breaks-within-words-in-second-column-table-cells"></a>2 番目の列のテーブル セルでの単語内の改行
 
-> [!IMPORTANT]
-> これは docs.microsoft.com サイトでのみ機能します。
-
-ときどき、表の 2 番目の列に非常に長い単語がある場合があります。 そのような単語を適切に分割するために、前述のような `div` ラッパー構文を使用して `mx-tdCol2BreakAll` クラスを適用できます。
+テーブルの 2 番目の列のみで、単語内に改行を自動的に挿入することもできます。 改行を 2 番目の列に限定するには、前に示した `div` のラッパー構文を使用して `mx-tdCol2BreakAll` クラスを適用します。
 
 ### <a name="html-tables"></a>HTML テーブル
 
-docs.microsoft.com の場合、HTML テーブルは推奨されません。 ソースでは人間が読めないようになっています。このことは Markdown の重要な原則の 1 つです。
-
-<!--If you use HTML tables and your Markdown is not being rendered between the two tables, you need to add a closing `br` tag after the closing `table` tag.
-
-![break HTML tables](media/break-tables.png)
--->
-
-## <a name="videos"></a>動画
-
-### <a name="embedding-videos-into-a-markdown-page"></a>Markdown ページに動画を埋め込む
-
-現在、Docs では、次の 3 つの場所のいずれかに公開される動画がサポートされます。
-
-- YouTube
-- Channel 9
-- Microsoft 独自の 'One Player' システム
-
-次の構文を使用してビデオを埋め込むことができ、そのビデオは Docs でレンダリングされます。
-
-```md
-> [!VIDEO <embedded_video_link>]
-```
-
-例:
-
-```md
-> [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
-
-> [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-```
-
-これは次のようにレンダリングされます。
-
-```html
-<iframe src="https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-
-<iframe src="https://www.youtube-nocookie.com/embed/iAtwVM-Z7rY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-```
-
-公開されたページでは、次のように表示されます。
-
-> [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
-
-> [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-
-> [!IMPORTANT]
-> CH9 ビデオの URL は `https` で始まり、`/player` で終わる必要があります。 そうしないと、ビデオだけでなくページ全体が埋め込まれます。
-
-### <a name="uploading-new-videos"></a>新しい動画をアップロードする
-
-新しい動画は次のプロセスでアップロードしてください。
-
-1. IDWEB で **docs_video_users** グループに参加します。
-1. [https://aka.ms/VideoUploadRequest](https://aka.ms/VideoUploadRequest ) に移動し、動画の詳細を入力します。 次の項目が必要になります (いずれも公開されません)。
-    1. 動画のタイトル。
-    1. 動画が関連する製品/サービスの一覧。
-    1. 動画がホストされる対象ページまたは (ページをまだ用意していない場合) ドキュメント セット。
-    1. 動画の MP4 ファイルへのリンク (ファイルを置く場所を用意していない場合、`\\scratch2\scratch\apex` に一時的に置くことができます)。 MP4 ファイルは 720p 以上にしてください。
-    1. 動画の説明。
-1. 項目を送信 (保存) します。
-1. 2 営業日以内に動画がアップロードされます。 埋め込みに必要なリンクは作業項目に配置されます。解決されて*戻されます*。
-1. 動画リンクを取得したら、作業項目を閉じます。
-1. その後、次の構文を利用し、動画リンクを投稿に追加できます。
-
-   ```md
-   > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-   ```
+docs.microsoft.com の場合、HTML テーブルは推奨されません。 それらはソースで人間が判読できるようになっていません。このことは Markdown の重要な原則の 1 つです。

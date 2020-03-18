@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 998ebf90c8a162451dd4ca2e7c8a55833ed9d408
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 8d4d8c572435b9261038017c04dcad78ec83fe67
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288362"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331749"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>.NET ドキュメントのメタデータと Markdown テンプレート
 
@@ -43,7 +43,7 @@ ms.date: [CREATION/UPDATE DATE - mm/dd/yyyy]
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>基本的 Markdown、GFM、特殊文字
 
-Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については [Markdown](how-to-write-use-markdown.md) と [Markdown リファレンス](markdown-reference.md)に関する全般記事で学習できます。
+Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については、[Markdown リファレンス](markdown-reference.md)の記事で学習できます。
 
 Markdown では、書式設定に \*、\`、\# のような特殊文字が使用されます。 このような文字をコンテンツに含める場合、次の 2 つのいずれかを行う必要があります。
 
@@ -122,11 +122,11 @@ UID の後ろに \* (または `%2A`) を追加すると、リンクは固有の
 
 特定のメソッド オーバーロードにリンクするには、メソッドの各パラメーターの完全修飾型名を含める必要があります。 たとえば、\<xref:System.DateTime.ToString> はパラメーターなしの [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) メソッドにリンクされますが、\<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> は [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) メソッドにリンクされます。
 
-[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) など、ジェネリック型にリンクするには、\` (`%60`) 文字にジェネリック型パラメーターの番号を続けます。 たとえば、`<xref:System.Nullable%601>` は [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 型にリンクされますが、`<xref:System.Func%602>` [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) デリゲートにリンクされます。
+[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) など、ジェネリック型にリンクするには、\` (`%60`) 文字にジェネリック型パラメーターの番号を続けます。 たとえば、`<xref:System.Nullable%601>` は [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 型にリンクされますが、`<xref:System.Func%602>`[System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) デリゲートにリンクされます。
 
 ## <a name="code"></a>コード
 
-コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute-process.md#contributing-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 コードを含める基本的規則は、[コード](how-to-write-use-markdown.md#code-snippets)の一般的なガイダンスにあります。
+コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute-process.md#contributing-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 コードを含める基本的規則は、[コード](code-in-docs.md)の一般的なガイダンスにあります。
 
 次の構文でコードを含めることができます。
 
@@ -183,7 +183,7 @@ UID の後ろに \* (または `%2A`) を追加すると、リンクは固有の
 [![alt text for linked image](../images/Logo_DotNet.png)](https://dot.net)
 ```
 
-## <a name="videos"></a>動画
+## <a name="videos"></a>ビデオ
 
 現在のところ、Channel 9 動画と YouTube 動画をいずれも次の構文で埋め込むことができます。
 

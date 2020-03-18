@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: sdwheeler
 ms.author: sewhee
 ms.date: 10/09/2019
-ms.openlocfilehash: e7ee9295794adfde78a2d500f0de3309dd3c821a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 073a44240b1aa4baa9e655dab069097d21cdd66d
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290359"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331931"
 ---
 # <a name="markdown-style-guide-for-powershell-docs"></a>PowerShell-Docs の Markdown スタイル ガイド
 
@@ -59,7 +59,7 @@ Windows 固有のテクノロジについて説明されている場合は、"Wi
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>基本的 Markdown、GFM、特殊文字
 
-Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については [Markdown](../how-to-write-use-markdown.md) と [Markdown リファレンス](../markdown-reference.md)に関する全般記事で学習できます。
+Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については、「[Markdown リファレンス](../markdown-reference.md)」の記事で学習できます。
 
 Markdown では、書式設定に \*、\`、\# のような特殊文字が使用されます。 このような文字をコンテンツに含める場合、次の 2 つのいずれかを行う必要があります。
 
