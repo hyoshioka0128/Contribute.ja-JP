@@ -7,12 +7,12 @@ ms.date: 01/30/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 14cc9f0912149eb342c97d0dd7d2776bd54c84e7
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.openlocfilehash: c1568264c687ebaf26048f5432fdea7d5132c012
+ms.sourcegitcommit: 216ef77ca2cd1eeb31c6c89d96778b178fc0d540
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78331967"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070076"
 ---
 # <a name="docs-markdown-reference"></a>Docs Markdown リファレンス
 
@@ -627,6 +627,19 @@ Markdown テーブルに長い単語があると、テーブルが右側のナ�
 ### <a name="line-breaks-within-words-in-second-column-table-cells"></a>2 番目の列のテーブル セルでの単語内の改行
 
 テーブルの 2 番目の列のみで、単語内に改行を自動的に挿入することもできます。 改行を 2 番目の列に限定するには、前に示した `div` のラッパー構文を使用して `mx-tdCol2BreakAll` クラスを適用します。
+
+### <a name="data-matrix-tables"></a>データ マトリックス テーブル
+
+データ マトリックス テーブルには、ヘッダーと重み付けされた最初の列の両方が備わり、左上に空のセルがあるマトリックスが作成されます。 Docs には、データ マトリックス テーブル用のカスタム Markdown が用意されています。
+
+```md
+|                  |Header 1 |Header 2|
+|------------------|---------|--------|
+|**First column A**|Cell 1A  |Cell 2A |
+|**First column B**|Cell 1B  |Cell 2B |
+```
+
+最初の列に含まれるすべてのエントリは、太字 (`**bold**`) としてスタイル設定する必要があります。そうしないと、スクリーン リーダーからテーブルにアクセスできず、Docs でテーブルが有効になりません。
 
 ### <a name="html-tables"></a>HTML テーブル
 
