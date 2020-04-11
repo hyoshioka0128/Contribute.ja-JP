@@ -3,16 +3,16 @@ title: docs.microsoft.com の Markdown 参照
 description: Microsoft Docs プラットフォームで使われる Markdown の機能と構文について学習します。
 author: meganbradley
 ms.author: mbradley
-ms.date: 01/30/2020
+ms.date: 03/31/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: c1568264c687ebaf26048f5432fdea7d5132c012
-ms.sourcegitcommit: 216ef77ca2cd1eeb31c6c89d96778b178fc0d540
+ms.openlocfilehash: f0aed4ebb57ee1ce34f55d9085bab718fd4511cb
+ms.sourcegitcommit: 5ef2dc72e2ff8bddf873415a3f4b816eb16029dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070076"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624727"
 ---
 # <a name="docs-markdown-reference"></a>Docs Markdown リファレンス
 
@@ -70,7 +70,7 @@ ms.locfileid: "80070076"
 
 ## <a name="apostrophes-and-quotation-marks"></a>アポストロフィと引用符
 
-Word から Markdown エディターにコピーしたテキストに、"スマート" (カールした) アポストロフィまたは引用符が含まれていることがあります。 これらを標準的なアポストロフィや引用符にエンコードまたは変更する必要があります。 そうしないと、ファイルが公開されたときに次のように表示されます: Itâ€™s
+Word から Markdown エディターにコピーしたテキストに、"スマート" (カールした) アポストロフィまたは引用符が含まれていることがあります。 これらを標準的なアポストロフィや引用符にエンコードまたは変更する必要があります。 そうしないと、ファイルが公開されたときに次のように表示されます: Itâ&euro;&trade;s
 
 これらの "スマート" バージョンの記述記号のエンコーディングは次のとおりです。
 
@@ -187,11 +187,11 @@ Docs では、6 つのレベルの Markdown 見出しがサポートされてい
 - H1 見出しは YML メタデータ ブロックの後ろに来る、ファイルで最初のコンテンツにする必要があります。
 - H2 見出しは、公開されたファイルの右側のナビゲーション メニューに、自動的に表示されます。 これより下のレベルの見出しは表示されません。そのため、閲覧者がコンテンツ内を移動しやすくなるように、H2 を戦略的に利用してください。
 - `<h1>` などの HTML 見出しは推奨されません。場合によっては、ビルド警告が発生します。
-- [ブックマーク リンク](how-to-write-links.md#links-to-anchors)を使用して、ファイル内の個々の見出しにリンクすることができます。
+- [ブックマーク リンク](how-to-write-links.md#explicit-anchor-links)を使用して、ファイル内の個々の見出しにリンクすることができます。
 
 ## <a name="html"></a>HTML
 
-Markdown ではインライン HTML がサポートされていますが、Docs への公開には HTML は推奨されません。値の一覧が限られている場合を除き、ビルドのエラーまたは警告が発生します。 
+Markdown ではインライン HTML がサポートされていますが、Docs への公開には HTML は推奨されません。値の一覧が限られている場合を除き、ビルドのエラーまたは警告が発生します。
 
 ## <a name="images"></a>イメージ
 

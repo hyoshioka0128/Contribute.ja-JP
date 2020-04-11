@@ -53,28 +53,16 @@
     - name: .NET ドキュメント
       items:
         - name: .NET ドキュメントへの協力方法
-          href: dotnet-contribute.md
-        - name: .NET ドキュメントに協力する
-          href: dotnet-contribute-process.md
+          href: dotnet/dotnet-contribute.md
+        - name: ラベルとプロジェクトのロードマップ
+          href: dotnet/labels-projects.md
         - name: .NET ドキュメントのスタイル規則
-          href: dotnet-style-guide.md
+          href: dotnet/dotnet-style-guide.md
         - name: ボイスとトーンのガイド
-          href: dotnet-voice-tone.md
+          href: dotnet/dotnet-voice-tone.md
         - name: pull request のレビュー プロセス
-          href: dotnet-pr-review.md
+          href: dotnet/dotnet-pr-review.md
     - name: PowerShell ドキュメント
-      items:
-        - name: PowerShell ドキュメントに協力する方法
-          href: powershell\powershell-contribute.md
-        - name: PowerShell の協力プロセス
-          href: powershell\powershell-contribute-process.md
-        - name: PowerShell 記事の作成に関するクイックスタート
-          href: powershell\powershell-style-basic-markdown.md
-        - name: PowerShell スクリプト サンプル スタイル ガイド
-          href: powershell\powershell-style-code.md
-        - name: PowerShell コマンドレット リファレンス スタイル ガイド
-          href: powershell\powershell-style-reference.md
-        - name: PowerShell の pull request の送信
-          href: powershell\powershell-pull-requests.md
+      href: powershell-overview.md
 - name: その他のリソース
   href: additional-resources.md
