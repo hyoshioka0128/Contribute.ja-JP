@@ -7,12 +7,12 @@ ms.date: 02/19/2019
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 3efe66a71a4a61b84ff513a6253777cb2d21bc9e
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 95dadff41bb31e0b34ee34f85ae47708297954f1
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288635"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784276"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Microsoft Docs 共同作成者ガイド概要
 
@@ -68,7 +68,7 @@ GitHub の編集用 UI は、リポジトリに対する自分のアクセス許
 > 有効な場合、**任意の言語**で記事を編集できます。また、編集の種類に基づいて、次のことが起こります。
 > 1. 承認された言語的な変更は、Microsoft の機械翻訳エンジンの改善にも役立てられます
 > 2. 編集によって記事のコンテンツが大幅に変更された場合、内部的に処理され、同じ記事の英語版に変更が送信されます。承認された場合はすべての言語でローカライズされます。
-> したがって、ご提案いただいた改善は、ご自身の言語だけでなく、利用可能なすべての言語の記事に良い影響を与えます。
+> ご提案いただいた改善は、ご自身の言語だけでなく、利用可能なすべての言語の記事に良い影響を与えます。
 
 ## <a name="review-open-prs"></a>オープン中の PR をレビューする
 

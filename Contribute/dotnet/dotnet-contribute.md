@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: d52d681987e26fddc89a33075b3d35279608ac04
-ms.sourcegitcommit: bf2f4c7d9050b480d4db306df19d4c9f8714eff0
+ms.openlocfilehash: d97d72e8458a53ab11b01cbd4bb5df3b8458b048
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784306"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>.NET ドキュメント リポジトリに協力する方法について説明します
 
@@ -203,6 +203,10 @@ C# インタラクティブ エクスペリエンスによって、サンプル�
 
 > [!NOTE]
 > 一部のトピックがここで指定したすべてのガイドラインに現在のところ従っていないことに気づかれているのではないでしょうか。 Microsoft はサイト全体での整合性の達成を目標に取り組んでいます。 その特定の目標を達成するために Microsoft が現在追跡している [開示状態の Issues](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Abookmark_tabs%3A+Information+Architecture%22) の一覧を確認してください。
+
+### <a name="contributing-to-international-content"></a>海外のコンテンツへの貢献   
+
+機械翻訳 (MT) コンテンツの投稿は、現在受け入れられていません。 MT コンテンツの品質を向上させるために、ニューラル MT エンジンに移行しました。 ニューラル MT エンジンをトレーニングするために使用される、人間が翻訳した (HT) コンテンツの投稿を受け入れ、促進することをお勧めします。 今後、HT コンテンツに貢献すると、HT と MT の両方の品質が向上します。 MT トピックには、トピックの一部が MT であることを示す免責事項が含まれており、編集が無効になっているため **[編集]** ボタンが表示されません。   
 
 ## <a name="contributor-license-agreement"></a>共同作成者使用許諾契約書
 
