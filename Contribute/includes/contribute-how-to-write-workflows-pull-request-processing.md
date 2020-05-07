@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9cb0ba651d40d2834081d32443a8fd2b1152003d
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "53286218"
+---
 ## <a name="pull-request-processing"></a>Pull request の処理
 
 前のセクションでは、変更提案を新しい pull request (PR) にバンドルし、宛先リポジトリの PR キューに追加するという変更提案の提出プロセスを確認しました。 Pull request は、自分の作業ブランチの変更内容をプルし、別のブランチにマージするように求めることで、GitHub のコラボレーション モデルを可能にします。 ほとんどの場合、このもう 1 つのブランチは、メイン リポジトリの default/master ブランチです。

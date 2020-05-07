@@ -8,10 +8,10 @@ author: jasonwhowell
 ms.author: jasonh
 ms.date: 04/30/2018
 ms.openlocfilehash: ba7e511d756f43acfa5cfbbd228f793d7fbce727
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78331862"
 ---
 # <a name="install-content-authoring-tools"></a>コンテンツ オーサリング ツールのインストール
@@ -41,7 +41,7 @@ ms.locfileid: "78331862"
 
 次の記事では、[ローカル Git リポジトリを設定](get-started-setup-local.md)します。
 
-   その他の Git リソースについては、こちらを参照してください: [Git 用語集](https://help.github.com/articles/github-glossary) | [Git の基礎](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) | [Git および GitHub の学習](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
+   Git の追加のリソースは、[Git 用語集](https://help.github.com/articles/github-glossary) | [Git の基礎](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) | [Git および GitHub の学習](https://help.github.com/articles/good-resources-for-learning-git-and-github/)にあります
 
 ## <a name="understand-markdown-editors"></a>Markdown エディターについて
 
@@ -74,6 +74,6 @@ Visual Studio Code 用に Docs Authoring Pack をインストールします。 
    詳しくは、[Docs Authoring Pack](how-to-write-docs-auth-pack.md) に関するページを参照してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、[ローカル Git リポジトリを設定](get-started-setup-local.md)する準備が整いました。

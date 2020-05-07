@@ -8,10 +8,10 @@ author: gewarren
 ms.author: gewarren
 ms.date: 03/31/2020
 ms.openlocfilehash: ca29d4b9e81f8af3b680367b210bd1734860687d
-ms.sourcegitcommit: 5ef2dc72e2ff8bddf873415a3f4b816eb16029dd
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "80624800"
 ---
 # <a name="use-links-in-documentation"></a>ドキュメントでリンクを使用する
@@ -204,7 +204,7 @@ XRef リンクはビルド時に検証されるため、API へのリンクに�
 
 通常、UID は、完全修飾されたクラスまたはメンバーの名前です。 UID を決定するには、少なくとも次の 2 つの方法があります。
 
-- 型またはメンバーの [Docs][docs] ページで右クリックして、 **[ソースの表示]** を選択し、**ms.assetid** の **content** の値をコピーします。
+- 型またはメンバーの [Docs][docs] ページで右クリックして、**[ソースの表示]** を選択し、**ms.assetid** の **content** の値をコピーします。
 
   ![Web ページのソース内の ms.assetid](media/how-to-write-links/ms-assetid.png)
 
@@ -249,11 +249,11 @@ UID 内の特殊文字は、次のように HTML エンコードする必要が�
 
 ### <a name="generic-types"></a>ジェネリック型
 
-ジェネリック型は、`System.Collections.Generic.List<T>` などの型です。 [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)でこの型を参照し、その URL を調べると、`<T>` は、URL で `-1` として記述されていることがわかります。これは、実際には、 **`1** を表します。
+ジェネリック型は、`System.Collections.Generic.List<T>` などの型です。 [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)でこの型を参照し、その URL を調べると、`<T>` は、URL で `-1` として記述されていることがわかります。これは、実際には、**`1** を表します。
 
 `https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1`
 
-**List\<T>** などのジェネリック型にリンクするには、次の例に示すように、 **\`** バックティック文字を **%60** としてエンコードします。
+**List\<T>** などのジェネリック型にリンクするには、次の例に示すように、**\`** バックティック文字を **%60** としてエンコードします。
 
 ```markdown
 <xref:System.Collections.Generic.List%601>

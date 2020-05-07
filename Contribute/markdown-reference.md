@@ -8,10 +8,10 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.openlocfilehash: f0aed4ebb57ee1ce34f55d9085bab718fd4511cb
-ms.sourcegitcommit: 5ef2dc72e2ff8bddf873415a3f4b816eb16029dd
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "80624727"
 ---
 # <a name="docs-markdown-reference"></a>Docs Markdown リファレンス
@@ -159,7 +159,7 @@ Markdown 拡張機能の**列**を使用すると、ドキュメントの作成�
    :::column span="2":::
       **This is a 2-span column with lots of text.**
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec rutrum non eros eget consectetur.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Donec vestibulum mollis nunc ornare commodo.  Nullam ac metus imperdiet, rutrum justo vel, vulputate leo.  Donec rutrum non eros eget consectetur.
    :::column-end:::
    :::column span="":::
       **This is a single-span column with an image in it.**

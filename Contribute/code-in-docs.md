@@ -8,10 +8,10 @@ ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
 ms.openlocfilehash: 4aa34196f59a69651dd19add35a0351dd9b5d59b
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336487"
 ---
 # <a name="how-to-include-code-in-docs"></a>ドキュメントにコードを追加する方法
@@ -265,7 +265,7 @@ docs.microsoft.com に公開された記事にコードを追加する方法は�
 :::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26" highlight="2,5":::
 ```
 
-この例では、表示されているスニペットの冒頭から数えて、2 番目と 5 番目の行が強調表示されています 強調表示する行番号は、コード ファイルの先頭からカウントされません。 つまり、コード ファイルの行 3 から 6 までが強調表示されています。
+この例では、表示されているスニペットの冒頭から数えて、2 番目と 5 番目の行が強調表示されています  強調表示する行番号は、コード ファイルの先頭からカウントされません。 つまり、コード ファイルの行 3 から 6 までが強調表示されています。
 
 ## <a name="out-of-repo-snippet-references"></a>リポジトリの外にあるスニペットの参照
 

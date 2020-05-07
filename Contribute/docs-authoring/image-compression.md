@@ -7,10 +7,10 @@ ms.topic: contributor-guide
 ms.date: 03/03/2020
 ms.author: dapine
 ms.openlocfilehash: 4b93ac23b83128d5b9125297879d008e9300509c
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336660"
 ---
 # <a name="image-compression"></a>画像の圧縮
@@ -23,22 +23,22 @@ docs の PDF バージョンを除いて、すべてのドキュメントは Web
 
 Docs Authoring Pack 拡張機能には、画像の圧縮コンテキスト メニュー項目が含まれています。 サポートされる画像の種類と拡張子は、次のとおりです。
 
-* " *\*.png*"
-* " *\*.jpg*"
-* " *\*.jpeg*"
-* " *\*.gif*"
-* " *\*.svg*"
-* " *\*.webp*"
+* "*\*.png*"
+* "*\*.jpg*"
+* "*\*.jpeg*"
+* "*\*.gif*"
+* "*\*.svg*"
+* "*\*.webp*"
 
 必要に応じて、画像の無損失圧縮アルゴリズムを使用します。
 
 ## <a name="compress-image"></a>画像を圧縮
 
-**エクスプローラー**のナビゲーション ウィンドウで、画像ファイルを右クリックし、 **[Compress image]\(画像を圧縮する\)** オプションを選択します。 画像が圧縮されます。
+**エクスプローラー**のナビゲーション ウィンドウで、画像ファイルを右クリックし、**[Compress image]\(画像を圧縮する\)** オプションを選択します。 画像が圧縮されます。
 
 ## <a name="compress-images-in-folder"></a>フォルダー内の画像を圧縮
 
-**エクスプローラー**のナビゲーション ウィンドウで、画像ファイルを右クリックし、 **[Compress images in folder]\(フォルダー内の画像を圧縮する\)** オプションを選択します。 フォルダー内のすべての画像が圧縮されます。
+**エクスプローラー**のナビゲーション ウィンドウで、画像ファイルを右クリックし、**[Compress images in folder]\(フォルダー内の画像を圧縮する\)** オプションを選択します。 フォルダー内のすべての画像が圧縮されます。
 
 ## <a name="considerations"></a>考慮事項
 
@@ -46,7 +46,7 @@ Docs Authoring Pack 拡張機能には、画像の圧縮コンテキスト メ�
 
 ## <a name="preferences"></a>基本設定
 
-最大寸法は構成可能ですが、既定の最大幅は `1200` ピクセルです。 最大寸法を構成するには、 **[ファイル]、[基本設定]、[設定]** の順に選択し、`"Docs Image Extension"` でフィルター処理します。
+最大寸法は構成可能ですが、既定の最大幅は `1200` ピクセルです。 最大寸法を構成するには、**[ファイル]、[基本設定]、[設定]** の順に選択し、`"Docs Image Extension"` でフィルター処理します。
 
 :::image type="content" source="media/configure-image-compression.png" alt-text="画像の圧縮の構成":::
 

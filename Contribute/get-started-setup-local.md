@@ -8,10 +8,10 @@ author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
 ms.openlocfilehash: e73c60c439285f901c5c83e538f8971d795bd6c4
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "72288594"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>ドキュメントの Git リポジトリをローカルに設定する
@@ -32,7 +32,7 @@ ms.locfileid: "72288594"
 
 ## <a name="overview"></a>概要
 
-Microsoft のドキュメント サイトに投稿するには、対応するドキュメント リポジトリを複製して、マークダウン ファイルをローカルで作成および編集します。 Microsoft では、GitHub アカウントに適切なリポジトリをフォークすることを要求しています。それにより、予定している変更を保存するための読み取り/書き込み権限が付与されます。 その後、pull request を使用して、変更を読み取り専用の一元的な共有リポジトリにマージします。
+Microsoft のドキュメント サイトに投稿するには、対応するドキュメント リポジトリを複製して、マークダウン ファイルをローカルで作成および編集します。 Microsoft では、GitHub アカウントに適切なリポジトリをフォークすることを要求しています。それにより、予定している変更を保存するための読み取り/書き込み権限が付与されます。 その後、pull requests を使用して、変更を読み取り専用の一元的な共有リポジトリにマージします。
 
 ![GitHub の三角形](./media/git-and-github-initial-setup.png)
 
@@ -63,7 +63,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
 ## <a name="fork-the-repository"></a>リポジトリのフォーク
 適切なリポジトリを使用し、GitHub Web サイトで GitHub アカウントにリポジトリのフォークを作成します。
 
-メインのドキュメント リポジトリはすべて読み取り専用アクセスを提供するため、個人のフォークが必須になります。 変更するには、自分のフォークからメイン リポジトリに [pull request](git-github-fundamentals.md#pull-requests) を送信する必要があります。 このプロセスを容易にするには、まずリポジトリの独自のコピーが必要になります。このコピーでは、書き込みアクセス権を持ちます。 GitHub の "*fork*" はその目的にかなっています。
+メインのドキュメント リポジトリはすべて読み取り専用アクセスを提供するため、個人のフォークが必須になります。 変更するには、自分のフォークからメイン リポジトリに[pull request](git-github-fundamentals.md#pull-requests)を送信する必要があります。 このプロセスを容易にするには、まずリポジトリの独自のコピーが必要になります。このコピーでは、書き込みアクセス権を持ちます。 GitHub の "*fork*" はその目的にかなっています。
 
 1. メイン リポジトリの GitHub ページに移動して、右上の **[フォーク]** ボタンをクリックします。
 
@@ -79,7 +79,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
    > [!IMPORTANT]
    > 別の Git リポジトリ フォルダーの場所内に入れ子になっているローカル フォルダーの場所を選択しないてください。 相互に隣接された Git 複製フォルダーを格納することは可能ですが、相互の Git フォルダー内に Git フォルダーを入れ子にすると、ファイルの追跡でエラーが発生する原因になります。
 
-2. Git Bash を起動する
+2. Git Bash を起動します。
 
    ![Git Bash を起動します。](./media/contribute-get-started-setup-local/gitbash-start.png)
 

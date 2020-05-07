@@ -7,10 +7,10 @@ ms.topic: contributor-guide
 ms.date: 03/03/2020
 ms.author: scaddie
 ms.openlocfilehash: f81dc2315dc09256639c98ed72484517ff2c6ff3
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336798"
 ---
 # <a name="dev-lang-completion"></a>開発言語の完了
@@ -21,7 +21,7 @@ ms.locfileid: "78336798"
 
 共同作成者は、Markdown ファイルでトリプルバッククォート (コード フェンスの始まり) の後に続けることができる有効な言語識別子 (開発言語) を決定するための支援を必要とします。 残念ながら、開発言語のビルド時検証機能はありません。 その結果、同じ概念 docset 内で単一の言語が異なって表現されています。
 
-例として、C# について考えてみましょう。 共同作成者は、言語の開発言語表現として `c#`、`C#`、`cs`、`csharp` を使用しています。 これらの表現のうち、正しいのはどれでしょうか?
+例として、C# について考えてみましょう。 共同作成者は、言語の開発言語表現として `c#`、`C#`、`cs`、`csharp` を使用しています。 これらの表現のうち、正しいのはどれでしょうか? 
 
 "*開発言語の完了*" 機能は、既知の dev lang の一覧を表示することにより、混乱を解消します。 IntelliSense から開発言語名を選択すると、次のようになります。
 

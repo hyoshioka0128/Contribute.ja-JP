@@ -6,10 +6,10 @@ ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 06/30/2017
 ms.openlocfilehash: c099a458718ade11840c314542c530dd6669402d
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78331885"
 ---
 # <a name="git-and-github-essentials-for-docs"></a>Git および GitHub のドキュメントの基礎
@@ -20,7 +20,7 @@ Docs コンテンツの共同作成者は、複数のツールやプロセスを
 
 Git はオープン ソースのバージョン管理システムです。 *リポジトリ* に存在するファイルの*分散型バージョン管理* により、この種のプロジェクト コラボレーションを容易にします。 要するに、Git を利用することで、特定のリポジトリを対象に複数の共同作成者によって長期間にわたって行われる一連の作業を統合できます。
 
-GitHub は、[docs.microsoft.com](https://docs.microsoft.com) コンテンツの格納に使用しているような Git リポジトリの、Web ベースのホスティング サービスです。 GitHub は任意のプロジェクトのメイン リポジトリをホストします。共同作成者はこのメイン リポジトリから独自の作業用のコピーを作成できます
+GitHub は、[docs.microsoft.com](https://docs.microsoft.com) コンテンツの格納に使用しているような Git リポジトリの、Web ベースのホスティング サービスです。 GitHub は任意のプロジェクトのメイン リポジトリをホストします。共同作成者はこのメイン リポジトリから独自の作業用のコピーを作成できます 
 
 ## <a name="git"></a>Git
 

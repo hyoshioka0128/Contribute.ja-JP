@@ -8,10 +8,10 @@ author: meganbradley
 ms.author: mbradley
 ms.date: 03/05/2020
 ms.openlocfilehash: 5bbf51af52069d5636715ffb2bd3f59bf459d5b9
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336379"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>VS Code 用 Docs Authoring Pack
@@ -29,7 +29,7 @@ Docs Authoring Pack は、docs.microsoft.com の Markdown の作成を支援す�
 
 ## <a name="prerequisites-and-assumptions"></a>前提条件
 
-Docs Markdown 拡張機能を使用して、相対リンク、画像、その他の埋め込みコンテンツを挿入するには、複製した Open Publishing System (OPS) リポジトリのルートを対象範囲とする VS Code ワークスペースが必要です。 たとえば、ドキュメント リポジトリを `C:\git\SomeDocsRepo\` に複製した場合は、VS Code でそのフォルダーまたはサブフォルダーを開きます。 **[ファイル]**  >  **[フォルダーを開く]** メニューを選択するか、コマンド ラインに `code C:\git\SomeDocsRepo\` を入力します。
+Docs Markdown 拡張機能を使用して、相対リンク、画像、その他の埋め込みコンテンツを挿入するには、複製した Open Publishing System (OPS) リポジトリのルートを対象範囲とする VS Code ワークスペースが必要です。 たとえば、ドキュメント リポジトリを `C:\git\SomeDocsRepo\` に複製した場合は、VS Code でそのフォルダーまたはサブフォルダーを開きます。**[ファイル]** > **[フォルダーを開く]** メニューを選択するか、コマンド ラインに `code C:\git\SomeDocsRepo\` を入力します。
 
 アラートやスニペットなどの拡張機能でサポートされる一部の構文は、OPS のカスタム Markdown です。 カスタム Markdown は、OPS から公開しない限り正しくレンダリングされません。
 
@@ -41,7 +41,7 @@ Docs Markdown 拡張機能を使用して、相対リンク、画像、その他
 
 ## <a name="how-to-generate-a-master-redirect-file"></a>マスター リダイレクト ファイルを作成する方法
 
-Docs Markdown 拡張機能には、個々のファイルの `redirect_url` メタデータに基づいて、リポジトリのマスター リダイレクト ファイルを作成または更新するスクリプトが含まれています。 このスクリプトは、`redirect_url` についてリポジトリ内のすべての Markdown ファイルをチェックし、リポジトリのマスター リダイレクト ファイル ( *.openpublishing.redirection.json*) にリダイレクト メタデータを追加して、リダイレクトされたファイルをリポジトリ外部のフォルダーに移動します。 スクリプトを実行するには、次のようにします。
+Docs Markdown 拡張機能には、個々のファイルの `redirect_url` メタデータに基づいて、リポジトリのマスター リダイレクト ファイルを作成または更新するスクリプトが含まれています。 このスクリプトは、`redirect_url` についてリポジトリ内のすべての Markdown ファイルをチェックし、リポジトリのマスター リダイレクト ファイル (*.openpublishing.redirection.json*) にリダイレクト メタデータを追加して、リダイレクトされたファイルをリポジトリ外部のフォルダーに移動します。 スクリプトを実行するには、次のようにします。
 
 1. <kbd>F1</kbd> を選択して、VS Code コマンド パレットを開きます。
 2. 入力を開始します: 「Docs:Generate...」
@@ -82,9 +82,9 @@ Docs Markdown 拡張機能には、個々のファイルの `redirect_url` メ�
 
 "Gauntlet" という名前の拡張コードの以前のユーザーは、Docs Markdown 拡張機能がインストールされたときに VS Code ウィンドウの下部にオーサリング ツールバーが表示されなくなったことに気付くでしょう。 これは、このツールバーが VS Code ステータス バーの大きなスペースを占有し、拡張機能のユーザー エクスペリエンスのベスト プラクティスに従っていなかったため、新しい拡張機能で非推奨になったからです。 しかし、オプションで VS Code の settings.json ファイルを次のように更新することでツールバーを表示できます。
 
-1. VS Code で、 **[ファイル]**  >  **[基本設定]**  >  **[設定]** を選択するか、<kbd>Ctrl+,</kbd> を選択します。
-1. **[ユーザー設定]** を選択してすべての VS Code ワークスペースの設定を変更するか、 **[ワークスペースの設定]** を選択して現在のワークスペースのみの設定を変更します。
-1. **[拡張機能]**  >  **[Docs Markdown Extension Configuration]** (Docs Markdown 拡張機能の構成) を選択し、 **[Show the legacy toolbar in the bottom status bar]** (下のステータス バーにレガシ ツールバーを表示する) を選択します。
+1. VS Code で、**[ファイル]** > **[基本設定]** > **[設定]** を選択するか、<kbd>Ctrl+,</kbd> を選択します。
+1. **[ユーザー設定]** を選択してすべての VS Code ワークスペースの設定を変更するか、**[ワークスペースの設定]** を選択して現在のワークスペースのみの設定を変更します。
+1. **[拡張機能]** > **[Docs Markdown Extension Configuration]** (Docs Markdown 拡張機能の構成) を選択し、**[Show the legacy toolbar in the bottom status bar]** (下のステータス バーにレガシ ツールバーを表示する) を選択します。
 
    ![VS Code にレガシ ツールバー表示する](docs-authoring/media/show-gauntlet-bar.png)
 
@@ -114,8 +114,8 @@ Templates 拡張機能では、3 つの動的メタデータ フィールド (au
 
 ### <a name="to-set-author-andor-msauthor"></a>author または ms.author を設定するには
 
-1. VS Code で、 **[ファイル]**  >  **[基本設定]**  >  **[設定]** を選択するか、<kbd>Ctrl+,</kbd> を選択します。
-1. **[ユーザー設定]** を選択してすべての VS Code ワークスペースの設定を変更するか、 **[ワークスペースの設定]** を選択して現在のワークスペースのみの設定を変更します。
+1. VS Code で、**[ファイル]** > **[基本設定]** > **[設定]** を選択するか、<kbd>Ctrl+,</kbd> を選択します。
+1. **[ユーザー設定]** を選択してすべての VS Code ワークスペースの設定を変更するか、**[ワークスペースの設定]** を選択して現在のワークスペースのみの設定を変更します。
 1. 左側の [既定の設定] ウィンドウで **[Docs Article Templates Extension Configuration]** (Docs Markdown 拡張機能の構成) を見つけ、必要な設定の横にある鉛筆アイコンをクリックしてから、[設定を置換] をクリックします。
 1. **[ユーザー設定]** ウィンドウが横に並んで開き、新しいエントリが下部に表示されます。
 1. GitHub ID または Microsoft メール エイリアスを必要に応じて追加し、ファイルを保存します。

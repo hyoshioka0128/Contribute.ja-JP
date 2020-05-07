@@ -7,17 +7,17 @@ ms.topic: contributor-guide
 ms.date: 03/03/2020
 ms.author: dapine
 ms.openlocfilehash: 07c95f2a0d24a49f59eaffe1bec64ee872530c2f
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336775"
 ---
 # <a name="reformat-markdown-tables"></a>Markdown テーブルの再フォーマット
 
 [!INCLUDE [markdown-extension](includes/markdown-extension.md)]
 
-## <a name="summary"></a>サマリー
+## <a name="summary"></a>まとめ
 
 Markdown (" *\*.md*") ファイルで、完全なテーブルを選択したときに、テーブルのフォーマット用に 2 つのコンテキスト メニュー項目を使用できるようになりました。 選択した Markdown テーブルを右クリックしてコンテキスト メニューを開きます。 次のようなメニュー項目が表示されます。
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b64e8dd4c62ca05b6e04ef404ebf98a618d0171e
-ms.sourcegitcommit: 2563918217ba0760a4f3877af2272a0a4b2c3052
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "66391412"
 ---
 コメント オートメーションにより、読み取りレベルのユーザー (リポジトリ内で書き込みアクセス許可を持たないユーザー) が書き込みレベルのアクションを実行できます。そのためには、適切なラベルを pull request に割り当てます。 コメント オートメーションが実装されているリポジトリで作業している場合は、次の表に示されているハッシュタグ コメントを使用してラベルを割り当て、ラベルを変更または pull request を終了します。 自分が作成者である記事への変更が提案されるたびに、Microsoft の従業員もパブリック リポジトリ プロトコル要求のレビューおよびサインオフに関して電子メールで通知されます。
