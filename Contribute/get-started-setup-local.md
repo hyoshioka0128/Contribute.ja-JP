@@ -44,7 +44,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
 
 [docs.microsoft.com](https://docs.microsoft.com) にホストされているドキュメントは、[github.com](https://www.github.com) のいくつかの異なるリポジトリに存在します。
 
-1. 使用するリポジトリが不明な場合は、Web ブラウザーを使用して [docs.microsoft.com](https://docs.microsoft.com) 上の記事にアクセスします。 記事の右上にある **[編集]** リンク (鉛筆のアイコン) を選択します。
+1. 使用するリポジトリが不明な場合は、Web ブラウザーを使用して [docs.microsoft.com](https://docs.microsoft.com) 上の記事にアクセスします。 記事の右上にある **[Edit]\(編集\)** リンク (鉛筆のアイコン) を選択します。
 
    ![[編集] をクリックしてリポジトリとファイルの場所を特定します。](media/index/edit-article.png)
 
@@ -65,7 +65,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
 
 メインのドキュメント リポジトリはすべて読み取り専用アクセスを提供するため、個人のフォークが必須になります。 変更するには、自分のフォークからメイン リポジトリに[pull request](git-github-fundamentals.md#pull-requests)を送信する必要があります。 このプロセスを容易にするには、まずリポジトリの独自のコピーが必要になります。このコピーでは、書き込みアクセス権を持ちます。 GitHub の "*fork*" はその目的にかなっています。
 
-1. メイン リポジトリの GitHub ページに移動して、右上の **[フォーク]** ボタンをクリックします。
+1. メイン リポジトリの GitHub ページに移動して、右上の **[Fork]\(フォーク\)** ボタンをクリックします。
 
    ![GitHub プロファイルの例](./media/contribute-get-started-setup-local/fork.png)
 
