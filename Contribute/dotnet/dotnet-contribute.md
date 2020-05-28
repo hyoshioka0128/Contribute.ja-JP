@@ -4,13 +4,13 @@ description: この記事では、.NET ドキュメントを構成するレポ�
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.date: 11/07/2018
-ms.openlocfilehash: 948c96a63754566fc73e54c722998739984977d6
-ms.sourcegitcommit: 43a4f52ab827a7cf4609cc592483595efde3ceae
+ms.date: 05/14/2020
+ms.openlocfilehash: c4382a66035a10debb2a0aa05f61c549a3f97ee6
+ms.sourcegitcommit: 300ce72ffc8596213e82ae511b1b314c850841c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203063"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404132"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>.NET ドキュメント リポジトリに協力する方法について説明します
 
@@ -73,7 +73,7 @@ ms.locfileid: "83203063"
 
 イメージなどの静的なリソースについては、ご自分の記事が格納されているフォルダー内に **media** というサブフォルダーを作成します (それがまだ作成されていない場合)。 **media** フォルダー内に、記事の名前を使用してサブフォルダーを作成します (ただし、インデックス ファイルは除く)。 
 
-**コード スニペット**については、ご自分の記事が格納されているフォルダー内に **snippets** というサブフォルダーを作成します (それがまだ作成されていない場合)。 ほとんどの場合、3 つの主要な .NET 言語 (C#、F#、Visual Basic) すべてに対してコード スニペットを用意することになります。 その場合は、3 つのプロジェクトそれぞれに対して **csharp**、**fsharp**、**vb** という名前のサブフォルダーを作成します。 わかりやすくするために、C# ガイド、F# ガイド、Visual Basic ガイドでは、プロジェクトに **snippets** フォルダーを使用してください。 これらの領域には、通常、1 つの言語のスニペットがあります。 コード スニペットは、記事で説明されている概念を示すコードに注目した小さなサンプルです。 ダウンロードと探索を目的とした大規模なプログラムは、[dotnet/samples](https://github.com/dotnet/samples) リポジトリに配置する必要があります。 完全なサンプルについては、[サンプルの共同作成](#contributing-to-samples)に関するセクションを参照してください。
+**コード スニペット**については、ご自分の記事が格納されているフォルダー内に **snippets** というサブフォルダーを作成します (それがまだ作成されていない場合)。  **snippets** フォルダー内に、記事の名前を使用してサブフォルダーを作成します。 ほとんどの場合、3 つの主要な .NET 言語 (C#、F#、Visual Basic) すべてに対してコード スニペットを用意することになります。 その場合は、3 つのプロジェクトそれぞれに対して **csharp**、**fsharp**、**vb** という名前のサブフォルダーを作成します。 わかりやすくするために、C# ガイド、F# ガイド、Visual Basic ガイドでは、プロジェクトに **snippets** フォルダーを使用してください。 これらの領域には、通常、1 つの言語のスニペットがあります。 コード スニペットは、記事で説明されている概念を示すコードに注目した小さなサンプルです。 ダウンロードと探索を目的とした大規模なプログラムは、[dotnet/samples](https://github.com/dotnet/samples) リポジトリに配置する必要があります。 完全なサンプルについては、[サンプルの共同作成](#contributing-to-samples)に関するセクションを参照してください。
 
 適切な Markdown 構文に必ず従ってください。 一般的な例については、[テンプレートと Markdown に関する簡易参照ガイド](dotnet-style-guide.md)を参照してください。
 
@@ -121,7 +121,7 @@ ms.locfileid: "83203063"
 
 フィードバックが適用され、ご自分の変更が承認されると、その PR は Maintainer によってマスター ブランチにマージされます。
 
-Microsoft によって定期的にすべてのコミットがマスター ブランチからライブ ブランチにプッシュされるので、https://docs.microsoft.com/dotnet/ でご自分の共同作成をライブで確認できるようになります。 通常、Microsoft は営業日には毎日発行しています。 メンテナンス アクティビティにより発行が数日遅れる場合があります。
+Microsoft によって定期的にすべてのコミットがマスター ブランチからライブ ブランチにプッシュされるので、 https://docs.microsoft.com/dotnet/ でご自分の共同作成をライブで確認できるようになります。 通常、Microsoft は営業日には毎日発行しています。 メンテナンス アクティビティにより発行が数日遅れる場合があります。
 
 ## <a name="contributing-to-samples"></a>サンプルに対する共同作成
 
@@ -258,4 +258,4 @@ C# インタラクティブ エクスペリエンスによって、サンプル�
 
 契約: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 
-事前に契約書に署名しておく必要はありません。 通常どおり、ご自分の PR をクローン、フォーク、送信することができます。 ご自分の PR が作成されたら、それを CLA ボットによって分類することができます。 変更が小さい場合 (たとえば、入力ミスの修正)、PR には `cla-not-required` というラベルが適用されます。 それ以外の場合は、`cla-required` として分類されます。 CLA に署名すると、現在の pull requests および今後のすべてのプル要求には `cla-signed` というラベルが付けられます。
+事前に契約書に署名しておく必要はありません。 通常どおり、ご自分の PR を複製、フォーク、送信することができます。 ご自分の PR が作成されたら、それを CLA ボットによって分類することができます。 変更が小さい場合 (たとえば、入力ミスの修正)、PR には `cla-not-required` というラベルが適用されます。 それ以外の場合は、`cla-required` として分類されます。 CLA に署名すると、現在の pull requests および今後のすべてのプル要求には `cla-signed` というラベルが付けられます。
