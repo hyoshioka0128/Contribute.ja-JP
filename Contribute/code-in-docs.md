@@ -7,12 +7,12 @@ ms.date: 03/03/2020
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 4aa34196f59a69651dd19add35a0351dd9b5d59b
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 4e57af6a1fe9a9d3799f09cb04f3bd3f0b9b712d
+ms.sourcegitcommit: 59e77d2fb9c38cccbacde9d2a7df61ae58c38fa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "78336487"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421047"
 ---
 # <a name="how-to-include-code-in-docs"></a>ドキュメントにコードを追加する方法
 
@@ -378,12 +378,14 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
   * 参照するコード スニペット ファイルを示すファイル システムの相対パス。
 
 * `<attribute>` および `<attribute-value>` (*省略可能*)
-  * ファイルからコードを取得する方法とその表示方法を指定するために併せて使用。
-    * `range`:　`1,3-5` 行の範囲です。 この例には、1、3、4、5 行が含まれます。
-    * `id`:　`snippet_Create` コード ファイルから挿入する必要があるスニペットの ID です。 この値を範囲と共存させることはできません。
-    * `highlight`:　`2-4,6` 生成されたコード スニペットで強調表示する必要がある行の範囲や数です。 番号は、ファイルではなく、表示される行 (範囲または ID で指定) からの相対です。
-    * `interactive`: `cloudshell-powershell`、`cloudshell-bash`、`try-dotnet`、`try-dotnet-class`、`try-dotnet-method` String 値では、有効にする対話機能の種類を決定します。
-    * 言語別のコード スニペット ソース ファイルでのタグ名表現の詳細については、[DocFX ガイドライン](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file)を参照してください。
+
+  ファイルからコードを取得する方法とその表示方法を指定するために併せて使用。
+
+  * `range`:　`1,3-5` 行の範囲です。 この例には、1、3、4、5 行が含まれます。
+  * `id`:　`snippet_Create` コード ファイルから挿入する必要があるスニペットの ID です。 この値を範囲と共存させることはできません。
+  * `highlight`:　`2-4,6` 生成されたコード スニペットで強調表示する必要がある行の範囲や数です。 番号は、ファイルではなく、表示される行 (範囲または ID で指定) からの相対です。
+  * `interactive`: `cloudshell-powershell`、`cloudshell-bash`、`try-dotnet`、`try-dotnet-class`、`try-dotnet-method` String 値では、有効にする対話機能の種類を決定します。
+  * 言語別のコード スニペット ソース ファイルでのタグ名表現の詳細については、[DocFX ガイドライン](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file)を参照してください。
 
 ## <a name="supported-languages"></a>サポートされている言語
 
