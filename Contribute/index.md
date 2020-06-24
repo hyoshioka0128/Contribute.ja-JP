@@ -3,16 +3,16 @@ title: Microsoft Docs 共同作成者ガイド概要
 description: このガイドでは、Microsoft ドキュメント サイト docs.microsoft.com で共同作成を行う方法について説明します。
 author: billwagner
 ms.author: wiwagn
-ms.date: 02/19/2019
+ms.date: 06/23/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 95dadff41bb31e0b34ee34f85ae47708297954f1
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 084da0320514b3a4551ce130d8d17e3040a35f29
+ms.sourcegitcommit: 6a7c9b5e9538ed588bd2da772ae319c09e545a74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "81784276"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279349"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Microsoft Docs 共同作成者ガイド概要
 
@@ -35,7 +35,7 @@ Microsoft のドキュメント セットには、オープン ソースで GitH
 
 クイック編集により、ドキュメント内の小さなエラーや漏れを報告および修正するプロセスが合理化されます。 さまざまな努力を重ねても、公開されたドキュメントには文法やスペルに関する小さな誤りが "_必ず_" 入り込みます。 イシューを作成して間違いを報告することもできますが、利用可能な場合は、pull request (PR) を作成して問題を修正するオプションの方が速くて簡単です。
 
-1. 一部のドキュメント ページでは、ブラウザー内でコンテンツを直接編集できます。 その場合、以下に示すような **[Edit]\(編集\)** ボタンが表示されます。 **[Edit]\(編集\)** (または同等にローカライズされた) ボタンをクリックすると、GitHub 上のソース ファイルに移動します。 **[Edit]\(編集\)** ボタン (テキストなしの鉛筆アイコン) がない場合は、そのドキュメント ページを変更することはできません。
+1. 一部のドキュメント ページでは、ブラウザー内でコンテンツを直接編集できます。 その場合、以下に示すような **[編集]** ボタンが表示されます。 **[編集]** (または同等にローカライズされた) ボタンをクリックすると、GitHub 上のソース ファイルに移動します。 **[編集]** ボタンがない場合は、そのドキュメント ページを変更することはできません。
 
    ![[編集] リンクの場所](./media/index/edit-article.png)
 
@@ -44,7 +44,7 @@ Microsoft のドキュメント セットには、オープン ソースで GitH
    ![鉛筆アイコンの場所](./media/index/edit-icon.png)
 
 
-3. Web エディターで変更を加えます。 **[Preview changes]\(変更のプレビュー\)** タブをクリックして、自分の変更の書式設定を確認します。
+3. Web エディターで変更を加えます。 **[変更のプレビュー]** タブをクリックして、自分の変更の書式設定を確認します。
 
 4. 変更を加えたら、ページの一番下までスクロールします。 次の図に示すように、自分の変更にタイトルと説明を入力して、 **[Propose file change]\(ファイル変更の提案\)** をクリックします。
 

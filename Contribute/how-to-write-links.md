@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: gewarren
 ms.author: gewarren
 ms.date: 03/31/2020
-ms.openlocfilehash: ca29d4b9e81f8af3b680367b210bd1734860687d
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 94ba4cefd9aff70b38502aa397a3761127c8089f
+ms.sourcegitcommit: 9852045bac75fd5d90c0ffc88d2a17dd45ba015f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80624800"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107112"
 ---
 # <a name="use-links-in-documentation"></a>ドキュメントでリンクを使用する
 
@@ -185,9 +185,9 @@ XRef リンクはビルド時に検証されるため、API へのリンクに�
 
 例:
 
-- **\<xref:System.String>** は、<xref:System.String> として表示されます。
+- **\<xref:System.String>** 表示方法 <xref:System.String>
 
-- **\<xref:System.String?displayProperty=nameWithType>** は、<xref:System.String?displayProperty=nameWithType> として表示されます。
+- **\<xref:System.String?displayProperty=nameWithType>** 表示方法 <xref:System.String?displayProperty=nameWithType>
 
 - **\[String class](xref:System.String)** は、[String クラス](xref:System.String)として表示されます。
 
@@ -204,7 +204,7 @@ XRef リンクはビルド時に検証されるため、API へのリンクに�
 
 通常、UID は、完全修飾されたクラスまたはメンバーの名前です。 UID を決定するには、少なくとも次の 2 つの方法があります。
 
-- 型またはメンバーの [Docs][docs] ページで右クリックして、**[ソースの表示]** を選択し、**ms.assetid** の **content** の値をコピーします。
+- 型またはメンバーの [Docs][docs] ページで右クリックして、 **[ソースの表示]** を選択し、**ms.assetid** の **content** の値をコピーします。
 
   ![Web ページのソース内の ms.assetid](media/how-to-write-links/ms-assetid.png)
 
@@ -241,7 +241,7 @@ UID 内の特殊文字は、次のように HTML エンコードする必要が�
 
 エンコード例:
 
-- `System.Threading.Tasks.Task``1` は、`System.Threading.Tasks.Task%601` としてエンコードされます ([ジェネリック型に関するセクション](#generic-types)を参照してください)
+- ``System.Threading.Tasks.Task`1`` は、`System.Threading.Tasks.Task%601` としてエンコードされます ([ジェネリック型に関するセクション](#generic-types)を参照してください)
 
 - `System.Exception.#ctor` は、`System.Exception.%23ctor` としてエンコードされます
 
@@ -249,11 +249,11 @@ UID 内の特殊文字は、次のように HTML エンコードする必要が�
 
 ### <a name="generic-types"></a>ジェネリック型
 
-ジェネリック型は、`System.Collections.Generic.List<T>` などの型です。 [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)でこの型を参照し、その URL を調べると、`<T>` は、URL で `-1` として記述されていることがわかります。これは、実際には、**`1** を表します。
+ジェネリック型は、`System.Collections.Generic.List<T>` などの型です。 [.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)でこの型を参照し、その URL を調べると、`<T>` は、URL で `-1` として記述されていることがわかります。これは、実際には、 **`1** を表します。
 
 `https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1`
 
-**List\<T>** などのジェネリック型にリンクするには、次の例に示すように、**\`** バックティック文字を **%60** としてエンコードします。
+**List\<T>** などのジェネリック型にリンクするには、次の例に示すように、 **\`** バックティック文字を **%60** としてエンコードします。
 
 ```markdown
 <xref:System.Collections.Generic.List%601>
