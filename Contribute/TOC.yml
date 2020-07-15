@@ -52,11 +52,11 @@
   items:
     - name: .NET ドキュメント
       items:
-        - name: .NET ドキュメントへの協力方法
+        - name: 貢献する方法
           href: dotnet/dotnet-contribute.md
         - name: ラベルとプロジェクトのロードマップ
           href: dotnet/labels-projects.md
-        - name: .NET ドキュメントのスタイル規則
+        - name: スタイル規則
           href: dotnet/dotnet-style-guide.md
         - name: ボイスとトーンのガイド
           href: dotnet/dotnet-voice-tone.md
