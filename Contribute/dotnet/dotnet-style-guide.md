@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: a520112cd77f4c4807e7719c2c4dbd43a762f062
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 926516895798757bde0861a345e0b5d0f95218a4
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80759551"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290913"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>.NET ドキュメントのメタデータと Markdown テンプレート
 
@@ -43,7 +43,7 @@ ms.date: [CREATION/UPDATE DATE - mm/dd/yyyy]
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>基本的 Markdown、GFM、特殊文字
 
-Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については、「[Markdown リファレンス](../markdown-reference.md)」の記事で学習できます。
+Markdown、GitHub Flavored Markdown (GFM)、OPS 固有の拡張機能の基本については、[Markdown リファレンス](../markdown-reference.md)の記事で学習できます。
 
 Markdown では、書式設定に \*、\`、\# のような特殊文字が使用されます。 このような文字をコンテンツに含める場合、次の 2 つのいずれかを行う必要があります。
 
@@ -67,11 +67,14 @@ Markdown では、書式設定に \*、\`、\# のような特殊文字が使用
 
 ## <a name="text-styling"></a>テキストのスタイル設定
 
-*斜体* ファイル、フォルダー、パス (長い項目の場合、分割してそれだけの行にします)、新しい用語に使用します。
+*斜体*\
+ファイル、フォルダー、パス (長い項目の場合、分割してそれだけの行にします)、新しい用語に使用します。
 
-**太字** UI 要素に使用します。
+**太字**\
+UI 要素に使用します。
 
-`Code` インライン コード、言語キーワード、NuGet パッケージ名、コマンドライン コマンド、データベース テーブル、列名、クリック可能にしない URL に使用します。
+`Code`\
+インライン コード、言語キーワード、NuGet パッケージ名、コマンドライン コマンド、データベース テーブル、列名、クリック可能にしない URL に使用します。
 
 ## <a name="links"></a>リンク
 
@@ -120,13 +123,13 @@ Markdown では、書式設定に \*、\`、\# のような特殊文字が使用
 
 UID の後ろに \* (または `%2A`) を追加すると、リンクは固有の API ではなく、オーバーロードのページを表すようになります。 これはたとえば、[List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_) のような固有のオーバーロードではなく、[List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) ページに汎用的な方法でリンクする必要がある場合に使用できます。 メンバーがオーバーロードされていないとき、\* を使用してメンバー ページにリンクすることもできます。それにより、UID にパラメーターの一覧を含める必要がなくなります。
 
-特定のメソッド オーバーロードにリンクするには、メソッドの各パラメーターの完全修飾型名を含める必要があります。 たとえば、\<xref:System.DateTime.ToString> はパラメーターなしの [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) メソッドにリンクされますが、\<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> は [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) メソッドにリンクされます。
+特定のメソッド オーバーロードにリンクするには、メソッドの各パラメーターの完全修飾型名を含める必要があります。 たとえば、\<xref:System.DateTime.ToString> はパラメーターなしの [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) メソッドにリンクされていますが、\<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> は [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_) メソッドにリンクされています。
 
-[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) など、ジェネリック型にリンクするには、\` (`%60`) 文字にジェネリック型パラメーターの番号を続けます。 たとえば、`<xref:System.Nullable%601>` は [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 型にリンクされますが、`<xref:System.Func%602>`[System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) デリゲートにリンクされます。
+[System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) など、ジェネリック型にリンクするには、\` (`%60`) 文字にジェネリック型パラメーターの番号を続けます。 たとえば、`<xref:System.Nullable%601>` は [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1) 型にリンクされていますが、`<xref:System.Func%602>` は [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2) デリゲートにリンクされています。
 
 ## <a name="code"></a>コード
 
-コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute.md#contributing-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 コードを含める基本的規則は、[コード](../code-in-docs.md)の一般的なガイダンスにあります。
+コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute.md#contribute-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 コードを含める基本的規則は、[コード](../code-in-docs.md)の一般的なガイダンスにあります。
 
 次の構文でコードを含めることができます。
 
