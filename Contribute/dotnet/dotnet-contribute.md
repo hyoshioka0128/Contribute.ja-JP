@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 05/14/2020
-ms.openlocfilehash: fa905d17a39b5fa7737e06fce38659b7e1563635
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: d1631f34ef9a3ceb10178792842421376fea97b0
+ms.sourcegitcommit: 3774d06ddc1f92b2bdb4c1d8babbd18357229298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290959"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87264811"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>.NET ドキュメント リポジトリに協力する方法について説明します
 
@@ -75,7 +75,30 @@ ms.locfileid: "86290959"
 
 ## <a name="example-folder-structure"></a>フォルダー構造の例
 
-docs /about /core /porting porting-overview.md /media /porting-overview portability_report.png /snippets /porting-overview /csharp porting.csproj porting-overview.cs Program.cs /fsharp porting.fsproj porting-overview.fs Program.fs /vb porting.vbproj porting-overview.vb Program.vb
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+          portability_report.png
+      /snippets
+        /porting-overview
+          /csharp
+            porting.csproj
+            porting-overview.cs
+            Program.cs
+          /fsharp
+            porting.fsproj
+            porting-overview.fs
+            Program.fs
+          /vb
+            porting.vbproj
+            porting-overview.vb
+            Program.vb
+```
 
 上記の構造には、1 つのイメージ (*portability_report.png*) と、*porting-overview.md* の記事に含まれている**コード スニペット**を含む、3 つのコード プロジェクトが含まれています。 受け入れられた代替構造体には、そのフォルダー内のすべての記事のすべてのスニペットを含む言語ごとに 1 つのプロジェクトが含まれています。 この代替は、言語の構文を示す非常に小さなスニペットであるため、言語リファレンスの分野で使用されています。 他の領域では推奨されません。
 
