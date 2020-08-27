@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 05/14/2020
-ms.openlocfilehash: d1631f34ef9a3ceb10178792842421376fea97b0
-ms.sourcegitcommit: 3774d06ddc1f92b2bdb4c1d8babbd18357229298
+ms.openlocfilehash: 810a1335bf3c93b79952c701c44470d3e72fb124
+ms.sourcegitcommit: 940c84d6bc23a8fbec780244563af188d2620ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264811"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88668645"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>.NET ドキュメント リポジトリに協力する方法について説明します
 
@@ -100,6 +100,9 @@ docs
             Program.vb
 ```
 
+> [!NOTE]
+> スニペットの下にある言語のフォルダーは、1 つの言語のみが想定されている言語ガイド領域では必要ありません。
+
 上記の構造には、1 つのイメージ (*portability_report.png*) と、*porting-overview.md* の記事に含まれている**コード スニペット**を含む、3 つのコード プロジェクトが含まれています。 受け入れられた代替構造体には、そのフォルダー内のすべての記事のすべてのスニペットを含む言語ごとに 1 つのプロジェクトが含まれています。 この代替は、言語の構文を示す非常に小さなスニペットであるため、言語リファレンスの分野で使用されています。 他の領域では推奨されません。
 
 歴史的な理由により、含まれているスニペットの多くは、*dotnet/docs* リポジトリの */samples* フォルダーに格納されています。 記事に大きな変更を加える場合は、それらのスニペットを新しい構造に移動する必要があります。 小さな変更ではスニペットを移動しないでください。
@@ -154,14 +157,6 @@ Microsoft は、すべてのコードに対応するように CI システムを
 
 3. 使用するサンプルには、**適切な例外処理**を含める必要があります。 その例外処理によって、サンプルのコンテキスト内でスローされる可能性が高いすべての例外が処理される必要があります。 たとえば、[Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline) メソッドを呼び出してユーザー入力を取得するサンプルには、入力文字列が引数としてメソッドに渡されるときの適切な例外処理を使用する必要があります。 同様に、使用するサンプルでメソッド呼び出しの失敗が予想される場合は、結果としてスローされる例外を処理する必要があります。 [Exception](https://docs.microsoft.com/dotnet/api/system.exception) や [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception) などの基本クラスの例外ではなく、メソッドによってスローされる特定の例外を常に処理します。
 
-4. 使用するサンプルによってスタンドアロン パッケージがビルドされる場合は、そのサンプルによって使用される任意のランタイムに加えて、Microsoft の CI ビルド システムによって使用されるランタイムも含める必要があります。
-    - `win7-x64`
-    - `win8-x64`
-    - `win81-x64`
-    - `ubuntu.16.04-x64`
-
-Microsoft はこれらのプロジェクトをすぐにビルドできるように CI システムを調整していきます。
-
 サンプルを作成するには:
 
 1. [Issue](https://github.com/dotnet/docs/issues) を提出するか、または作業する既存の Issue にコメントを加えます。
@@ -186,12 +181,13 @@ Microsoft はこれらのプロジェクトをすぐにビルドできるよう�
 
 1. sample フォルダーに進み、エラーをチェックするために次をビルドします。
 
-    ```console
+    ```dotnetcli
     dotnet build
     ```
+
 2. 使用するサンプルを実行します。
 
-    ```console
+    ```dotnetcli
     dotnet run
     ```
 

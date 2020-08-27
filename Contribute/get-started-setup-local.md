@@ -7,16 +7,16 @@ ms.custom: external-contributor-guide
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
-ms.openlocfilehash: e73c60c439285f901c5c83e538f8971d795bd6c4
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 60da6e3d5db1486025643d5a5030402a5f2987d3
+ms.sourcegitcommit: 0d49b27c43974f6fecf4c92a659ec3c44ca55f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "72288594"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799800"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>ドキュメントの Git リポジトリをローカルに設定する
 
-この記事では、Microsoft のドキュメントに投稿することを目的として、ローカル コンピューターに git リポジトリを設定する手順について説明します。 共同作成者は、ローカルに複製されたリポジトリを使用して、新規記事の追加、既存の記事の大幅な編集、またはアートワークの変更を行うことができます。
+この記事では、Microsoft のドキュメントに投稿することを目的として、ローカル コンピューター上に Git リポジトリを設定する手順について説明します。 共同作成者は、ローカルに複製されたリポジトリを使用して、新規記事の追加、既存の記事の大幅な編集、またはアートワークの変更を行うことができます。
 
 投稿を開始するには、次の 1 回限りのセットアップ アクティビティを実行します。
 > [!div class="checklist"]
@@ -44,7 +44,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
 
 [docs.microsoft.com](https://docs.microsoft.com) にホストされているドキュメントは、[github.com](https://www.github.com) のいくつかの異なるリポジトリに存在します。
 
-1. 使用するリポジトリが不明な場合は、Web ブラウザーを使用して [docs.microsoft.com](https://docs.microsoft.com) 上の記事にアクセスします。 記事の右上にある **[Edit]\(編集\)** リンク (鉛筆のアイコン) を選択します。
+1. 使用するリポジトリが不明な場合は、Web ブラウザーを使用して [docs.microsoft.com](https://docs.microsoft.com) 上の記事にアクセスします。 記事の右上にある **[編集]** リンク (鉛筆のアイコン) を選択します。
 
    ![[編集] をクリックしてリポジトリとファイルの場所を特定します。](media/index/edit-article.png)
 
@@ -65,7 +65,7 @@ GitHub を初めて使用する場合は、次のビデオを視聴して、フ�
 
 メインのドキュメント リポジトリはすべて読み取り専用アクセスを提供するため、個人のフォークが必須になります。 変更するには、自分のフォークからメイン リポジトリに[pull request](git-github-fundamentals.md#pull-requests)を送信する必要があります。 このプロセスを容易にするには、まずリポジトリの独自のコピーが必要になります。このコピーでは、書き込みアクセス権を持ちます。 GitHub の "*fork*" はその目的にかなっています。
 
-1. メイン リポジトリの GitHub ページに移動して、右上の **[Fork]\(フォーク\)** ボタンをクリックします。
+1. メイン リポジトリの GitHub ページに移動して、右上の **[フォーク]** ボタンをクリックします。
 
    ![GitHub プロファイルの例](./media/contribute-get-started-setup-local/fork.png)
 
@@ -133,7 +133,7 @@ Git Bash を使用し、**clone** コマンドを実行してデバイスの現�
 ## <a name="configure-remote-upstream"></a>リモート アップストリームを構成する
 レポジトリを複製した後に、**upstream** という名前のメイン リポジトリへの読み取り専用のリモート接続をセットアップします。 upstream URL を使用して、他のユーザーが行った最新の変更と、ローカル リポジトリを常に同期しておくことができます。 **git remote** コマンドは、構成値を設定するために使用します。 **fetch** コマンドを使用して upstream リポジトリからブランチの情報を更新します。
 
-1. **Git Credential Manager** を使用している場合は、次のコマンドを使用します。 \<repo\> および \<organization\> プレースホルダーを置き換えます。
+1. **Git Credential Manager** を使用している場合は、次のコマンドを使用します。 \<repo\> および \<organization\> のプレースホルダーを置き換えます。
    ```bash
    cd <repo>
    git remote add upstream https://github.com/<organization>/<repo>.git
