@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 06/24/2020
-ms.openlocfilehash: 7a494b00c05251e70b74d874d13653db9ba9f6e9
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: b2c0cbb0ed72948ba49a7456e16df5659057f5e6
+ms.sourcegitcommit: 56505b3f7e670f6387d2c919f0326e9f4c571c8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290982"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89201129"
 ---
 # <a name="pull-request-review-process-for-the-net-docs-repositories"></a>.NET ドキュメントのリポジトリに対する pull request のレビュー プロセス
 
@@ -61,6 +61,10 @@ ms.locfileid: "86290982"
 ### <a name="review-draft-pull-requests"></a>ドラフトの pull request をレビューする
 
 プロセスの早期にフィードバックが必要な場合があります。 ドラフト PR を開き、早期レビューを要求するコメントを追加します。 これらの早期レビューでは、アウトライン、全体のコンテンツ、およびサンプルといった、記事の構成に注目します。 これらのレビューには、文法および適切なリンクに関する完全なチェックは含まれません。
+
+## <a name="explain-suggestions"></a>提案の説明
+
+GitHub では、`suggestion` 型の 3 つのバック ティック ブロックにコメントを入力できます。それは差分として表示され、ボタンをクリックすることでマージできます。 短い行の場合は、GitHub によって変更がうまく強調表示されます。 長い行 (1 行のテキストの長い段落など) の場合は、GitHub によって変更が強調表示されません。 長い行の提案を入力するときに、変更が明確に強調表示されているかどうかを確認します。 変更が強調表示されていない場合は、提案ブロックの外に変更内容を説明するコメントを含めてください。 説明がないと、後続のレビュー担当者や PR 作成者が変更内容を把握するのに時間がかかることがよくあります。
 
 ## <a name="respond-to-reviews"></a>レビューに回答する
 
