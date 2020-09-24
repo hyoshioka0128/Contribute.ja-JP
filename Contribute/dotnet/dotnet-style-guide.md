@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 926516895798757bde0861a345e0b5d0f95218a4
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: 15288ccb1831e994fd078f47788ad4c2f502775c
+ms.sourcegitcommit: 92d06515af1d9d0e5abf632fc3b6425c487174d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290913"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837214"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>.NET ドキュメントのメタデータと Markdown テンプレート
 
@@ -129,48 +129,9 @@ UID の後ろに \* (または `%2A`) を追加すると、リンクは固有の
 
 ## <a name="code"></a>コード
 
-コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute.md#contribute-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 コードを含める基本的規則は、[コード](../code-in-docs.md)の一般的なガイダンスにあります。
+コードを含める最良の方法は、動作するサンプルからの抜粋を含めることです。 [.NET に協力する](dotnet-contribute.md#contribute-to-samples)方法に関する記事の指示に従い、サンプルを作成します。 完全なプログラムからのスニペットを含めることで、すべてのコードが Microsoft の継続的インテグレーション (CI) システムで実行されます。 ただし、コンパイル タイム エラーまたはランタイム エラーの原因を表示する必要がある場合、インライン コード ブロックを使用できます。
 
-次の構文でコードを含めることができます。
-
-```markdown
-[!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
-```
-
-* `-<language>` (*省略可能*ですが、実施することを*お勧めします*)
-  * 参照されているコード スニペットの言語。
-
-* `<name>` (*省略可能*)
-  * コード スニペットの名前。 出力 HTML には影響ありませんが、これを使用して Markdown ソースの読みやすさを向上させることができます。
-
-* `<pathToFile>` (*必須*)
-  * 参照するコード スニペット ファイルを示すファイル システムの相対パス。 これは .NET ドキュメント セットを構成するさまざまなレポジトリによって複雑になることがあります。 .NET サンプルは dotnet/samples レポジトリにあります。 すべてのスニペット パスは `~/samples` から始まり、パスの残りの部分はそのリポジトリのルートからソースまでのパスとなります。
-
-* `<queryoption>` (*省略可能*)
-  * ファイルからコードを取得する方法を指定するために使用。
-    * `#`: `#{tagname}` (タグ名) *または* `#L{startlinenumber}-L{endlinenumber}` (行の範囲)。
-    行番号は非常に崩れやすいため、使用はお勧めしません。 コード スニペットを参照する方法としてはタグ名をお勧めします。 タグ名には意味のある名前を使用します。 (スニペットの多くは前のプラットフォームから移行されており、タグには `Snippet1` や `Snippet2` のような名前が付けられています。この方法では保守管理が難しくなります。)
-    * `range`:　`?range=1,3-5` 行の範囲です。 この例には、1、3、4、5 行が含まれます。
-
-可能な限り、タグ名を使用することをお勧めします。 タグ名はリージョンまたはコード コメントの名前であり、ソース コードでは `Snippettagname` の形式で確認できます。 次の例は、タグ名 `BasicThrow` を参照する方法を示しています。
-
-```markdown
-[!code-csharp[csrefKeyword#1](~/samples/snippets/snippets/csharp/language-reference/operators/ConditionalExamples.csConditionalRef)]
-```
-
-**dotnet/samples** レポジトリのソースの相対パスは `~/samples` パスに従います。
-
-また、[このソース ファイル](https://github.com/dotnet/samples/blob/master/snippets/csharp/language-reference/operators/ConditionalExamples.cs)でスニペット タグの構造を確認できます。 言語別のコード スニペット ソース ファイルでのタグ名表現の詳細については、[DocFX ガイドライン](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file)を参照してください。
-
-次の例は、3 つすべての .NET 言語に含まれるコードを示しています。
-
-```markdown
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
- [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
- [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]
-```
-
-完全なプログラムからのスニペットを含めることで、すべてのコードが Microsoft の継続的インテグレーション (CI) システムで実行されます。 ただし、コンパイル タイム エラーまたはランタイム エラーの原因を表示する必要がある場合、インライン コード ブロックを使用できます。
+ドキュメントにコードを表示するための Markdown 構文の詳細については、「[ドキュメントにコードを追加する方法](../code-in-docs.md)」をご覧ください。
 
 ## <a name="images"></a>イメージ
 
