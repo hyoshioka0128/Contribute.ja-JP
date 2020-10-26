@@ -7,12 +7,12 @@ ms.date: 03/03/2020
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 4e57af6a1fe9a9d3799f09cb04f3bd3f0b9b712d
-ms.sourcegitcommit: 59e77d2fb9c38cccbacde9d2a7df61ae58c38fa4
+ms.openlocfilehash: b33333a49df11f0234193ca84fc2c3accdb6894d
+ms.sourcegitcommit: f1535713b66ff9b840f1138583746bc2bf182b4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421047"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91953652"
 ---
 # <a name="how-to-include-code-in-docs"></a>ドキュメントにコードを追加する方法
 
@@ -140,7 +140,7 @@ docs.microsoft.com に公開された記事にコードを追加する方法は�
 
 コード ファイルへの参照によるコード表示が実用的でない場合にのみ、インライン コード ブロックを使用します。 一般に、インライン コードは完全なプロジェクトに含まれるコード ファイルと比較すると、テストして最新の状態に保つことが困難です。  また、インライン コードでは、開発者がコードを理解して使用するのに役立つコンテキストを省略する場合があります。 これらの考慮事項は主にプログラミング言語に適用されます。 インライン コード ブロックは、出力と入力 (JSON など)、クエリ言語 (SQL など)、スクリプト言語 (PowerShell など) にも使用できます。
   
-記事のファイルでテキストのセクションを示す方法は 2 つあります。トリプル バックフォード (\`\`\`) で*フェンス設定*するか、またはインデント設定します。 言語を指定できるので、フェンス設定の使用をお勧めします。 インデントは使用しないようにします。非常に誤解を招きやすく、他の作成者が、記事を編集する必要がある場合に作成時の意図を理解するのが難しくなる可能性があります。
+記事のファイルでテキストのセクションを示す方法は 2 つあります。トリプル バックフォード (\`\`\`) で *フェンス設定* するか、またはインデント設定します。 言語を指定できるので、フェンス設定の使用をお勧めします。 インデントは使用しないようにします。非常に誤解を招きやすく、他の作成者が、記事を編集する必要がある場合に作成時の意図を理解するのが難しくなる可能性があります。
 
 次の例に示すように、言語インジケーターは、開始を示すトリプル バックフォードの直後に配置されます。
 
@@ -230,7 +230,7 @@ docs.microsoft.com に公開された記事にコードを追加する方法は�
 :::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
 ```
 
-この例では、*StudentController.cs* コード ファイルの行 2 から 24 までと行 26 のみが表示されます。
+この例では、 *StudentController.cs* コード ファイルの行 2 から 24 までと行 26 のみが表示されます。
 
 次のセクションで説明するように、行番号をハードコーディングするよりも名前付きのスニペットを使用してください。
 
@@ -269,9 +269,9 @@ docs.microsoft.com に公開された記事にコードを追加する方法は�
 
 ## <a name="out-of-repo-snippet-references"></a>リポジトリの外にあるスニペットの参照
 
-参照したいコード ファイルが別のリポジトリにある場合は、そのコード リポジトリを "*依存リポジトリ*" として設定します。 これを行う場合は、その名前を指定します。 その後、この名前は、コード参照の目的のために、フォルダー名のように機能します。
+参照したいコード ファイルが別のリポジトリにある場合は、そのコード リポジトリを " *依存リポジトリ* " として設定します。 これを行う場合は、その名前を指定します。 その後、この名前は、コード参照の目的のために、フォルダー名のように機能します。
 
-たとえば、ドキュメント リポジトリが *Azure/azure-docs*で、コード リポジトリが *Azure/azure-functions-durable-extension* であるとします。
+たとえば、ドキュメント リポジトリが *Azure/azure-docs* で、コード リポジトリが *Azure/azure-functions-durable-extension* であるとします。
 
 *azure-docs* のルート フォルダーで、 *.openpublishing.publish.config.json* に次のセクションを追加します。
 
@@ -284,7 +284,7 @@ docs.microsoft.com に公開された記事にコードを追加する方法は�
     },
 ```
 
-これで、*azure-docs* 内のフォルダーであるかのように *samples-durable-functions* を参照すると、実際には *azure-functions-durable-extension* リポジトリ内のルート フォルダーを参照するようになります。
+これで、 *azure-docs* 内のフォルダーであるかのように *samples-durable-functions* を参照すると、実際には *azure-functions-durable-extension* リポジトリ内のルート フォルダーを参照するようになります。
 
 手動で、または [docs.microsoft.com Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) を利用して Visual Studio Code 内で、トリプル コロン形式 (:\:\:) を使用して、コードを追加することができます。
 
@@ -354,11 +354,17 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
 
 * `cloudshell-powershell` - 前の例にあるように、Azure PowerShell Cloud Shell を有効にする
 * `cloudshell-bash` - Azure Cloud Shell を有効にする
-* `try-dotnet` - Try .NET を有効にします。
-* `try-dotnet-class` - クラス スキャフォールディングを使用した Try .NET を有効にする
-* `try-dotnet-method` - メソッド スキャフォールディングを使用した Try .NET を有効にする
+* `try-dotnet` - .NET Interactive を有効にする
+* `try-dotnet-class` - クラス スキャフォールディングを使用した .NET Interactive を有効にする
+* `try-dotnet-method` - メソッド スキャフォールディングを使用した .NET Interactive を有効にする
 
 Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは自分の Azure アカウントに対してのみコマンドを実行できます。
+
+.NET Interactive のエクスペリエンスについて、コード ブロックの内容は、次の 3 つのスキャフォールディング エクスペリエンスのどれを選択するかによって異なります。
+
+* " *スキャフォールディングなし* " (`try-dotnet`):コード ブロックによって、完全なプログラム テキストを表す必要があります。 たとえば、`dotnet new console` によって生成される *Program.cs* ファイルは有効です。 これらは、必要な `using` ディレクティブなど、小さなプログラム全体を表示する場合に最も役立ちます。 最上位レベルのステートメントは現時点ではサポートされていません。
+* " *メソッド スキャフォールディング* " (`try-dotnet-method`):コード ブロックによって、コンソール アプリケーションの `Main` メソッドの内容を表す必要があります。 `dotnet new console` テンプレートによって追加された `using` ディレクティブを想定できます。 この設定は、1 つの機能を表す短いスニペットに最も役立ちます。
+* " *クラス スキャフォールディング* " (`try-dotnet-class`):コード ブロックによって、プログラムのエントリ ポイントとして `Main` メソッドを持つクラスを表す必要があります。 これらは、クラスのメンバーがどのように対話するかを示すために使用できます。
 
 ## <a name="snippet-syntax-reference"></a>スニペットの構文リファレンス
 
@@ -371,19 +377,19 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
 > [!IMPORTANT]
 > この構文は、ブロックの Markdown 拡張機能です。 これは、独自の行で使用する必要があります。
 
-* `<language>` (*省略可能*)
+* `<language>` ( *省略可能* )
   * コード スニペットの言語。 詳細については、この記事で後述する「[サポートされている言語](#supported-languages)」を参照してください。
 
-* `<path>` (*必須*)
+* `<path>` ( *必須* )
   * 参照するコード スニペット ファイルを示すファイル システムの相対パス。
 
-* `<attribute>` および `<attribute-value>` (*省略可能*)
+* `<attribute>` および `<attribute-value>` (" *省略可能* ")
 
   ファイルからコードを取得する方法とその表示方法を指定するために併せて使用。
 
   * `range`:　`1,3-5` 行の範囲です。 この例には、1、3、4、5 行が含まれます。
-  * `id`:　`snippet_Create` コード ファイルから挿入する必要があるスニペットの ID です。 この値を範囲と共存させることはできません。
-  * `highlight`:　`2-4,6` 生成されたコード スニペットで強調表示する必要がある行の範囲や数です。 番号は、ファイルではなく、表示される行 (範囲または ID で指定) からの相対です。
+  * `id`:`snippet_Create` コード ファイルから挿入する必要があるスニペットの ID です。 この値を範囲と共存させることはできません。
+  * `highlight`:`2-4,6` 生成されたコード スニペットで強調表示する必要がある行の範囲や数です。 番号は、ファイルではなく、表示される行 (範囲または ID で指定) からの相対です。
   * `interactive`: `cloudshell-powershell`、`cloudshell-bash`、`try-dotnet`、`try-dotnet-class`、`try-dotnet-method` String 値では、有効にする対話機能の種類を決定します。
   * 言語別のコード スニペット ソース ファイルでのタグ名表現の詳細については、[DocFX ガイドライン](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file)を参照してください。
 
@@ -393,7 +399,7 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
 
 ### <a name="fenced-code-blocks"></a>フェンスされたコード ブロック
 
-| Name                           | 有効なエイリアス                                                                  |
+| 名前                           | 有効なエイリアス                                                                  |
 |--------------------------------|--------------------------------------------------------------------------------|
 | .NET Core CLI                  | `dotnetcli`                                                                    |
 | 1C                             | `1c`                                                                           |
@@ -402,111 +408,111 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
 | Ada                            | `ada`                                                                          |
 | ARM アセンブラー                  | `armasm`、`arm`                                                                |
 | AVR アセンブラー                  | `avrasm`                                                                       |
-| ActionScript                   | `actionscript`、`as`                                                           |
+| ActionScript                   | `actionscript`, `as`                                                           |
 | Alan                           | `alan`、`i`                                                                    |
-| AngelScript                    | `angelscript`、`asc`                                                           |
+| AngelScript                    | `angelscript`, `asc`                                                           |
 | ANTLR                          | `antlr`                                                                        |
-| Apache                         | `apache`、`apacheconf`                                                         |
-| AppleScript                    | `applescript`、`osascript`                                                     |
-| Arcade                         | `arcade`                                                                       |
-| AsciiDoc                       | `asciidoc`、`adoc`                                                             |
+| Apache                         | `apache`, `apacheconf`                                                         |
+| AppleScript                    | `applescript`, `osascript`                                                     |
+| アーケード                         | `arcade`                                                                       |
+| AsciiDoc                       | `asciidoc`, `adoc`                                                             |
 | AspectJ                        | `aspectj`                                                                      |
 | ASPX                           | `aspx`                                                                         |
 | ASP.NET (C#)                   | `aspx-csharp`                                                                  |
 | ASP.NET (VB)                   | `aspx-vb`                                                                      |
 | AutoHotkey                     | `autohotkey`                                                                   |
 | AutoIt                         | `autoit`                                                                       |
-| Awk                            | `awk`、`mawk`、`nawk`、`gawk`                                                  |
+| Awk                            | `awk`, `mawk`, `nawk`, `gawk`                                                  |
 | Axapta                         | `axapta`                                                                       |
 | AzCopy                         | `azcopy`                                                                       |
 | Azure CLI                      | `azurecli`                                                                     |
 | Azure CLI (対話型)        | `azurecli-interactive`                                                         |
 | Azure PowerShell               | `azurepowershell`                                                              |
 | Azure Powershell (対話型) | `azurepowershell-interactive`                                                  |
-| Bash                           | `bash`、`sh`、`zsh`                                                            |
+| Bash                           | `bash`, `sh`, `zsh`                                                            |
 | Basic                          | `basic`                                                                        |
 | BNF                            | `bnf`                                                                          |
 | C                              | `c`                                                                            |
 | C#                             | `csharp`、`cs`                                                                 |
 | C# (対話型)               | `csharp-interactive`                                                           |
-| C++                            | `cpp`、`c`、`cc`、`h`、`c++`、`h++`、`hpp`                                     |
+| C++                            | `cpp`, `c`, `cc`, `h`, `c++`, `h++`, `hpp`                                     |
 | C++/CX                         | `cppcx`                                                                        |
 | C++/WinRT                      | `cppwinrt`                                                                     |
 | C/AL                           | `cal`                                                                          |
-| Cache Object Script            | `cos`、`cls`                                                                   |
-| CMake                          | `cmake`、`cmake.in`                                                            |
+| Cache Object Script            | `cos`, `cls`                                                                   |
+| CMake                          | `cmake`, `cmake.in`                                                            |
 | Coq                            | `coq`                                                                          |
 | CSP                            | `csp`                                                                          |
 | CSS                            | `css`                                                                          |
-| Cap'n Proto                    | `capnproto`、`capnp`                                                           |
-| Clojure                        | `clojure`、`clj`                                                               |
-| CoffeeScript                   | `coffeescript`、`coffee`、`cson`、`iced`                                       |
-| Crmsh                          | `crmsh`、`crm`、`pcmk`                                                         |
-| Crystal                        | `crystal`、`cr`                                                                |
+| Cap'n Proto                    | `capnproto`, `capnp`                                                           |
+| Clojure                        | `clojure`, `clj`                                                               |
+| CoffeeScript                   | `coffeescript`, `coffee`, `cson`, `iced`                                       |
+| Crmsh                          | `crmsh`, `crm`, `pcmk`                                                         |
+| Crystal                        | `crystal`, `cr`                                                                |
 | Cypher (Neo4j)                 | `cypher`                                                                       |
 | D                              | `d`                                                                            |
 | DAX Power BI                   | `dax`                                                                          |
-| DNS ゾーン ファイル                  | `dns`、`zone`、`bind`                                                          |
-| DOS                            | `dos`、`bat`、`cmd`                                                            |
+| DNS ゾーン ファイル                  | `dns`, `zone`, `bind`                                                          |
+| DOS                            | `dos`, `bat`, `cmd`                                                            |
 | Dart                           | `dart`                                                                         |
-| Delphi                         | `delphi`、`dpr`、`dfm`、`pas`、`pascal`、`freepascal`、`lazarus`、`lpr`、`lfm` |
-| Diff                           | `diff`、`patch`                                                                |
-| Django                         | `django`、`jinja`                                                              |
+| Delphi                         | `delphi`, `dpr`, `dfm`, `pas`, `pascal`, `freepascal`, `lazarus`, `lpr`, `lfm` |
+| [Diff]                           | `diff`, `patch`                                                                |
+| Django                         | `django`, `jinja`                                                              |
 | Dockerfile                     | `dockerfile`、`docker`                                                         |
 | dsconfig                       | `dsconfig`                                                                     |
 | DTS (デバイス ツリー)              | `dts`                                                                          |
-| Dust                           | `dust`、`dst`                                                                  |
+| Dust                           | `dust`, `dst`                                                                  |
 | Dylan                          | `dylan`                                                                        |
 | EBNF                           | `ebnf`                                                                         |
 | Elixir                         | `elixir`                                                                       |
 | Elm                            | `elm`                                                                          |
-| Erlang                         | `erlang`、`erl`                                                                |
-| Excel                          | `excel`、`xls`、`xlsx`                                                         |
-| Extempore                      | `extempore`、`xtlang`、`xtm`                                                   |
-| F#                             | `fsharp`、`fs`                                                                 |
+| Erlang                         | `erlang`, `erl`                                                                |
+| Excel                          | `excel`, `xls`, `xlsx`                                                         |
+| Extempore                      | `extempore`, `xtlang`, `xtm`                                                   |
+| F#                             | `fsharp`, `fs`                                                                 |
 | FIX                            | `fix`                                                                          |
-| Fortran                        | `fortran`、`f90`、`f95`                                                        |
-| G-Code                         | `gcode`、`nc`                                                                  |
-| Gams                           | `gams`、`gms`                                                                  |
-| GAUSS                          | `gauss`、`gss`                                                                 |
-| GDScript                       | `godot`、`gdscript`                                                            |
+| Fortran                        | `fortran`, `f90`, `f95`                                                        |
+| G-Code                         | `gcode`, `nc`                                                                  |
+| Gams                           | `gams`, `gms`                                                                  |
+| GAUSS                          | `gauss`, `gss`                                                                 |
+| GDScript                       | `godot`, `gdscript`                                                            |
 | Gherkin                        | `gherkin`                                                                      |
 | GN for Ninja                   | `gn`、`gni`                                                                    |
-| Go                             | `go`、`golang`                                                                 |
-| Golo                           | `golo`、`gololang`                                                             |
+| Go                             | `go`, `golang`                                                                 |
+| Golo                           | `golo`, `gololang`                                                             |
 | Gradle                         | `gradle`                                                                       |
 | Groovy                         | `groovy`                                                                       |
-| HTML                           | `html`、`xhtml`                                                                |
-| HTTP                           | `http`、`https`                                                                |
+| HTML                           | `html`, `xhtml`                                                                |
+| HTTP                           | `http`, `https`                                                                |
 | Haml                           | `haml`                                                                         |
-| Handlebars                     | `handlebars`、`hbs`、`html.hbs`、`html.handlebars`                             |
-| Haskell                        | `haskell`、`hs`                                                                |
-| Haxe                           | `haxe`、`hx`                                                                   |
-| Hy                             | `hy`、`hylang`                                                                 |
+| ハンドルバー                     | `handlebars`, `hbs`, `html.hbs`, `html.handlebars`                             |
+| Haskell                        | `haskell`, `hs`                                                                |
+| Haxe                           | `haxe`, `hx`                                                                   |
+| Hy                             | `hy`, `hylang`                                                                 |
 | Ini                            | `ini`                                                                          |
-| Inform7                        | `inform7`、`i7`                                                                |
+| Inform7                        | `inform7`, `i7`                                                                |
 | IRPF90                         | `irpf90`                                                                       |
 | JSON                           | `json`                                                                         |
-| Java                           | `java`、`jsp`                                                                  |
-| JavaScript                     | `javascript`、`js`、`jsx`                                                      |
+| Java                           | `java`, `jsp`                                                                  |
+| JavaScript                     | `javascript`, `js`, `jsx`                                                      |
 | Kotlin                         | `kotlin`、`kt`                                                                 |
 | Kusto                          | `kusto`                                                                        |
 | Leaf                           | `leaf`                                                                         |
-| Lasso                          | `lasso`、`ls`、`lassoscript`                                                   |
-| Less                           | `less`                                                                         |
+| なげなわ                          | `lasso`, `ls`, `lassoscript`                                                   |
+| 未満                           | `less`                                                                         |
 | LDIF                           | `ldif`                                                                         |
 | Lisp                           | `lisp`                                                                         |
 | LiveCode Server                | `livecodeserver`                                                               |
-| LiveScript                     | `livescript`、`ls`                                                             |
+| LiveScript                     | `livescript`, `ls`                                                             |
 | Lua                            | `lua`                                                                          |
-| Makefile                       | `makefile`、`mk`、`mak`                                                        |
-| Markdown                       | `markdown`、`md`、`mkdown`、`mkd`                                              |
-| Mathematica                    | `mathematica`、`mma`、`wl`                                                     |
+| メイクファイル                       | `makefile`, `mk`, `mak`                                                        |
+| Markdown                       | `markdown`, `md`, `mkdown`, `mkd`                                              |
+| Mathematica                    | `mathematica`, `mma`, `wl`                                                     |
 | Matlab                         | `matlab`                                                                       |
 | Maxima                         | `maxima`                                                                       |
 | Maya Embedded Language         | `mel`                                                                          |
 | Mercury                        | `mercury`                                                                      |
-| mIRC スクリプト言語        | `mirc`、`mrc`                                                                  |
+| mIRC スクリプト言語        | `mirc`, `mrc`                                                                  |
 | Mizar                          | `mizar`                                                                        |
 | Managed Object Format          | `mof`                                                                          |
 | Mojolicious                    | `mojolicious`                                                                  |
@@ -516,89 +522,89 @@ Azure Cloud Shell および PowerShell Cloud Shell の場合、ユーザーは�
 | N1QL                           | `n1ql`                                                                         |
 | NSIS                           | `nsis`                                                                         |
 | Nginx                          | `nginx`、`nginxconf`                                                           |
-| Nimrod                         | `nimrod`、`nim`                                                                |
+| Nimrod                         | `nimrod`, `nim`                                                                |
 | Nix                            | `nix`                                                                          |
-| OCaml                          | `ocaml`、`ml`                                                                  |
-| Objective C                    | `objectivec`、`mm`、`objc`、`obj-c`                                            |
+| OCaml                          | `ocaml`, `ml`                                                                  |
+| Objective C                    | `objectivec`, `mm`, `objc`, `obj-c`                                            |
 | OpenGL シェーディング言語        | `glsl`                                                                         |
-| OpenSCAD                       | `openscad`、`scad`                                                             |
+| OpenSCAD                       | `openscad`, `scad`                                                             |
 | Oracle ルール言語          | `ruleslanguage`                                                                |
 | Oxygene                        | `oxygene`                                                                      |
-| PF                             | `pf`、`pf.conf`                                                                |
-| PHP                            | `php`、`php3`、`php4`、`php5`、`php6`                                          |
+| PF                             | `pf`, `pf.conf`                                                                |
+| PHP                            | `php`, `php3`, `php4`, `php5`, `php6`                                          |
 | Parser3                        | `parser3`                                                                      |
-| Perl                           | `perl`、`pl`、`pm`                                                             |
+| Perl                           | `perl`, `pl`, `pm`                                                             |
 | Plaintext 強調表示なし         | `plaintext`                                                                    |
 | Pony                           | `pony`                                                                         |
-| PostgreSQL & PL/pgSQL          | `pgsql`、`postgres`、`postgresql`                                              |
-| PowerShell                     | `powershell`、`ps`                                                             |
+| PostgreSQL & PL/pgSQL          | `pgsql`, `postgres`, `postgresql`                                              |
+| PowerShell                     | `powershell`, `ps`                                                             |
 | Powershell (対話型)       | `powershell-interactive`                                                       |
-| Processing                     | `processing`                                                                   |
+| 処理中                     | `processing`                                                                   |
 | Prolog                         | `prolog`                                                                       |
-| プロパティ                     | `properties`                                                                   |
-| Protocol Buffers               | `protobuf`                                                                     |
-| Puppet                         | `puppet`、`pp`                                                                 |
-| Python                         | `python`、`py`、`gyp`                                                          |
+| Properties                     | `properties`                                                                   |
+| プロトコル バッファー               | `protobuf`                                                                     |
+| Puppet                         | `puppet`, `pp`                                                                 |
+| Python                         | `python`, `py`, `gyp`                                                          |
 | Python プロファイラーの結果        | `profile`                                                                      |
 | Q#                             | `qsharp`                                                                       |
 | Q                              | `k`、`kdb`                                                                     |
 | QML                            | `qml`                                                                          |
 | R                              | `r`                                                                            |
-| Razor CSHTML                   | `cshtml`、`razor`、`razor-cshtml`                                              |
-| ReasonML                       | `reasonml`、`re`                                                               |
+| Razor CSHTML                   | `cshtml`, `razor`, `razor-cshtml`                                              |
+| ReasonML                       | `reasonml`, `re`                                                               |
 | RenderMan RIB                  | `rib`                                                                          |
 | RenderMan RSL                  | `rsl`                                                                          |
 | Roboconf                       | `graph`、`instances`                                                           |
-| Robot Framework                | `robot`、`rf`                                                                  |
-| RPM spec ファイル                 | `rpm-specfile`、`rpm`、`spec`、`rpm-spec`、`specfile`                          |
-| Ruby                           | `ruby`、`rb`、`gemspec`、`podspec`、`thor`、`irb`                              |
+| Robot Framework                | `robot`, `rf`                                                                  |
+| RPM spec ファイル                 | `rpm-specfile`, `rpm`, `spec`, `rpm-spec`, `specfile`                          |
+| Ruby                           | `ruby`, `rb`, `gemspec`, `podspec`, `thor`, `irb`                              |
 | Rust                           | `rust`、`rs`                                                                   |
-| SAS                            | `SAS`、`sas`                                                                   |
+| SAS                            | `SAS`, `sas`                                                                   |
 | SCSS                           | `scss`                                                                         |
 | SQL                            | `sql`                                                                          |
-| STEP パート 21                   | `p21`、`step`、`stp`                                                           |
+| STEP パート 21                   | `p21`, `step`, `stp`                                                           |
 | Scala                          | `scala`                                                                        |
 | Scheme                         | `scheme`                                                                       |
-| Scilab                         | `scilab`、`sci`                                                                |
+| Scilab                         | `scilab`, `sci`                                                                |
 | Shape Expressions              | `shexc`                                                                        |
-| シェル                          | `shell`、`console`                                                             |
+| Shell                          | `shell`, `console`                                                             |
 | Smali                          | `smali`                                                                        |
-| Smalltalk                      | `smalltalk`、`st`                                                              |
-| Solidity                       | `solidity`、`sol`                                                              |
+| Smalltalk                      | `smalltalk`, `st`                                                              |
+| Solidity                       | `solidity`, `sol`                                                              |
 | Stan                           | `stan`                                                                         |
 | Stata                          | `stata`                                                                        |
-| Structured Text                | `iecst`、`scl`、`stl`、`structured-text`                                       |
-| Stylus                         | `stylus`、`styl`                                                               |
+| Structured Text                | `iecst`, `scl`, `stl`, `structured-text`                                       |
+| スタイラス                         | `stylus`, `styl`                                                               |
 | SubUnit                        | `subunit`                                                                      |
-| Supercollider                  | `supercollider`、`sc`                                                          |
+| Supercollider                  | `supercollider`, `sc`                                                          |
 | Swift                          | `swift`                                                                        |
-| Tcl                            | `tcl`、`tk`                                                                    |
-| Terraform (HCL)                | `terraform`、`tf`、`hcl`                                                       |
+| Tcl                            | `tcl`, `tk`                                                                    |
+| Terraform (HCL)                | `terraform`, `tf`, `hcl`                                                       |
 | Test Anything Protocol         | `tap`                                                                          |
 | TeX                            | `tex`                                                                          |
 | Thrift                         | `thrift`                                                                       |
 | TOML                           | `toml`                                                                         |
 | TP                             | `tp`                                                                           |
 | Twig                           | `twig`、`craftcms`                                                             |
-| TypeScript                     | `typescript`、`ts`                                                             |
-| VB.NET                         | `vbnet`、`vb`                                                                  |
-| VBScript                       | `vbscript`、`vbs`                                                              |
+| TypeScript                     | `typescript`, `ts`                                                             |
+| VB.NET                         | `vbnet`, `vb`                                                                  |
+| [VBScript]                       | `vbscript`, `vbs`                                                              |
 | VHDL                           | `vhdl`                                                                         |
 | Vala                           | `vala`                                                                         |
-| Verilog                        | `verilog`、`v`                                                                 |
+| Verilog                        | `verilog`, `v`                                                                 |
 | Vim スクリプト                     | `vim`                                                                          |
 | X++                            | `xpp`                                                                          |
 | x86 アセンブリ                   | `x86asm`                                                                       |
-| XL                             | `xl`、`tao`                                                                    |
-| XQuery                         | `xquery`、`xpath`、`xq`                                                        |
+| XL                             | `xl`, `tao`                                                                    |
+| XQuery                         | `xquery`, `xpath`, `xq`                                                        |
 | XAML                           | `xaml`                                                                         |
-| XML                            | `xml`、`xhtml`、`rss`、`atom`、`xjb`、`xsd`、`xsl`、`plist`                    |
-| YAML                           | `yml`、`yaml`                                                                  |
-| Zephir                         | `zephir`、`zep`                                                                |
+| XML                            | `xml`, `xhtml`, `rss`, `atom`, `xjb`, `xsd`, `xsl`, `plist`                    |
+| YAML                           | `yml`, `yaml`                                                                  |
+| Zephir                         | `zephir`, `zep`                                                                |
 
 > [!TIP]
 > Docs Authoring Pack の [開発言語の完了機能](docs-authoring/dev-lang-completion.md)では、複数のエイリアスが使用可能な場合、最初に有効なエイリアスが使用されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 コード以外のコンテンツの種類に対するテキストの書式設定の詳細については、「[Text formatting guidelines](text-formatting-guidelines.md)」 (テキストの書式設定に関するガイドライン) を参照してください。

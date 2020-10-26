@@ -54,6 +54,8 @@
       items:
         - name: 貢献する方法
           href: dotnet/dotnet-contribute.md
+        - name: コード分析のドキュメント
+          href: dotnet/dotnet-contribute-code-analysis.md
         - name: ラベル、プロジェクト、マイルストーンのロードマップ
           href: dotnet/labels-projects.md
         - name: スタイル規則
