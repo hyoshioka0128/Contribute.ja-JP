@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/06/2020
-ms.openlocfilehash: b8e9f2a33f9b4a8025aa36a890bff1017cf132c6
-ms.sourcegitcommit: abcc67cb3ec1f635a6374d7c47a4831e3eee9050
+ms.openlocfilehash: 059ed8297956589a281cf11e4f7244e972565160
+ms.sourcegitcommit: 11228bd1d3dc1496820355096453f1eb2d28b33e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89559265"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523472"
 ---
 # <a name="labels-projects-and-milestones-roadmap"></a>ラベル、プロジェクト、マイルストーンのロードマップ
 
@@ -114,10 +114,21 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 
 優先順位ラベルはすべて、`P` の後に 1 桁の数字が続きます。 数値が小さいほど優先度が高くなります。
 
-- P0 - 重大な優先度の issue または PR を示します
+- P0 - 重大な優先度
+
+  セキュリティ イシュー、またはコンプライアンスのために法的に必要です。 他のすべてに優先して修正されます。
+  
 - P1 - 高優先度
+
+  一般的なシナリオにおいて不可欠です。 または、ページ ビューが多い記事で非常に目立つエラーです。 これらは P2 や P3 の作業の前に実行されます。
+  
 - P2 - 中程度の優先度
+
+  一般的なシナリオにおいて役立ちますが、妨げになるほどではありません。  これらは、すばやく簡単に作業できる場合、または同じ記事内の P1 のイシューに対処するのと同時に実行されます。
+  
 - P3 - 低優先度
+
+  特殊なケースで役に立つ、一般的なシナリオにおいてささいな修正である、ページ ビューが少ない記事、または非推奨のテクノロジ。 私たちが作業することはありませんが、コミュニティのメンバーは自由に貢献できます。 P3 のイシューは、2 か月後に対処されていない場合は閉じられる可能性があります。
 
 ### <a name="what-about-the-other-labels"></a>その他のラベルについて
 
@@ -125,7 +136,7 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 
 ## <a name="projects"></a>プロジェクト
 
-プロジェクトは計画を目的としており、かんばんボードを通じて優先的な作業が自動化されます。 プロジェクトには、GitHub の issue のみを含める必要があります。pull request は "_含めません_"。 プロジェクトはマイルストーンとは異なります。マイルストーンに含めるのは pull request のみです。
+プロジェクトは計画を目的としており、かんばんボードを通じて優先的な作業が自動化されます。 プロジェクトには、GitHub の issue のみを含める必要があります。pull request は " _含めません_ "。 プロジェクトはマイルストーンとは異なります。マイルストーンに含めるのは pull request のみです。
 
 プロジェクトは、次の 2 つの方法で使用します。
 
@@ -136,4 +147,4 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 
 ## <a name="milestones"></a>マイルストーン
 
-通常、マイルストーンはプロジェクトと同じ名前付け規則 `Month YYYY` に従いますが、プロジェクトとは異なります。 マイルストーンは、完了した作業を追跡するために使用されます。 マイルストーンには issue (潜在的な作業) を "_含めません_"。pull request だけを含める必要があります。 現在のマイルストーンは、自動的に新しい pull request に適用されます。
+通常、マイルストーンはプロジェクトと同じ名前付け規則 `Month YYYY` に従いますが、プロジェクトとは異なります。 マイルストーンは、完了した作業を追跡するために使用されます。 マイルストーンには issue (潜在的な作業) を " _含めません_ "。pull request だけを含める必要があります。 現在のマイルストーンは、自動的に新しい pull request に適用されます。
