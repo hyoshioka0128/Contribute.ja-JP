@@ -47,7 +47,7 @@ Docs Markdown 拡張機能には、個々のファイルの `redirect_url` メ�
 2. 入力を開始します: 「Docs:Generate...」
 3. コマンド `Docs: Generate master redirection file` を選択します。
 4. スクリプトの実行が完了すると、VS Code 出力ウィンドウにリダイレクトの結果が表示され、削除された Markdown ファイルが、既定のパスの下にある Docs Authoring\redirects フォルダーに追加されます。
-5. 結果を確認します。 予想どおりの場合は、プル要求を送信してリポジトリを更新します。
+5. 結果を確認します。 予想どおりの場合は、プルリクエストを送信してリポジトリを更新します。
 
 ## <a name="how-to-assign-keyboard-shortcuts"></a>キーボード ショートカットの割り当て方法
 
@@ -125,7 +125,7 @@ Templates 拡張機能では、3 つの動的メタデータ フィールド (au
 ### <a name="to-make-a-new-template-available-in-vs-code"></a>VS Code で新しいテンプレートを使用できるようにするには
 
 1. テンプレートを Markdown ファイルとしてドラフトします。
-1. [MicrosoftDocs/content-templates](https://github.com/MicrosoftDocs/content-templates) リポジトリの templates フォルダーへのプル要求を送信します。
+1. [MicrosoftDocs/content-templates](https://github.com/MicrosoftDocs/content-templates) リポジトリの templates フォルダーへのプルリクエストを送信します。
 
 docs.microsoft.com チームがテンプレートを確認し、docs.microsoft.com スタイルガイド ラインを満たしている場合に PR をマージします。 マージされると、このテンプレートは、Docs Article Templates 拡張機能のすべてのユーザーが使用できるようになります。
 
@@ -146,7 +146,7 @@ docs.microsoft.com チームがテンプレートを確認し、docs.microsoft.c
 
 ## <a name="contribution-expectations"></a>コントリビューションの見込み
 
-Docs Authoring Pack 拡張機能はオープンソースであり、GitHub アカウントを持っていればだれでもコントリビュートできます。 Microsoft 社内にこのプロジェクトに積極的に取り組んでいる専属チームがあります。 このチームは、問題とプル要求を監視します。 サービス レベル アグリーメント (SLA)、プル要求のレビュー終了見込みは、現在 1 週間です。 チームでは、この所要時間を改善するために、自動化の取り組みを進めています。
+Docs Authoring Pack 拡張機能はオープンソースであり、GitHub アカウントを持っていればだれでもコントリビュートできます。 Microsoft 社内にこのプロジェクトに積極的に取り組んでいる専属チームがあります。 このチームは、問題とプルリクエストを監視します。 サービス レベル アグリーメント (SLA)、プルリクエストのレビュー終了見込みは、現在 1 週間です。 チームでは、この所要時間を改善するために、自動化の取り組みを進めています。
 
 ## <a name="next-steps"></a>次の手順
 
