@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/06/2020
-ms.openlocfilehash: 059ed8297956589a281cf11e4f7244e972565160
-ms.sourcegitcommit: 11228bd1d3dc1496820355096453f1eb2d28b33e
+ms.openlocfilehash: b7c6e4058d802db2e9dc391bfebc9f66b27c4023
+ms.sourcegitcommit: fe12c5eef9d05fa598e326c44248c2b9c68cca12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523472"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755448"
 ---
 # <a name="labels-projects-and-milestones-roadmap"></a>ラベル、プロジェクト、マイルストーンのロードマップ
 
@@ -58,7 +58,6 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 - [API リファレンス](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20API%20Reference)
 - [Azure .NET SDK](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20Azure%20.NET%20SDk)
 - [C# のガイド](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20C%23%20Guide)
-- [デスクトップ ガイド](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20Desktop%20Guide)
 - [F# のガイド](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20F%23%20Guide)
 - [ML.NET ガイド](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20ML.NET%20Guide)
 - [.NET アーキテクチャ ガイド](https://github.com/dotnet/docs/labels/%3Abooks%3A%20Area%20-%20.NET%20Architecture%20Guide) - 削除可能です
@@ -136,7 +135,7 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 
 ## <a name="projects"></a>プロジェクト
 
-プロジェクトは計画を目的としており、かんばんボードを通じて優先的な作業が自動化されます。 プロジェクトには、GitHub の issue のみを含める必要があります。pull request は " _含めません_ "。 プロジェクトはマイルストーンとは異なります。マイルストーンに含めるのは pull request のみです。
+プロジェクトは計画を目的としており、かんばんボードを通じて優先的な作業が自動化されます。 プロジェクトには、GitHub の issue のみを含める必要があります。pull request は "_含めません_"。 プロジェクトはマイルストーンとは異なります。マイルストーンに含めるのは pull request のみです。
 
 プロジェクトは、次の 2 つの方法で使用します。
 
@@ -147,4 +146,4 @@ NET docs チームでは、[GitHub ラベル](https://github.com/dotnet/docs/lab
 
 ## <a name="milestones"></a>マイルストーン
 
-通常、マイルストーンはプロジェクトと同じ名前付け規則 `Month YYYY` に従いますが、プロジェクトとは異なります。 マイルストーンは、完了した作業を追跡するために使用されます。 マイルストーンには issue (潜在的な作業) を " _含めません_ "。pull request だけを含める必要があります。 現在のマイルストーンは、自動的に新しい pull request に適用されます。
+通常、マイルストーンはプロジェクトと同じ名前付け規則 `Month YYYY` に従いますが、プロジェクトとは異なります。 マイルストーンは、完了した作業を追跡するために使用されます。 マイルストーンには issue (潜在的な作業) を "_含めません_"。pull request だけを含める必要があります。 現在のマイルストーンは、自動的に新しい pull request に適用されます。
