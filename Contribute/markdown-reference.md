@@ -557,7 +557,7 @@ Goodbye <sup>This is superscript!</sup>
 
 Goodbye <sup>This is superscript!</sup>
 
-## <a name="tables"></a>Tables
+## <a name="tables"></a>テーブル
 
 Markdow で表を作成する最も簡単な方法は、パイプと行を使用することです。 ヘッダー付きの標準的な表を作成するには、最初の行の後に点線を続けます。
 
